@@ -1,2 +1,2 @@
-# cheatsheets
-A collection of Cheatsheets for various Programming Languages &amp; Utilities, created on Obsidian.
+# portfolio-projects
+A collection of personal projects.
