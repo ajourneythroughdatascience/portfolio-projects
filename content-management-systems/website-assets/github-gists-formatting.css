@@ -1,0 +1,200 @@
+/* 
+Website Formatting for Embedded GitHub Gists
+Includes Normal Mode & Dark Mode Toggle
+
+Created on Wed Jan 18 19:23:00 2023
+@author: Pablo Aguirre
+GitHub: https://github.com/pabloagn
+Website: https://pabloagn.com
+Contact: https://pabloagn.com/contact
+*/
+
+/* GITHUB GISTS */
+
+.gist
+{
+    background: transparent !important;
+}
+
+body .gist .highlight
+{
+    background: #1b1e28;
+}
+
+body .gist .blob-num,
+body .gist .blob-code-inner,
+body .gist .pl-s1 .pl-s2,
+body .gist .pl-smi,
+body .gist .pl-smp,
+body .gist .pl-stj,
+body .gist .pl-vo,
+body .gist .pl-vpf
+{
+    color: #839496;
+}
+
+body .gist .pl-c,
+body .gist .pl-c span
+{
+    color: #586e75;
+    font-style: italic;
+}
+
+body .gist .pl-mb
+{
+    color: #2aa198;
+    font-weight: 700;
+}
+
+body .gist .pl-mh .pl-en
+{
+    color: #cb4b16;
+    font-weight: 700;
+}
+
+body .gist .pl-mi
+{
+    color: #859900;
+    font-style: italic;
+}
+
+body .gist .pl-c1,
+body .gist .pl-pds,
+body .gist .pl-s1,
+body .gist .pl-s1 .pl-pse .pl-s2,
+body .gist .pl-sv
+{
+    color: #5b7c9e !important;
+}
+
+body .gist .pl-e,
+body .gist .pl-ent,
+body .gist .pl-s,
+body .gist .pl-v
+{
+    color: #c0c0c0;
+}
+
+body .gist .pl-k,
+body .gist .pl-en,
+body .gist .pl-mdh,
+body .gist .pl-mdr,
+body .gist .pl-ml,
+body .gist .pl-mm,
+body .gist .pl-mo,
+body .gist .pl-mp,
+body .gist .pl-mr,
+body .gist .pl-ms,
+body .gist .pl-s1 .pl-v,
+body .gist .pl-s3
+{
+    color: #58d2b0;
+}
+
+body .gist .pl-mh,
+body .gist .pl-sc,
+body .gist .pl-sr .pl-cce
+{
+    color: #cb4b16;
+}
+
+body .gist .pl-mq,
+body .gist .highlight-source-css .pl-k
+{
+    color: #586e75;
+}
+
+body .gist .pl-sr,
+body .gist .pl-sr .pl-sra,
+body .gist .pl-sr .pl-sre,
+body .gist .pl-src
+{
+    color: #d30102;
+}
+
+body .gist .pl-st,
+body .gist .highlight-source-c\+\+ .pl-s
+{
+    color: #dc322f;
+}
+
+body .gist .pl-mi1,
+body .gist .pl-mdht
+{
+    color: #839496;
+    background: rgba(0, 64, 0, .5);
+}
+
+body .gist .pl-md,
+body .gist .pl-mdhf,
+body .gist .pl-id,
+body .gist .pl-ii
+{
+    color: #839496;
+    background: rgba(64, 0, 0, .5);
+}
+
+body .gist .gist-meta
+{
+	color: #f2f2f2;
+	background-color: #1b1e28;
+	border-radius: 0 0 6px 6px;
+}
+
+.gist td,
+.gist th
+{
+    border-color: #1b1e28 !important;
+}
+
+.gist .blob-num:hover
+{
+    color: #58d2b0 !important;
+}
+
+.gist .markdown-body h1,
+.gist .markdown-body h2,
+.gist .markdown-body h3,
+.gist .markdown-body h4,
+.gist .markdown-body h5,
+.gist .markdown-body h6
+{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    line-height: 1.25 !important;
+}
+
+.gist .markdown-body p
+{
+    padding-bottom: 10px;
+}
+
+/* DARK MODE */
+
+.dark .gist .markdown-body
+{
+	color: #f2f2f2;
+	background-color: #1b1e28 !important;
+}
+
+.dark .gist td,
+.dark .gist th
+{
+	color: #f2f2f2;
+    background: #1b1e28 !important;
+    border-color: #1b1e28 !important;
+}
+
+.dark .form-control
+{
+	color: #f2f2f2;
+    background: #1b1e28 !important;
+}
+
+.dark .octicon-search
+{ 
+	-webkit-filter: invert(1);
+			filter: invert(1);
+}
