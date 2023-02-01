@@ -93,6 +93,13 @@ p
 }
 ```
 
+### 1.7 Lists
+```
+    font-family: var( --e-global-typography-secondary-font-family );
+    font-size: var( --e-global-typography-secondary-font-size );
+    font-weight: var( --e-global-typography-secondary-font-weight );
+```
+
 ---
 
 ## 2. Color Palette

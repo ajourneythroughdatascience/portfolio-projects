@@ -9,6 +9,8 @@ Website: https://pabloagn.com
 Contact: https://pabloagn.com/contact
 */
 
+/* GITHUB GISTS */
+
 /* ALL OBJECTS */
 /* ------------ */
 /* Gist Background */
@@ -25,13 +27,23 @@ Contact: https://pabloagn.com/contact
 	border-radius: 0 0 6px 6px !important;
 }
 
+.gist .gist-meta a
+{
+	color: var(--e-global-color-primary) !important;
+}
+
+.gist .gist-meta a:hover
+{
+	color: var(--e-global-color-db8558a) !important;
+}
+
 /* BOXES */
 /* ------------ */
 /* Borders & Drop Shadow */
 .gist .gist-file
 {
     border-color: var(--e-global-color-bff6976) !important;
-    filter: drop-shadow(5px 5px 10px var(--e-global-color-2bd078d));
+    filter: drop-shadow(5px 5px 10px var(--e-global-color-2bd078d)) !important;
 }
 
 /* Markdown Padding */
@@ -42,23 +54,23 @@ Contact: https://pabloagn.com/contact
 /* CODE SNIPPETS */
 /* ------------ */
 /* Code Snippet Line Background */
-body .gist .highlight
+.gist .highlight
 {
-    background: var(--e-global-color-19c43af);
+    background: var(--e-global-color-19c43af) !important;
 }
 
 /* Line number */
-body .gist .blob-num,
+.gist .blob-num,
 /* Parenthesis & Brackets */
-body .gist .blob-code-inner,
-body .gist .pl-s1 .pl-s2,
-body .gist .pl-smi,
-body .gist .pl-smp,
-body .gist .pl-stj,
-body .gist .pl-vo,
-body .gist .pl-vpf
+.gist .blob-code-inner,
+.gist .pl-s1 .pl-s2,
+.gist .pl-smi,
+.gist .pl-smp,
+.gist .pl-stj,
+.gist .pl-vo,
+.gist .pl-vpf
 {
-    color: var(--e-global-color-4736028);
+    color: var(--e-global-color-4736028) !important;
 }
 
 /* Line Numbers Hover */
@@ -68,61 +80,61 @@ body .gist .pl-vpf
 }
 
 /* Line Numbers Border */
-body .gist .blob-num
+.gist .blob-num
 {
     border-style: none !important;
 }
 
 /* Comments */
-body .gist .pl-c,
-body .gist .pl-c span
+.gist .pl-c,
+.gist .pl-c span
 {
-    color: var(--e-global-color-b340e16);
-    font-style: italic;
+    color: var(--e-global-color-b340e16) !important;
+    font-style: italic !important;
 }
 
-body .gist .pl-c1,
-body .gist .pl-pds,
+.gist .pl-c1,
+.gist .pl-pds,
 /* Code inside parenthesis */
-body .gist .pl-s1,
-body .gist .pl-s1 .pl-pse .pl-s2,
-body .gist .pl-sv
+.gist .pl-s1,
+.gist .pl-s1 .pl-pse .pl-s2,
+.gist .pl-sv
 {
     color: var(--e-global-color-792f33c) !important;
 }
 
-body .gist .pl-e,
-body .gist .pl-ent,
+.gist .pl-e,
+.gist .pl-ent,
 /* Strings and docstrings */
-body .gist .pl-s,
-body .gist .pl-v
+.gist .pl-s,
+.gist .pl-v
 {
-    color: var(--e-global-color-d0581ac);
+    color: var(--e-global-color-d0581ac) !important;
 }
 
 /* For & Return Statements */
-body .gist .pl-k,
+.gist .pl-k,
 /* Print Statements & Methods */
-body .gist .pl-en,
-body .gist .pl-mdh,
-body .gist .pl-mdr,
-body .gist .pl-ml,
-body .gist .pl-mm,
-body .gist .pl-mo,
-body .gist .pl-mp,
-body .gist .pl-mr,
-body .gist .pl-ms,
-body .gist .pl-s1 .pl-v,
-body .gist .pl-s3
+.gist .pl-en,
+.gist .pl-mdh,
+.gist .pl-mdr,
+.gist .pl-ml,
+.gist .pl-mm,
+.gist .pl-mo,
+.gist .pl-mp,
+.gist .pl-mr,
+.gist .pl-ms,
+.gist .pl-s1 .pl-v,
+.gist .pl-s3
 {
-    color: var(--e-global-color-accent);
+    color: var(--e-global-color-accent) !important;
 }
 
 /* TABULAR DATA */
 /* ------------ */
 /* Headings */
 .gist th,
-/* Body */
+/* */
 .gist td
 {
     border-color: var(--e-global-color-bff6976) !important;
@@ -153,57 +165,78 @@ body .gist .pl-s3
 
 .gist .markdown-body p
 {
-    font-family: inherit;
-    font-size: inherit;
+    font-family: var( --e-global-typography-secondary-font-family ) !important;
+    font-size: var( --e-global-typography-secondary-font-size ) !important;
+    font-weight: var( --e-global-typography-secondary-font-weight ) !important;
+    padding-bottom: 10px !important !important;
 }
 
 .gist .markdown-body li
 {
-    font-family: Merriweather;
-    font-size: 18px;
+    font-family: var( --e-global-typography-secondary-font-family ) !important;
+    font-size: var( --e-global-typography-secondary-font-size ) !important;
+    font-weight: var( --e-global-typography-secondary-font-weight ) !important;
 }
 
 .gist .markdown-body h1
 {
-    font-family: Cormorant Garamond;
-    font-size: 45px !important;
+    font-family: var( --e-global-typography-2d44508-font-family ), Sans-serif !important;
+    font-size: var( --e-global-typography-2d44508-font-size ) !important;
+    font-weight: var( --e-global-typography-2d44508-font-weight ) !important;
+    line-height: var( --e-global-typography-2d44508-line-height ) !important;
+    letter-spacing: var( --e-global-typography-2d44508-letter-spacing ) !important;
+    word-spacing: var( --e-global-typography-2d44508-word-spacing ) !important;
 }
 
 .gist .markdown-body h2
 {
-    font-family: Cormorant Garamond;
-    font-size: 35px !important;
+    font-family: var( --e-global-typography-c76c0ab-font-family ), Sans-serif !important;
+    font-size: var( --e-global-typography-c76c0ab-font-size ) !important;
+    font-weight: var( --e-global-typography-c76c0ab-font-weight ) !important;
+    line-height: var( --e-global-typography-c76c0ab-line-height ) !important;
+    letter-spacing: var( --e-global-typography-c76c0ab-letter-spacing ) !important;
+    word-spacing: var( --e-global-typography-c76c0ab-word-spacing ) !important;
 }
 
 .gist .markdown-body h3
 {
-    font-family: Cormorant Garamond;
-    font-size: 32px !important;
+    font-family: var( --e-global-typography-beaff97-font-family ), Sans-serif !important;
+    font-size: var( --e-global-typography-beaff97-font-size ) !important;
+    font-weight: var( --e-global-typography-beaff97-font-weight ) !important;
+    line-height: var( --e-global-typography-beaff97-line-height ) !important;
+    letter-spacing: var( --e-global-typography-beaff97-letter-spacing ) !important;
+    word-spacing: var( --e-global-typography-beaff97-word-spacing ) !important;
 }
 
 .gist .markdown-body h4
 {
-    font-family: Cormorant Garamond;
-    font-size: 29px !important;
+    font-family: var( --e-global-typography-11b54b3-font-family ), Sans-serif !important;
+    font-size: var( --e-global-typography-11b54b3-font-size ) !important;
+    font-weight: var( --e-global-typography-11b54b3-font-weight ) !important;
+    line-height: var( --e-global-typography-11b54b3-line-height ) !important;
+    letter-spacing: var( --e-global-typography-11b54b3-letter-spacing ) !important;
+    word-spacing: var( --e-global-typography-11b54b3-word-spacing ) !important;
 }
 
 .gist .markdown-body h5
 {
-    font-family: Cormorant Garamond;
-    font-size: 26px !important;
+    font-family: var( --e-global-typography-789f625-font-family ), Sans-serif !important;
+    font-size: var( --e-global-typography-789f625-font-size ) !important;
+    font-weight: var( --e-global-typography-789f625-font-weight ) !important;
+    line-height: var( --e-global-typography-789f625-line-height ) !important;
+    letter-spacing: var( --e-global-typography-789f625-letter-spacing ) !important;
+    word-spacing: var( --e-global-typography-789f625-word-spacing ) !important;
 }
 
-.gist .markdown-body h6
-{
-    font-family: Cormorant Garamond;
-    font-size: 23px !important;
-}
-
-/* Body */
-.gist .markdown-body p
-{
-    padding-bottom: 10px;
-}
+/* Separator (---) */
+.gist .markdown-body hr {
+    height: 1px !important;
+    width: 7% !important;
+    padding: 0 !important;
+    background-color: var(--e-global-color-secondary) !important;
+    border: 0 !important;
+    margin: 50px auto 50px auto !important;
+  }
 
 /* DARK MODE */
 /* ------------ */
@@ -211,31 +244,40 @@ body .gist .pl-s3
 .dark .gist .gist-file
 {
     border-color: var(--e-global-color-primary) !important;
-    filter: drop-shadow( 5px 5px 10px var(--e-global-color-aa09944));
 }
 
 .dark .gist .markdown-body
 {
-	color: var(--e-global-color-primary);
-	background-color: var(--e-global-color-19c43af) !important;
+	color: var(--e-global-color-primary) !important;
+	background-color: var(--e-global-color-secondary) !important;
 }
 
 .dark .gist td,
 .dark .gist th
 {
-    color: var(--e-global-color-primary);
-    background: var(--e-global-color-19c43af) !important;
-    border-color: var(--e-global-color-19c43af) !important;
+    color: var(--e-global-color-primary) !important;
+    background: var(--e-global-color-secondary) !important;
+    border-color: var(--e-global-color-5260874) !important;
 }
 
 .dark .form-control
 {
-    color: var(--e-global-color-primary);
-    background: var(--e-global-color-19c43af) !important;
+    color: var(--e-global-color-primary) !important;
+    background: var(--e-global-color-secondary) !important;
 }
 
 .dark .octicon-search
 { 
-    -webkit-filter: invert(1);
-    filter: invert(1);
+    -webkit-filter: invert(1) !important;
+    filter: invert(1) !important;
 }
+
+.dark .gist .gist-meta
+{
+	background-color: var(--e-global-color-secondary) !important;
+}
+
+/* Separator (---) */
+.dark .gist .markdown-body hr {
+    background-color: var(--e-global-color-primary) !important;
+  }
