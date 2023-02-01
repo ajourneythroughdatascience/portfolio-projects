@@ -1,5 +1,5 @@
 /* 
-Website Formatting for Embedded GitHub Gists
+Website Formatting for Embedded GitHub Gistsborder
 Includes Normal Mode & Dark Mode Toggle
 
 Created on Wed Jan 18 19:23:00 2023
@@ -9,19 +9,47 @@ Website: https://pabloagn.com
 Contact: https://pabloagn.com/contact
 */
 
-/* GITHUB GISTS */
-
+/* ALL OBJECTS */
+/* ------------ */
+/* Gist Background */
 .gist
 {
     background: transparent !important;
 }
 
-body .gist .highlight
+/* Meta Bottom tag */
+.gist .gist-meta
 {
-    background: #1b1e28;
+	color: var(--e-global-color-primary) !important;
+	background-color: var(--e-global-color-19c43af) !important;
+	border-radius: 0 0 6px 6px !important;
 }
 
+/* BOXES */
+/* ------------ */
+/* Borders & Drop Shadow */
+.gist .gist-file
+{
+    border-color: var(--e-global-color-bff6976) !important;
+    filter: drop-shadow(5px 5px 10px var(--e-global-color-2bd078d));
+}
+
+/* Markdown Padding */
+.gist .gist-file article {
+    padding: 30px !important;
+}
+
+/* CODE SNIPPETS */
+/* ------------ */
+/* Code Snippet Line Background */
+body .gist .highlight
+{
+    background: var(--e-global-color-19c43af);
+}
+
+/* Line number */
 body .gist .blob-num,
+/* Parenthesis & Brackets */
 body .gist .blob-code-inner,
 body .gist .pl-s1 .pl-s2,
 body .gist .pl-smi,
@@ -30,52 +58,51 @@ body .gist .pl-stj,
 body .gist .pl-vo,
 body .gist .pl-vpf
 {
-    color: #839496;
+    color: var(--e-global-color-4736028);
 }
 
+/* Line Numbers Hover */
+.gist .blob-num:hover
+{
+    color: var(--e-global-color-accent) !important;
+}
+
+/* Line Numbers Border */
+body .gist .blob-num
+{
+    border-style: none !important;
+}
+
+/* Comments */
 body .gist .pl-c,
 body .gist .pl-c span
 {
-    color: #586e75;
-    font-style: italic;
-}
-
-body .gist .pl-mb
-{
-    color: #2aa198;
-    font-weight: 700;
-}
-
-body .gist .pl-mh .pl-en
-{
-    color: #cb4b16;
-    font-weight: 700;
-}
-
-body .gist .pl-mi
-{
-    color: #859900;
+    color: var(--e-global-color-b340e16);
     font-style: italic;
 }
 
 body .gist .pl-c1,
 body .gist .pl-pds,
+/* Code inside parenthesis */
 body .gist .pl-s1,
 body .gist .pl-s1 .pl-pse .pl-s2,
 body .gist .pl-sv
 {
-    color: #5b7c9e !important;
+    color: var(--e-global-color-792f33c) !important;
 }
 
 body .gist .pl-e,
 body .gist .pl-ent,
+/* Strings and docstrings */
 body .gist .pl-s,
 body .gist .pl-v
 {
-    color: #c0c0c0;
+    color: var(--e-global-color-d0581ac);
 }
 
+/* For & Return Statements */
 body .gist .pl-k,
+/* Print Statements & Methods */
 body .gist .pl-en,
 body .gist .pl-mdh,
 body .gist .pl-mdr,
@@ -88,70 +115,28 @@ body .gist .pl-ms,
 body .gist .pl-s1 .pl-v,
 body .gist .pl-s3
 {
-    color: #58d2b0;
+    color: var(--e-global-color-accent);
 }
 
-body .gist .pl-mh,
-body .gist .pl-sc,
-body .gist .pl-sr .pl-cce
+/* TABULAR DATA */
+/* ------------ */
+/* Headings */
+.gist th,
+/* Body */
+.gist td
 {
-    color: #cb4b16;
+    border-color: var(--e-global-color-bff6976) !important;
 }
 
-body .gist .pl-mq,
-body .gist .highlight-source-css .pl-k
-{
-    color: #586e75;
-}
-
-body .gist .pl-sr,
-body .gist .pl-sr .pl-sra,
-body .gist .pl-sr .pl-sre,
-body .gist .pl-src
-{
-    color: #d30102;
-}
-
-body .gist .pl-st,
-body .gist .highlight-source-c\+\+ .pl-s
-{
-    color: #dc322f;
-}
-
-body .gist .pl-mi1,
-body .gist .pl-mdht
-{
-    color: #839496;
-    background: rgba(0, 64, 0, .5);
-}
-
-body .gist .pl-md,
-body .gist .pl-mdhf,
-body .gist .pl-id,
-body .gist .pl-ii
-{
-    color: #839496;
-    background: rgba(64, 0, 0, .5);
-}
-
-body .gist .gist-meta
-{
-	color: #f2f2f2;
-	background-color: #1b1e28;
-	border-radius: 0 0 6px 6px;
-}
-
-.gist td,
+/* Headings Background Color */
 .gist th
 {
-    border-color: #1b1e28 !important;
+    background-color: var(--e-global-color-2ed4fd3) !important;
 }
 
-.gist .blob-num:hover
-{
-    color: #58d2b0 !important;
-}
-
+/* MARKDOWN */
+/* ------------ */
+/* Headings */
 .gist .markdown-body h1,
 .gist .markdown-body h2,
 .gist .markdown-body h3,
@@ -160,41 +145,97 @@ body .gist .gist-meta
 .gist .markdown-body h6
 {
     margin-top: 20px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 10px !important;
     padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 10 !important;
     line-height: 1.25 !important;
 }
 
+.gist .markdown-body p
+{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.gist .markdown-body li
+{
+    font-family: Merriweather;
+    font-size: 18px;
+}
+
+.gist .markdown-body h1
+{
+    font-family: Cormorant Garamond;
+    font-size: 45px !important;
+}
+
+.gist .markdown-body h2
+{
+    font-family: Cormorant Garamond;
+    font-size: 35px !important;
+}
+
+.gist .markdown-body h3
+{
+    font-family: Cormorant Garamond;
+    font-size: 32px !important;
+}
+
+.gist .markdown-body h4
+{
+    font-family: Cormorant Garamond;
+    font-size: 29px !important;
+}
+
+.gist .markdown-body h5
+{
+    font-family: Cormorant Garamond;
+    font-size: 26px !important;
+}
+
+.gist .markdown-body h6
+{
+    font-family: Cormorant Garamond;
+    font-size: 23px !important;
+}
+
+/* Body */
 .gist .markdown-body p
 {
     padding-bottom: 10px;
 }
 
 /* DARK MODE */
+/* ------------ */
+/* Boxes Dark */
+.dark .gist .gist-file
+{
+    border-color: var(--e-global-color-primary) !important;
+    filter: drop-shadow( 5px 5px 10px var(--e-global-color-aa09944));
+}
 
 .dark .gist .markdown-body
 {
-	color: #f2f2f2;
-	background-color: #1b1e28 !important;
+	color: var(--e-global-color-primary);
+	background-color: var(--e-global-color-19c43af) !important;
 }
 
 .dark .gist td,
 .dark .gist th
 {
-	color: #f2f2f2;
-    background: #1b1e28 !important;
-    border-color: #1b1e28 !important;
+    color: var(--e-global-color-primary);
+    background: var(--e-global-color-19c43af) !important;
+    border-color: var(--e-global-color-19c43af) !important;
 }
 
 .dark .form-control
 {
-	color: #f2f2f2;
-    background: #1b1e28 !important;
+    color: var(--e-global-color-primary);
+    background: var(--e-global-color-19c43af) !important;
 }
 
 .dark .octicon-search
 { 
-	-webkit-filter: invert(1);
-			filter: invert(1);
+    -webkit-filter: invert(1);
+    filter: invert(1);
 }
