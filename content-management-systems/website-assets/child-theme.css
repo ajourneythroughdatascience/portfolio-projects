@@ -5,8 +5,8 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1675220752
-Updated: 2023-01-31 21:05:52
+Version: 1.1.1675300066
+Updated: 2023-02-01 19:07:46
 
 */
 
@@ -803,6 +803,26 @@ html, body {
 .dark .elementor-6146 .elementor-element.elementor-element-aab7207 .elementor-pagination .page-numbers.current, .dark .elementor-6146 .elementor-element.elementor-element-aab7207 .elementor-pagination .page-numbers:not(:last-child):hover, .dark .elementor-6146 .elementor-element.elementor-element-aab7207 .elementor-pagination .page-numbers:not(:first-child):hover, .dark .elementor-6146 .elementor-element.elementor-element-aab7207 .elementor-pagination .page-numbers:not(.dots):hover {
     color: var( --e-global-color-db8558a );
 }
+.elementor-7 .elementor-element.elementor-element-5511907 .elementor-button .elementor-button-text {
+    width: 2px;
+    display: block;
+    background-color: current olor;
+    position: relative;
+    top: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 8px;
+    -webkit-animation: 1.2s ease infinite wheel-up-down;
+    animation: 1.2s ease infinite wheel-up-down;
+}
+.elementor-7 .elementor-element.elementor-element-5511907 .elementor-button .elementor-button-icon {
+    display: none;
+}
+.elementor-7 .elementor-element.elementor-element-5511907 .elementor-button a:focus {
+    outline: none;
+}
 .elementor-1943 .elementor-element.elementor-element-e45577a, .elementor-3493 .elementor-element.elementor-element-d45994b, .elementor-2291 .elementor-element.elementor-element-f454c34 {
     width: 50px;
     right: 30px;
@@ -1291,6 +1311,9 @@ body.dark {
 .gist .gist-file article {
     padding: 30px !important;
 }
+.gist .blob-code-inner {
+    font-family: JetBrains Mono !important;
+}
 .gist .highlight {
     background-color: var(--e-global-color-19c43af) !important;
 }
@@ -1326,59 +1349,49 @@ body.dark {
     margin-top: 20px !important;
     margin-bottom: 10px !important;
     padding-top: 10px !important;
-    padding-bottom: 10 !important;
+    padding-bottom: 10px !important;
     line-height: 1.25 !important;
 }
 .gist .markdown-body p {
     padding-bottom: 10px !important;
-    font-weight: var(--e-global-typography-secondary-font-weight) !important;
-    font-size: var(--e-global-typography-secondary-font-size) !important;
-    font-family: var(--e-global-typography-secondary-font-family) !important;
+    font-weight: var( --e-global-typography-secondary-font-weight ) !important;
+    font-size: var( --e-global-typography-secondary-font-size ) !important;
+    font-family: var( --e-global-typography-secondary-font-family ) !important;
 }
 .gist .markdown-body li {
-    font-weight: var(--e-global-typography-secondary-font-weight) !important;
-    font-size: var(--e-global-typography-secondary-font-size) !important;
-    font-family: var(--e-global-typography-secondary-font-family) !important;
+    font-weight: var( --e-global-typography-secondary-font-weight ) !important;
+    font-size: var( --e-global-typography-secondary-font-size ) !important;
+    font-family: var( --e-global-typography-secondary-font-family ) !important;
 }
 .gist .markdown-body h1 {
-    font-weight: var(--e-global-typography-2d44508-font-weight) !important;
-    font-size: var(--e-global-typography-2d44508-font-size) !important;
-    line-height: var(--e-global-typography-2d44508-line-height) !important;
-    font-family: var(--e-global-typography-2d44508-font-family), Sans-serif !important;
-    letter-spacing: var(--e-global-typography-2d44508-letter-spacing) !important;
-    word-spacing: var(--e-global-typography-2d44508-word-spacing) !important;
+    font-weight: var( --e-global-typography-2d44508-font-weight ) !important;
+    font-size: var( --e-global-typography-2d44508-font-size ) !important;
+    line-height: var( --e-global-typography-2d44508-line-height ) !important;
+    font-family: var( --e-global-typography-2d44508-font-family ), Sans-serif !important;
 }
 .gist .markdown-body h2 {
-    font-weight: var(--e-global-typography-c76c0ab-font-weight) !important;
-    font-size: var(--e-global-typography-c76c0ab-font-size) !important;
-    line-height: var(--e-global-typography-c76c0ab-line-height) !important;
-    font-family: var(--e-global-typography-c76c0ab-font-family), Sans-serif !important;
-    letter-spacing: var(--e-global-typography-c76c0ab-letter-spacing) !important;
-    word-spacing: var(--e-global-typography-c76c0ab-word-spacing) !important;
+    font-weight: var( --e-global-typography-c76c0ab-font-weight ) !important;
+    font-size: var( --e-global-typography-c76c0ab-font-size ) !important;
+    line-height: var( --e-global-typography-c76c0ab-line-height ) !important;
+    font-family: var( --e-global-typography-c76c0ab-font-family ), Sans-serif !important;
 }
 .gist .markdown-body h3 {
-    font-weight: var(--e-global-typography-beaff97-font-weight) !important;
-    font-size: var(--e-global-typography-beaff97-font-size) !important;
-    line-height: var(--e-global-typography-beaff97-line-height) !important;
-    font-family: var(--e-global-typography-beaff97-font-family), Sans-serif !important;
-    letter-spacing: var(--e-global-typography-beaff97-letter-spacing) !important;
-    word-spacing: var(--e-global-typography-beaff97-word-spacing) !important;
+    font-weight: var( --e-global-typography-beaff97-font-weight ) !important;
+    font-size: var( --e-global-typography-beaff97-font-size ) !important;
+    line-height: var( --e-global-typography-beaff97-line-height ) !important;
+    font-family: var( --e-global-typography-beaff97-font-family ), Sans-serif !important;
 }
 .gist .markdown-body h4 {
-    font-weight: var(--e-global-typography-11b54b3-font-weight) !important;
-    font-size: var(--e-global-typography-11b54b3-font-size) !important;
-    line-height: var(--e-global-typography-11b54b3-line-height) !important;
-    font-family: var(--e-global-typography-11b54b3-font-family), Sans-serif !important;
-    letter-spacing: var(--e-global-typography-11b54b3-letter-spacing) !important;
-    word-spacing: var(--e-global-typography-11b54b3-word-spacing) !important;
+    font-weight: var( --e-global-typography-11b54b3-font-weight ) !important;
+    font-size: var( --e-global-typography-11b54b3-font-size ) !important;
+    line-height: var( --e-global-typography-11b54b3-line-height ) !important;
+    font-family: var( --e-global-typography-11b54b3-font-family ), Sans-serif !important;
 }
 .gist .markdown-body h5 {
-    font-weight: var(--e-global-typography-789f625-font-weight) !important;
-    font-size: var(--e-global-typography-789f625-font-size) !important;
-    line-height: var(--e-global-typography-789f625-line-height) !important;
-    font-family: var(--e-global-typography-789f625-font-family), Sans-serif !important;
-    letter-spacing: var(--e-global-typography-789f625-letter-spacing) !important;
-    word-spacing: var(--e-global-typography-789f625-word-spacing) !important;
+    font-weight: var( --e-global-typography-789f625-font-weight ) !important;
+    font-size: var( --e-global-typography-789f625-font-size ) !important;
+    line-height: var( --e-global-typography-789f625-line-height ) !important;
+    font-family: var( --e-global-typography-789f625-font-family ), Sans-serif !important;
 }
 .gist .markdown-body hr {
     width: 7% !important;
