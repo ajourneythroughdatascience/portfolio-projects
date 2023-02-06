@@ -5,8 +5,8 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1675398345
-Updated: 2023-02-02 22:25:45
+Version: 1.1.1675710407
+Updated: 2023-02-06 13:06:47
 
 */
 
@@ -1290,6 +1290,15 @@ body.dark {
 .gist {
     background-color: transparent !important;
 }
+.gist .gist-data {
+    background-color: var(--e-global-color-primary) !important;
+}
+.gist .blob-filter {
+    background-color: var(--e-global-color-primary) !important;
+}
+.dark .gist .blob-filter {
+    background-color: var(--e-global-color-secondary) !important;
+}
 .gist .gist-meta {
     background-color: var(--e-global-color-19c43af) !important;
     color: var(--e-global-color-primary) !important;
@@ -1312,7 +1321,8 @@ body.dark {
     padding: 30px !important;
 }
 .gist .blob-code-inner {
-    font-family: JetBrains Mono !important;
+    font-weight: 500 !important;
+    font-family: Fira Code !important;
 }
 .gist .highlight {
     background-color: var(--e-global-color-primary) !important;
@@ -1334,10 +1344,10 @@ body.dark {
     color: var(--e-global-color-792f33c) !important;
 }
 .gist .pl-e, .gist .pl-ent, .gist .pl-s, .gist .pl-v {
-    color: var(--e-global-color-d0581ac) !important;
+    color: var(--e-global-color-text) !important;
 }
 .gist .pl-k, .gist .pl-en, .gist .pl-mdh, .gist .pl-mdr, .gist .pl-ml, .gist .pl-mm, .gist .pl-mo, .gist .pl-mp, .gist .pl-mr, .gist .pl-ms, .gist .pl-s1 .pl-v, .gist .pl-s3 {
-    color: var(--e-global-color-accent) !important;
+    color: #32ae85 !important;
 }
 .gist th, .gist td {
     border-color: var(--e-global-color-bff6976) !important;
@@ -1430,6 +1440,34 @@ body.dark {
 .dark .gist .gist-data {
     background-color: transparent !important;
 }
+.dark .gist .pl-e, .gist .pl-ent, .gist .pl-s, .gist .pl-v {
+    color: var(--e-global-color-b340e16) !important;
+}
+.dark .katex {
+    color: var(--e-global-color-secondary) !important;
+}
+.pb-12 {
+    padding-bottom: 0 !important;
+}
+.dark .px-3, .dark .py-2 {
+    color: var(--e-global-color-secondary) !important;
+}
+.border-gray-300 {
+    -moz-border-radius: 0 0 10px 10px !important;
+    -webkit-border-radius: 0 0 10px 10px !important;
+    -o-border-radius: 0 0 10px 10px !important;
+    border-radius: 0 0 10px 10px !important;
+    border-width: 1px 1px 1px 1px !important;
+    border-style: solid !important;
+}
+.flex-1 {
+    -moz-border-radius: 10px 10px 0 0 !important;
+    -webkit-border-radius: 10px 10px 0 0 !important;
+    -o-border-radius: 10px 10px 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
+    border-width: 1px 1px 1px 1px !important;
+    border-style: solid !important;
+}
 .elementor-1554 .elementor-element.elementor-element-60fb7a4:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-1554 .elementor-element.elementor-element-60fb7a4 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-repeat: repeat-y;
     background-position: center center;
@@ -1469,4 +1507,29 @@ body.dark {
 }
 .elementor-1554 .elementor-element.elementor-element-b372ba3 a:hover {
     color: var( --e-global-color-db8558a ) !important;
+}
+revo-grid[theme="compact"] revogr-header .rgHeaderCell.sortable {
+    color: var( --e-global-color-secondary ) !important;
+}
+.dark revo-grid[theme="compact"] revogr-header .rgHeaderCell.sortable {
+    color: var( --e-global-color-secondary ) !important;
+}
+.elementor-2205 .elementor-element.elementor-element-5aa15c6 kbd, .elementor-5661 .elementor-element.elementor-element-cf6f763 kbd, .elementor-5252 .elementor-element.elementor-element-a3712d7 kbd, .elementor-5243 .elementor-element.elementor-element-aa30dcc kbd {
+    background-color: var(--e-global-color-a7a0f0d);
+    color: var(--e-global-color-secondary);
+    font-size: 14px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    border-color: var(--e-global-color-3b68caa);
+    border-style: solid;
+    padding: 1px 5px;
+}
+.dark .elementor-2205 .elementor-element.elementor-element-5aa15c6 kbd, .dark .elementor-5661 .elementor-element.elementor-element-cf6f763 kbd, .dark .elementor-5252 .elementor-element.elementor-element-a3712d7 kbd, .dark .elementor-5243 .elementor-element.elementor-element-aa30dcc kbd {
+    font-weight: 400;
+    background-color: var(--e-global-color-5260874);
+    color: var(--e-global-color-primary);
+    border-color: var(--e-global-color-3b68caa);
 }
