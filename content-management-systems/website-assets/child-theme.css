@@ -5,8 +5,8 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1675710407
-Updated: 2023-02-06 13:06:47
+Version: 1.1.1675733837
+Updated: 2023-02-06 19:37:17
 
 */
 
@@ -15,20 +15,21 @@ html, body {
     overflow-x: hidden !important;
 }
 .elementor-2205 .elementor-element.elementor-element-5aa15c6 h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.elementor-2205 .elementor-element.elementor-element-5aa15c6 h2 {
     margin-top: 80px;
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--e-global-color-secondary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-5aa15c6 h2 {
+.dark .elementor-2205 .elementor-element.elementor-element-5aa15c6 h1 {
     border-bottom: 1px solid var(--e-global-color-primary);
 }
-.elementor-2205 .elementor-element.elementor-element-5aa15c6 h3 {
+.elementor-2205 .elementor-element.elementor-element-5aa15c6 h2 {
     margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.elementor-2205 .elementor-element.elementor-element-5aa15c6 h3 {
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 .elementor-2205 .elementor-element.elementor-element-5aa15c6 h4 {
@@ -161,28 +162,33 @@ html, body {
     color: var(--e-global-color-primary);
 }
 .elementor-5243 .elementor-element.elementor-element-aa30dcc h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.elementor-5243 .elementor-element.elementor-element-aa30dcc h2 {
     margin-top: 80px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var( --e-global-color-secondary );
+    border-bottom: 1px solid var(--e-global-color-secondary);
 }
-.dark .elementor-5243 .elementor-element.elementor-element-aa30dcc h2 {
-    border-bottom: 1px solid var( --e-global-color-primary);
+.dark .elementor-5243 .elementor-element.elementor-element-aa30dcc h1 {
+    border-bottom: 1px solid var(--e-global-color-primary);
 }
-.elementor-5243 .elementor-element.elementor-element-aa30dcc h3 {
+.elementor-5243 .elementor-element.elementor-element-aa30dcc h2 {
     margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.elementor-5243 .elementor-element.elementor-element-aa30dcc h3 {
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 .elementor-5243 .elementor-element.elementor-element-aa30dcc h4 {
     margin-top: 30px;
     margin-bottom: 10px;
 }
-.elementor-5243 .elementor-element.elementor-element-aa30dcc li {
-    margin-bottom: 10px;
+.elementor-5243 .elementor-element.elementor-element-aa30dcc h5, .elementor-2205 .elementor-element.elementor-element-5aa15c6 h5, .elementor-5661 .elementor-element.elementor-element-cf6f763 h5, .elementor-5252 .elementor-element.elementor-element-a3712d7 h5 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.elementor-5243 .elementor-element.elementor-element-aa30dcc li, .elementor-2205 .elementor-element.elementor-element-5aa15c6 li, .elementor-5661 .elementor-element.elementor-element-cf6f763 li, .elementor-5252 .elementor-element.elementor-element-a3712d7 h5 {
+    margin-bottom: 4px;
 }
 .elementor-5243 .elementor-element.elementor-element-aa30dcc .wp-element-caption {
     font-style: italic;
@@ -301,20 +307,21 @@ html, body {
     color: var( --e-global-color-primary );
 }
 .elementor-5252 .elementor-element.elementor-element-a3712d7 h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.elementor-5252 .elementor-element.elementor-element-a3712d7 h2 {
     margin-top: 80px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var( --e-global-color-secondary );
+    border-bottom: 1px solid var(--e-global-color-secondary);
 }
-.dark .elementor-5252 .elementor-element.elementor-element-a3712d7 h2 {
-    border-bottom: 1px solid var( --e-global-color-primary);
+.dark .elementor-5252 .elementor-element.elementor-element-a3712d7 h1 {
+    border-bottom: 1px solid var(--e-global-color-primary);
 }
-.elementor-5252 .elementor-element.elementor-element-a3712d7 h3 {
+.elementor-5252 .elementor-element.elementor-element-a3712d7 h2 {
     margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.elementor-5252 .elementor-element.elementor-element-a3712d7 h3 {
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 .elementor-5252 .elementor-element.elementor-element-a3712d7 h4 {
@@ -441,20 +448,21 @@ html, body {
     color: var( --e-global-color-primary );
 }
 .elementor-5661 .elementor-element.elementor-element-cf6f763 h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.elementor-5661 .elementor-element.elementor-element-cf6f763 h2 {
     margin-top: 80px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var( --e-global-color-secondary );
+    border-bottom: 1px solid var(--e-global-color-secondary);
 }
-.dark .elementor-5661 .elementor-element.elementor-element-cf6f763 h2 {
-    border-bottom: 1px solid var( --e-global-color-primary);
+.dark .elementor-5661 .elementor-element.elementor-element-cf6f763 h1 {
+    border-bottom: 1px solid var(--e-global-color-primary);
 }
-.elementor-5661 .elementor-element.elementor-element-cf6f763 h3 {
+.elementor-5661 .elementor-element.elementor-element-cf6f763 h2 {
     margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.elementor-5661 .elementor-element.elementor-element-cf6f763 h3 {
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 .elementor-5661 .elementor-element.elementor-element-cf6f763 h4 {
