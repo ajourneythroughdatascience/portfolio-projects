@@ -5,8 +5,8 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1675733837
-Updated: 2023-02-06 19:37:17
+Version: 1.1.1676225063
+Updated: 2023-02-12 12:04:23
 
 */
 
@@ -27,7 +27,6 @@ html, body {
     margin-top: 40px;
     margin-bottom: 10px;
 }
-
 .elementor-2205 .elementor-element.elementor-element-5aa15c6 h3 {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -121,13 +120,19 @@ html, body {
     --divider-border-style: solid;
     --divider-color: var(--e-global-color-primary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn {
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn,
+.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon
+{
     background-color: var(--e-global-color-primary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn__icon i {
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn__icon i,
+.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon i
+{
     color: var(--e-global-color-secondary) !important;
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover {
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover,
+.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon:hover
+{
     background-color: var(--e-global-color-primary);
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -138,7 +143,9 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i {
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i,
+.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon:hover i
+{
     color: var(--e-global-color-db8558a);
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -174,7 +181,6 @@ html, body {
     margin-top: 40px;
     margin-bottom: 10px;
 }
-
 .elementor-5243 .elementor-element.elementor-element-aa30dcc h3 {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -270,13 +276,19 @@ html, body {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn {
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn,
+.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon
+{
     background-color: var( --e-global-color-primary );
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i {
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i,
+.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon i
+{
     color: var( --e-global-color-secondary );
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover {
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover,
+.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon:hover
+{
     background-color: var( --e-global-color-primary );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -287,7 +299,9 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i {
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i,
+.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon:hover i
+{
     color: var( --e-global-color-db8558a );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -319,7 +333,6 @@ html, body {
     margin-top: 40px;
     margin-bottom: 10px;
 }
-
 .elementor-5252 .elementor-element.elementor-element-a3712d7 h3 {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -411,13 +424,22 @@ html, body {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn, .dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn, .dark .elementor-5661 .elementor-element.elementor-element-96a82b2 .elementor-share-btn {
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn,
+.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon,
+.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon
+{
     background-color: var( --e-global-color-primary );
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i, .dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i, .dark .elementor-5661 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i {
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i,
+.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon i,
+.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon i
+{
     color: var( --e-global-color-secondary );
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover, .dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover, .dark .elementor-5661 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover {
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover,
+.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon:hover,
+.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon:hover
+{
     background-color: var( --e-global-color-primary );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -428,7 +450,10 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i, .dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i, .dark .elementor-5661 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i {
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i,
+.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon:hover i,
+.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon:hover i
+{
     color: var( --e-global-color-db8558a );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -460,7 +485,6 @@ html, body {
     margin-top: 40px;
     margin-bottom: 10px;
 }
-
 .elementor-5661 .elementor-element.elementor-element-cf6f763 h3 {
     margin-top: 30px;
     margin-bottom: 10px;
