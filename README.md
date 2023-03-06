@@ -8,17 +8,14 @@ Here you will find a list of all my projects & collaborations. Projects are orde
 Keep in mind that this section refers to my personal portfolio; thus projects included are not explained step-by-step. If you’d like to build your own project using guidance, you can head to the [guided-projects](https://github.com/pabloagn/guided-projects) repo.
 
 ## Table of Contents
-1. [Network & Servers](https://github.com/pabloagn/documentation/tree/master/network-and-servers)
-	1. [QNAP NAS](https://github.com/pabloagn/documentation/blob/master/network-and-servers/NAS.md)
-	2. [WinSCP](https://github.com/pabloagn/documentation/blob/master/network-and-servers/WinSCP.md)
-2. [Programming Languages](https://github.com/pabloagn/documentation/tree/master/programming-languages)
-	1. [Julia](https://github.com/pabloagn/documentation/blob/master/programming-languages/julia.md)
-3. [Terminal](https://github.com/pabloagn/documentation/tree/master/terminal)
-	1. [PowerShell 7](https://github.com/pabloagn/documentation/blob/master/terminal/powershell-7.md)
-4. [Visualization & Graphic Design](https://github.com/pabloagn/documentation/tree/master/visualization-and-graphic-design)
-	1. [GIMP](https://github.com/pabloagn/documentation/blob/master/visualization-and-graphic-design/GIMP.md)
-5. [Writing & Formatting](https://github.com/pabloagn/documentation/tree/master/writing-and-formatting)
-	1. [Markdown](https://github.com/pabloagn/documentation/blob/master/writing-and-formatting/markdown.md)
+1. [Computer Science](https://github.com/pabloagn/portfolio-projects/tree/master/computer-science)
+	1. [A Task Manager Written in Rust](https://github.com/pabloagn/portfolio-projects/blob/master/computer-science/a-task-manager-written-in-rust/a-task-manager-written-in-rust.md)
+2. [Content Management Systems](https://github.com/pabloagn/portfolio-projects/tree/master/content-management-systems)
+	1. [Website Assets](https://github.com/pabloagn/portfolio-projects/tree/master/content-management-systems/website-assets)
+3. [Machine Learning](https://github.com/pabloagn/portfolio-projects/tree/master/machine-learning)
+	1. [Sentiment Analysis With Python](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/sentiment-analysis-with-python.md)
+4. [Probability & Statistics](https://github.com/pabloagn/portfolio-projects/tree/master/probability-and-statistics)
+	1. [Markov Chains Toolbox](https://github.com/pabloagn/portfolio-projects/blob/master/probability-and-statistics/markov-chains-toolbox/markov-chains-toolbox.md)
 
 ## Website
 You can also directly consult the [Portfolio Projects](https://pabloagn.com/portfolio/) page on my website.
