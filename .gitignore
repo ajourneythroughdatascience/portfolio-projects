@@ -10,8 +10,8 @@
 **/__pycache__/
 **/*.py[cod]
 
-# Ignore all virtual envs (termination venv)
-**/*_venv/
+# Ignore all virtual envs (termination env)
+**/*_env/
 
 # Ignore .obsidian folder on main folder
 .obsidian/

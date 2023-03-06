@@ -1,0 +1,7 @@
+polars
+numpy
+matplotlib
+seaborn
+nltk
+scikit-learn
+spyder-kernels

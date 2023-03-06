@@ -1,0 +1,5 @@
+# .gitignore file for: portfolio-project - sentiment-analysis-with-python
+
+## Ignore datasets folder
+datasets/
+
