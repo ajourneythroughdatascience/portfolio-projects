@@ -1,0 +1,14 @@
+{
+    "input_method":"D",
+  	"rdir": "../datasets",
+	"inputdir": "../inputs",
+	"sample_file": "sample_us.tsv",
+	"source_url":"source.txt",
+	"complete_file": "all_reviews",
+	"target_id_col":"review_id",
+	"agg_cols":["marketplace", "product_category","product_id"],
+	"rating_col":"star_rating",
+	"text_col": "review_body",
+	"model": "ROB",
+	"dataset":["amazon_reviews_us_Watches_v1_00.tsv.gz"]
+}

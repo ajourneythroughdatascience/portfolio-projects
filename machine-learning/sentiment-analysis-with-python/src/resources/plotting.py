@@ -17,7 +17,7 @@ Part of Portfolio Project: sentiment-analysis-in-python
 
 # Internal modules
 # --------------------------------------------------
-from get_parameters import getParameters
+from .get_parameters import getParameters
 
 # Data manipulation
 # --------------------------------------------------
@@ -40,7 +40,43 @@ import warnings
 
 # Plotting
 # --------------------------------------------------
+
+# Before anything else, delete the Matplotlib
+# font cache directory if it exists, to ensure
+# custom font propper loading
+try:
+    shutil.rmtree(matplotlib.get_cachedir())
+except FileNotFoundError:
+    pass
+
+# Define R ggplot style
 plt.style.use('ggplot')
 
+# Define main color as hex
+color_main = '#1a1a1a'
+
+# Define title & label padding
+text_padding = 18
+
+# Define font sizes
+title_font_size = 17
+label_font_size = 14
+
+# Define rc params
+plt.rcParams['figure.figsize'] = [14.0, 7.0]
+plt.rcParams['figure.dpi'] = 300
+plt.rcParams['grid.color'] = 'k'
+plt.rcParams['grid.linestyle'] = ':'
+plt.rcParams['grid.linewidth'] = 0.5
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Lora']
+
 def plotResults():
+
+    
+
     return None
+
+# Call main function
+if __name__ == '__main__':
+    plotResults()

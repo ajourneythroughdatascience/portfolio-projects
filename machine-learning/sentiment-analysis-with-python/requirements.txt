@@ -1,7 +1,12 @@
 polars
+pandas
 numpy
 matplotlib
 seaborn
 nltk
+torch
+transformers
+textblob
 scikit-learn
 spyder-kernels
+pyarrow

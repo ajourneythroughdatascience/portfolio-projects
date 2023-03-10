@@ -25,19 +25,27 @@ import json
 
 def getParameters(**kwargs):
     
-    f = open('parameters.json', 'r')
+    f = open('resources/parameters.json', 'r')
     
     source = json.loads(f.read())
 
     param_dict = dict(
+        input_method = source['input_method'],
         rdir = source['rdir'],
-        sample_file = source['sample_file'],
-        complete_file = source['complete_file'],
+        inputdir = source['inputdir'],
         source_url = source['source_url'],
-        cols = source['cols'],
-        model = source['model']
+        target_id_col = source['target_id_col'],
+        agg_cols = source['agg_cols'],
+        rating_col = source['rating_col'],
+        text_col = source['text_col'],
+        model = source['model'],
+        dataset = source['dataset']
         )
     
     f.close()
     
     return param_dict
+
+# Call main function
+if __name__ == '__main__':
+    getParameters()

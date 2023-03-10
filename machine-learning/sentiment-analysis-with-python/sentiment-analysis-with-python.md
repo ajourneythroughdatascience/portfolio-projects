@@ -29,13 +29,21 @@ I'll be using Python scripts which can be found in the [Portfolio Project Repo]
 # Preparing the environment
 
 # Defining a parameters JSON file
+Input method can be `"Download"` or `"Read"`.
 
-# Performing exploratory analysis on sample
 
 # Preprocessing the complete data set
+- A complete data set can be in the form of a .gz file, or a .tsv file.
+- A complete data set must have at least the following columns specified in the JSON parameters file:
+	- 
+- If multiple datasets are provided in different files, they will need to have the same number of columns with the same column names
+- 
+
 
 # VADER Model
 https://www.youtube.com/watch?v=QpzMWQvxXWk
+https://www.youtube.com/watch?v=Ew72EAgM7FM
+https://towardsdatascience.com/the-most-favorable-pre-trained-sentiment-classifiers-in-python-9107c06442c6
 https://www.google.com/search?q=beautiful+python+gui&tbm=isch&client=firefox-b-d&hl=en&sa=X&ved=2ahUKEwja2KT4s779AhX-2skDHWv5B2sQrNwCKAB6BQgBEPQB&biw=1920&bih=919#imgrc=IY1ipTmyw464FM&imgdii=Pu6U445c1OHxsM
 
 Library:
