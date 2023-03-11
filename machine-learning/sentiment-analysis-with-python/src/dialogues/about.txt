@@ -1,0 +1,13 @@
++ Project Information
+---------------------------------------------------------------------------
+- Application Name: Sentiment Analysis 1.0
+- Author: Pablo Aguirre
+- Contact: main@pabloagn.com
+- GitHub: https://github.com/pabloagn
+- Last Updated: 15/Mar/2023
+
++ Requirements Information
+---------------------------------------------------------------------------
+- Python Version 3.9.0
+- Lorem
+- Ipsum

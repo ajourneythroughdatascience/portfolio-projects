@@ -10,3 +10,6 @@ textblob
 scikit-learn
 spyder-kernels
 pyarrow
+tk
+customtkinter
+pyinstaller

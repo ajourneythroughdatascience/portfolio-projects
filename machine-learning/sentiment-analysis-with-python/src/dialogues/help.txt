@@ -1,0 +1,28 @@
+To run any Sentiment Analysis model, follow the steps below:
+
++ Select Model
+---------------------------------------------------------------------------
+- VADER
+- RoBERTa - Hugging Face
+- TextBlob
+- Happy Transformer
+
++ Select operation mode
+---------------------------------------------------------------------------
+- Download: Will download target URLs defined in the FILE.tsv or FILE.tsv.gz
+- Load: Will load a pre-downloaded set of data sets.
+
++ Select Input Path
+---------------------------------------------------------------------------
+- Where executable wil look for the target data sets
+
++ Select Output Path
+---------------------------------------------------------------------------
+- Where results will be saved
+
++ Select format of results
+---------------------------------------------------------------------------
+- Complete set
+- Visual set
+- Report-style set
+- Informative set

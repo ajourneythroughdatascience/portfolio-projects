@@ -20,9 +20,46 @@ Sentiment Analysis with Python implements 4 different pretrained NLP models for 
 	- [Models included]()
 	- [Basic features]()
 - [User manual]()
-	- [Required preformatting & schema prerequisites]()
+	- [Dependencies & requirements]()
+	- [Preformatting & schema prerequisites]()
 	- [Using the GUI]()
 	- [Exporting the results]()
 	- [Interpreting the Results]()
 
 ---
+## Dependencies & requirements
+
+### Python version
+Since as of the creation of this project, `PyTorch` only supports `Python` versions < 3.9.9, the requirement for this project is `Python 3.9.0`.
+
+### Dependencies
+The complete list of dependencies can be found on `requirements.txt`:
+- `polars`
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `nltk`
+- `torch`
+- `transformers`
+- `textblob`
+- `scikit-learn`
+- `spyder-kernels`
+- `pyarrow`
+- `tkinter`
+- `customtkinter`
+- `pyinstaller`
+
+- **Source Documentation and Complex Example:**
+- https://github.com/TomSchimansky/CustomTkinter/blob/master/examples/complex_example.py
+- https://raw.githubusercontent.com/TomSchimansky/CustomTkinter/master/documentation_images/complex_example_dark_Windows.png
+- https://github.com/TomSchimansky/CustomTkinter/wiki
+- https://www.youtube.com/watch?v=Ew9dsDDy7pk&t=183s
+- https://www.youtube.com/watch?v=NI9LXzo0UY0
+
+- **Formatting:**
+- https://github.com/TomSchimansky/CustomTkinter/wiki/Themes
+
+- **Packaging:**
+- https://www.youtube.com/watch?v=QWqxRchawZY
+- https://github.com/TomSchimansky/CustomTkinter/wiki/Packaging

@@ -1,5 +1,5 @@
 {
-    "input_method":"D",
+    "input_method":["Download", "Read"],
   	"rdir": "../datasets",
 	"inputdir": "../inputs",
 	"sample_file": "sample_us.tsv",
@@ -9,6 +9,6 @@
 	"agg_cols":["marketplace", "product_category","product_id"],
 	"rating_col":"star_rating",
 	"text_col": "review_body",
-	"model": "ROB",
+	"model": ["VADER", "RoBERTa"],
 	"dataset":["amazon_reviews_us_Watches_v1_00.tsv.gz"]
 }

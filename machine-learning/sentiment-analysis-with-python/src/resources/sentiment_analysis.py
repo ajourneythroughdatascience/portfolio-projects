@@ -80,7 +80,7 @@ def runSentimentModel(dataset):
     
     def applyModel(dataset):
         
-        print(f'APPLYING MODEL TO {dataset}')
+        print(f'APPLYING MODEL TO {dataset}')   
 
         # Run Sentiment Analysis
         df = preprocessData(dataset)
@@ -179,4 +179,4 @@ def runSentimentModel(dataset):
 
 # Call main function
 if __name__ == '__main__':
-    runSentimentModel()
+    main()

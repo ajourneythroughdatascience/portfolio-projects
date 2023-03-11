@@ -79,4 +79,4 @@ def plotResults():
 
 # Call main function
 if __name__ == '__main__':
-    plotResults()
+    main()

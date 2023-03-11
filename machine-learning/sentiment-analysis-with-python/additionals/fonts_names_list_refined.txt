@@ -1,0 +1,28 @@
+Segoe UI
+Sitka Text
+Baskerville Old Face
+Calisto MT
+Centaur
+Century
+Felix Titling
+Garamond
+Gill Sans MT
+Century Gothic
+High Tower Text
+Modern No. 20
+Perpetua
+Perpetua Titling MT
+Poor Richard
+Tw Cen MT
+Cardo
+JuliaMono
+Lora
+Lora Medium
+JetBrains Mono
+CMU Serif
+Cormorant Garamond Light
+Cormorant Garamond Medium
+Cormorant Garamond
+Fira Code
+Fira Code Retina
+Fira Code Medium

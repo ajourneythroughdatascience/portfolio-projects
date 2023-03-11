@@ -159,4 +159,4 @@ def preprocessData(dataset, **kwargs):
 
 # Call main function
 if __name__ == '__main__':
-    preprocessData()
+    main()
