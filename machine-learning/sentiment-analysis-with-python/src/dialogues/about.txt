@@ -5,9 +5,3 @@
 - Contact: main@pabloagn.com
 - GitHub: https://github.com/pabloagn
 - Last Updated: 15/Mar/2023
-
-+ Requirements Information
----------------------------------------------------------------------------
-- Python Version 3.9.0
-- Lorem
-- Ipsum

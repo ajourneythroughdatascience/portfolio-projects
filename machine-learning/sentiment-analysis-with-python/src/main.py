@@ -18,6 +18,7 @@ import tkinter
 import customtkinter
 import resources
 import os
+import time
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -28,7 +29,7 @@ warnings.filterwarnings("ignore")
 customtkinter.set_appearance_mode("System")
 
 # Dark-blue UI
-customtkinter.set_default_color_theme("dark-blue")
+customtkinter.set_default_color_theme("blue")
 
 
 
@@ -104,6 +105,7 @@ class aboutInfo(customtkinter.CTkToplevel):
         self.font_header_family = 'Tw Cen MT'
         self.font_header_size = 20
         self.font_header_weight = 'bold'
+
         # Header Font Object
         self.font_header = customtkinter.CTkFont(family=self.font_header_family,
                                                  size=self.font_header_size,
@@ -117,7 +119,20 @@ class aboutInfo(customtkinter.CTkToplevel):
         # Body Font Object
         self.font_body = customtkinter.CTkFont(family=self.font_body_family,
                                                size=self.font_body_size,
-                                               weight=self.font_body_weight)
+                                               weight=self.font_body_weight
+                                               )
+        
+        # Code Font Parameters
+        self.font_code_family = 'Fira Code Retina'
+        self.font_code_size = 14
+        self.font_code_weight = 'normal'
+
+        # Body Font Object
+        self.font_code = customtkinter.CTkFont(family=self.font_code_family,
+                                               size=self.font_code_size,
+                                               weight=self.font_code_weight
+                                               )
+        
         # UI Elements - General Parameters
         # --------------------------------------------------
         self.geometry("600x300")
@@ -187,21 +202,60 @@ class sentimentAnalysisApp(customtkinter.CTk):
                                                   size=self.font_body_pc_size,
                                                   weight=self.font_body_pc_weight,
                                                   slant=self.slant_pc)
-        
+
+        # Code Font Parameters
+        self.font_code_family = 'Fira Code Retina'
+        self.font_code_size = 14
+        self.font_code_weight = 'normal'
+
+        # Body Font Object
+        self.font_code = customtkinter.CTkFont(family=self.font_code_family,
+                                               size=self.font_code_size,
+                                               weight=self.font_code_weight
+                                               )
+
         # Toplevel window
         self.toplevel_window = None
+
+        # Progress Bar Height
+        self.progress_bar_height = 20
+
+        # Option Box Width
+        self.option_box_width = 200
 
         # System Settings
         # --------------------------------------------------
         self.iconbitmap('digital_assets/favicon_code_white.ico') # Define favicon
-        self.geometry(f"{1366}x{768}") # Define resolution
+        self.geometry(f"{1416}x{768}") # Define resolution
         self.title('Pablo Aguirre | Sentiment Analysis 1.0') # Define app title
 
-        # UI Elements - Grid Layout (4x4)
+        # Printing Formatting Settings
+        # --------------------------------------------------
+        self.dot_sep = 25
+        self.measure_title = ''
+        self.value_title = ''
+
+        # Initial Variables
+        # --------------------------------------------------
+        self.var_model = customtkinter.StringVar(value=resources.getParameters()['model'][0])
+        self.var_analysis = customtkinter.StringVar(value=resources.getParameters()['analysis'][0])
+        self.var_operation = customtkinter.StringVar(value=resources.getParameters()['input_method'][0])
+        self.var_col1 = customtkinter.StringVar(value=resources.getParameters()['agg_cols'][0])
+        self.var_col2 = customtkinter.StringVar(value=resources.getParameters()['agg_cols'][1])
+        self.var_col3 = customtkinter.StringVar(value=resources.getParameters()['agg_cols'][2])
+        self.var_col4 = customtkinter.StringVar(value=resources.getParameters()['agg_cols'][3])
+        self.var_coltarget = customtkinter.StringVar(value=resources.getParameters()['text_col'])
+        self.var_colid = customtkinter.StringVar(value=resources.getParameters()['target_id_col'])
+        self.var_colrating = customtkinter.StringVar(value=resources.getParameters()['rating_col'])
+        self.var_rdir = customtkinter.StringVar(value=resources.getParameters()['rdir'])
+        self.var_wdir = customtkinter.StringVar(value=resources.getParameters()['wdir'])
+
+        # UI Elements - Grid Layout (3x4) (3Rows, 4 Cols)
         # --------------------------------------------------
         self.grid_columnconfigure(1, weight=1)
-        self.grid_columnconfigure((2, 3), weight=0)
-        self.grid_rowconfigure((0, 1, 1), weight=1)
+        # self.grid_columnconfigure((0, 2), weight=0)
+        # self.grid_rowconfigure((0, 1, 1), weight=1)
+        self.grid_rowconfigure(0, weight=1)
 
         # UI Elements - Sidebar with Widgets
         # --------------------------------------------------
@@ -221,7 +275,8 @@ class sentimentAnalysisApp(customtkinter.CTk):
         self.help_prompt = customtkinter.CTkButton(self.sidebar_frame,
                                                    text="Help",
                                                    font=self.font_body,
-                                                   command=self.open_help_prompt)
+                                                   command=self.open_help_prompt,
+                                                   corner_radius=0)
         
         self.help_prompt.grid(row=1, column=0, padx=20, pady=10)
 
@@ -229,7 +284,8 @@ class sentimentAnalysisApp(customtkinter.CTk):
         self.about_prompt = customtkinter.CTkButton(self.sidebar_frame,
                                                    text="About",
                                                    font=self.font_body,
-                                                   command=self.open_about_prompt)
+                                                   command=self.open_about_prompt,
+                                                   corner_radius=0)
         
         self.about_prompt.grid(row=2, column=0, padx=20, pady=10)
 
@@ -239,7 +295,7 @@ class sentimentAnalysisApp(customtkinter.CTk):
                                                             anchor="w",
                                                             font=self.font_body)
         
-        self.appearance_mode_label.grid(row=5, column=0, padx=20, pady=(10, 0))
+        self.appearance_mode_label.grid(row=6, column=0, padx=20, pady=(10, 0))
 
         self.appearance_mode_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame,
                                                                        values=["System", "Light", "Dark"],
@@ -248,127 +304,311 @@ class sentimentAnalysisApp(customtkinter.CTk):
                                                                        font=self.font_body,
                                                                        dropdown_font=self.font_body)
         
-        self.appearance_mode_optionemenu.grid(row=6, column=0, padx=20, pady=(10, 10))
+        self.appearance_mode_optionemenu.grid(row=7, column=0, padx=20, pady=(10, 40))
 
-        self.scaling_label = customtkinter.CTkLabel(self.sidebar_frame,
-                                                    text="UI Scaling",
-                                                    anchor="w",
-                                                    font=self.font_body)
+        # UI Elements - Execution Parameters (Tab View) & Operation Mode (Radio Button)
+        # --------------------------------------------------
+        self.parameters_operation = customtkinter.CTkFrame(self)
+        self.parameters_operation.grid(row=0, column=1, padx=(20, 0), pady=(20, 20), sticky="nsew")
+        self.parameters_operation.grid_columnconfigure(1, weight=1)
+        self.parameters_operation.grid_rowconfigure(0, weight=1)
+
+        # Execution Parameters (Tab View)
+        self.parameters = customtkinter.CTkTabview(self.parameters_operation)
+        # Illegally change tab font family (indirect method)
+        self.parameters._segmented_button.configure(font=self.font_body)
+        # Configure tab view grid & add tab objects
+        self.parameters.grid(row=0, column=0, padx=(20, 0), pady=(20, 20), sticky="nsew")
+        self.parameters.add('Model')
+        self.parameters.add('Analysis')
+
+        # Configure grid of individual tabs
+        self.parameters.tab("Model").grid_columnconfigure(0, weight=1)
+        self.parameters.tab("Analysis").grid_columnconfigure(0, weight=1)
+
+        # Tab 1 Elements
+        self.model_name = customtkinter.CTkOptionMenu(self.parameters.tab("Model"),
+                                                      dynamic_resizing=False,
+                                                      values=resources.getParameters()['model'],
+                                                      corner_radius=0,
+                                                      font=self.font_body,
+                                                      dropdown_font=self.font_body,
+                                                      width=self.option_box_width,
+                                                      variable=self.var_model
+                                                      )    
+
+        self.model_name.grid(row=0, column=0, padx=20, pady=(20, 10))
+
+        # Tab 2 Elements
+        self.analysis_type = customtkinter.CTkOptionMenu(self.parameters.tab("Analysis"),
+                                                         dynamic_resizing=False,
+                                                         values=resources.getParameters()['analysis'],
+                                                         corner_radius=0,
+                                                         font=self.font_body,
+                                                         dropdown_font=self.font_body,
+                                                         width=self.option_box_width,
+                                                         variable=self.var_analysis
+                                                         )
+
+        self.analysis_type.grid(row=0, column=0, padx=20, pady=(20, 10))
+
+        # Operation Mode
+        self.operation_mode_frame = customtkinter.CTkFrame(self.parameters_operation)
+        self.operation_mode_frame.grid(row=0, column=1, padx=(20, 20), pady=(20, 20), sticky="nsew")
+        self.operation_mode_frame.grid_columnconfigure(0, weight=1)
+        self.operation_mode_frame.grid_rowconfigure(2, weight=1)
+
+        self.label_operation_mode = customtkinter.CTkLabel(master=self.operation_mode_frame,
+                                                           text="Operation Mode",
+                                                           font=self.font_body
+                                                           )
         
-        self.scaling_label.grid(row=7, column=0, padx=20, pady=(10, 0))
-        self.scaling_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame,
-                                                               values=["80%", "90%", "100%", "110%", "120%"],
-                                                               corner_radius=0,
-                                                               command=self.change_scaling_event,
-                                                               font=self.font_body,
-                                                               dropdown_font=self.font_body)
+        self.label_operation_mode.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
+
+        # Download Mode
+        self.operation_mode_1 = customtkinter.CTkRadioButton(master=self.operation_mode_frame,
+                                                             variable=self.var_operation,
+                                                             value=resources.getParameters()['input_method'][0],
+                                                             text=resources.getParameters()['input_method'][0],
+                                                             font=self.font_body)
         
-        self.scaling_optionemenu.grid(row=8, column=0, padx=20, pady=(10, 20))
+        # Justify North-West
+        self.operation_mode_1.grid(row=1, column=0, pady=10, padx=20, sticky="nw")
 
-        # UI Elements - Text Box
+        # Load Mode
+        self.operation_mode_2 = customtkinter.CTkRadioButton(master=self.operation_mode_frame,
+                                                           variable=self.var_operation,
+                                                           value=resources.getParameters()['input_method'][1],
+                                                           text=resources.getParameters()['input_method'][1],
+                                                           font=self.font_body)
+        # Justify North-West
+        self.operation_mode_2.grid(row=2, column=0, pady=10, padx=20, sticky="nw")
+
+        # UI Elements - Column Selector
         # --------------------------------------------------
-        self.textbox = customtkinter.CTkTextbox(self, width=250)
-        self.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.column_entry = customtkinter.CTkFrame(self)
+        self.column_entry.grid(row=1, column=1, padx=(20, 0), pady=(20, 20), sticky="nsew")
+        self.column_entry.grid_columnconfigure(3, weight=1)
+        self.column_entry.grid_rowconfigure(2, weight=1)
 
-        # UI Elements - Tab View
+        # Column Entry Title
+        self.label_column_entry = customtkinter.CTkLabel(master=self.column_entry,
+                                                         text="Column Selection",
+                                                         font=self.font_body
+                                                         )
+        
+        self.label_column_entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, sticky="ew")
+
+        # Segmentation Columns
+        # Row 1 - Column 1
+        self.col_entry_1 = customtkinter.CTkEntry(self.column_entry,
+                                                  placeholder_text="Column 1",
+                                                  corner_radius=0,
+                                                  font=self.font_body_pc,
+                                                  placeholder_text_color=self.text_placeholder_color,
+                                                  textvariable=self.var_col1
+                                                  )
+
+        self.col_entry_1.grid(row=1, column=0, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # Row 1 - Column 2
+        self.col_entry_2 = customtkinter.CTkEntry(self.column_entry,
+                                                  placeholder_text="Column 2",
+                                                  corner_radius=0,
+                                                  font=self.font_body_pc,
+                                                  placeholder_text_color=self.text_placeholder_color,
+                                                  textvariable=self.var_col2
+                                                  )
+
+        self.col_entry_2.grid(row=1, column=1, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # Row 1 - Column 3
+        self.col_entry_3 = customtkinter.CTkEntry(self.column_entry,
+                                                  placeholder_text="Column 3",
+                                                  corner_radius=0,
+                                                  font=self.font_body_pc,
+                                                  placeholder_text_color=self.text_placeholder_color,
+                                                  textvariable=self.var_col3
+                                                  )
+
+        self.col_entry_3.grid(row=1, column=2, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # Row 1 - Column 4
+        self.col_entry_4 = customtkinter.CTkEntry(self.column_entry,
+                                                  placeholder_text="Column 4",
+                                                  corner_radius=0,
+                                                  font=self.font_body_pc,
+                                                  placeholder_text_color=self.text_placeholder_color,
+                                                  textvariable=self.var_col4
+                                                  )
+
+        self.col_entry_4.grid(row=1, column=3, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # Target Columns
+        # Target Column
+        self.col_target = customtkinter.CTkEntry(self.column_entry,
+                                                 placeholder_text="Target Column",
+                                                 corner_radius=0,
+                                                 font=self.font_body_pc,
+                                                 placeholder_text_color=self.text_placeholder_color,
+                                                 textvariable=self.var_coltarget
+                                                 )
+
+        self.col_target.grid(row=2, column=0, columnspan=2, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # Col ID
+        self.col_id = customtkinter.CTkEntry(self.column_entry,
+                                             placeholder_text="ID Column",
+                                             corner_radius=0,
+                                             font=self.font_body_pc,
+                                             placeholder_text_color=self.text_placeholder_color,
+                                             textvariable=self.var_colid
+                                             )
+
+        self.col_id.grid(row=2, column=2, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # Rating Column
+        self.col_rating = customtkinter.CTkEntry(self.column_entry,
+                                                 placeholder_text="Rating Column",
+                                                 corner_radius=0,
+                                                 font=self.font_body_pc,
+                                                 placeholder_text_color=self.text_placeholder_color,
+                                                 textvariable=self.var_colrating)
+
+        self.col_rating.grid(row=2, column=3, padx=(10, 10), pady=(10, 10), sticky="new")
+
+        # UI Elements - Status Box
         # --------------------------------------------------
-        self.tabview = customtkinter.CTkTabview(self, width=250)
-        self.tabview.grid(row=0, column=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
-        self.tabview.add("CTkTabview")
-        self.tabview.add("Tab 2")
-        self.tabview.add("Tab 3")
-        self.tabview.tab("CTkTabview").grid_columnconfigure(0, weight=1)  # configure grid of individual tabs
-        self.tabview.tab("Tab 2").grid_columnconfigure(0, weight=1)
+        self.textbox_frame = customtkinter.CTkFrame(self)
+        self.textbox_frame.grid(row=0,
+                                column=2,
+                                padx=(20, 20),
+                                pady=(20, 20),
+                                sticky="nsew")
+        
+        self.textbox_frame.grid_columnconfigure(0, weight=1)
+        self.textbox_frame.grid_rowconfigure(0, weight=1)
 
-        self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("CTkTabview"), dynamic_resizing=False,
-                                                        values=["Value 1", "Value 2", "Value Long Long Long"])
-        self.optionmenu_1.grid(row=0, column=0, padx=20, pady=(20, 10))
-        self.combobox_1 = customtkinter.CTkComboBox(self.tabview.tab("CTkTabview"),
-                                                    values=["Value 1", "Value 2", "Value Long....."])
-        self.combobox_1.grid(row=1, column=0, padx=20, pady=(10, 10))
-        self.string_input_button = customtkinter.CTkButton(self.tabview.tab("CTkTabview"), text="Open CTkInputDialog",
-                                                           command=self.open_input_dialog_event)
-        self.string_input_button.grid(row=2, column=0, padx=20, pady=(10, 10))
-        self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("Tab 2"), text="CTkLabel on Tab 2")
-        self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
+        self.textlog = customtkinter.CTkTextbox(self.textbox_frame,
+                                                width=450,
+                                                wrap='word',
+                                                font=self.font_code
+                                                )
+        
+        self.textlog.grid(row=0, column=0, padx=(20, 20), pady=(20, 20), sticky="nsew")
 
-        # UI Elements - Radio Button
+        # UI Elements - Progress Bars
         # --------------------------------------------------
-        self.radiobutton_frame = customtkinter.CTkFrame(self)
-        self.radiobutton_frame.grid(row=0, column=3, padx=(20, 20), pady=(20, 0), sticky="nsew")
-        self.radio_var = tkinter.IntVar(value=0)
-        self.label_radio_group = customtkinter.CTkLabel(master=self.radiobutton_frame, text="CTkRadioButton Group:")
-        self.label_radio_group.grid(row=0, column=2, columnspan=1, padx=10, pady=10, sticky="")
-        self.radio_button_1 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, value=0)
-        self.radio_button_1.grid(row=1, column=2, pady=10, padx=20, sticky="n")
-        self.radio_button_2 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, value=1)
-        self.radio_button_2.grid(row=2, column=2, pady=10, padx=20, sticky="n")
-        self.radio_button_3 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, value=2)
-        self.radio_button_3.grid(row=3, column=2, pady=10, padx=20, sticky="n")
+        self.progress_frame = customtkinter.CTkFrame(self)
+        self.progress_frame.grid(row=1, column=2, rowspan=2, padx=(20, 20), pady=(20, 20), sticky="nsew")
+        self.progress_frame.grid_columnconfigure(0, weight=1)
+        self.progress_frame.grid_rowconfigure(5, weight=1)
 
-        # # UI Elements - Model Selector (VADER, RoBERTa)
-        # # --------------------------------------------------
-        # model_prompt = customtkinter.CTkLabel(self, text='Select a Model')
-        # model_prompt_var = customtkinter.StringVar(value=resources.getParameters()['model'][0]) # Set initial value
+        # Progress Load or Download
+        self.progressbar_1_tag =  customtkinter.CTkLabel(master=self.progress_frame,
+                                                         text="Download/Load Progress",
+                                                         font=self.font_body
+                                                         )
 
-        # def model_prompt_callback(model_choice):
-        #     print(model_choice)
-        #     return None
+        self.progressbar_1_tag.grid(row=0, column=0, padx=10, pady=10, sticky="new")
 
-        # combobox = customtkinter.CTkOptionMenu(master=self,
-        #                                        values=resources.getParameters()['model'],
-        #                                        command=model_prompt_callback,
-        #                                        variable=model_prompt_var)
+        self.progressbar_1 = customtkinter.CTkProgressBar(self.progress_frame,
+                                                          mode='determinate',
+                                                          height=self.progress_bar_height,
+                                                          corner_radius=0)
+        
+        self.progressbar_1.grid(row=1, column=0, padx=(20, 20), pady=(10, 10), sticky="new")
+        # Set to 0, since by default, it will be set to 0.5
+        self.progressbar_1.set(0)
 
-        # # UI Elements - Mode Selector (Download / Run on Existing File)
-        # # --------------------------------------------------
-        # mode_prompt = customtkinter.CTkLabel(self, text='Select a Mode')
-        # mode_prompt_var = customtkinter.StringVar(value=resources.getParameters()['input_method'][0]) # Set initial value
+        # Progress Run Model
+        self.progressbar_2_tag =  customtkinter.CTkLabel(master=self.progress_frame,
+                                                         text="Model Execution Progress",
+                                                         font=self.font_body
+                                                         )
 
-        # def mode_prompt_callback(mode_choice):
-        #     print(mode_choice)
-        #     return None
+        self.progressbar_2_tag.grid(row=2, column=0, padx=10, pady=10, sticky="new")
 
-        # combobox = customtkinter.CTkOptionMenu(master=self,
-        #                             values=resources.getParameters()['input_method'],
-        #                             command=mode_prompt_callback,
-        #                             variable=mode_prompt_var)
+        self.progressbar_2 = customtkinter.CTkProgressBar(self.progress_frame,
+                                                          mode='determinate',
+                                                          height=self.progress_bar_height,
+                                                          corner_radius=0)
+        
+        self.progressbar_2.grid(row=3, column=0, padx=(20, 20), pady=(10, 10), sticky="new")
+        # Set to 0, since by default, it will be set to 0.5
+        self.progressbar_2.set(0)
 
-        # UI Elements - Absolute Source Path Specification
+        # Progress Generate Analysis
+        self.progressbar_3_tag =  customtkinter.CTkLabel(master=self.progress_frame,
+                                                         text="Analysis Progress",
+                                                         font=self.font_body
+                                                         )
+
+        self.progressbar_3_tag.grid(row=4, column=0, padx=10, pady=10, sticky="new")
+
+        self.progressbar_3 = customtkinter.CTkProgressBar(self.progress_frame,
+                                                          mode='determinate',
+                                                          height=self.progress_bar_height,
+                                                          corner_radius=0)
+        
+        self.progressbar_3.grid(row=5, column=0, padx=(20, 20), pady=(10, 10), sticky="new")
+        # Set to 0, since by default, it will be set to 0.5
+        self.progressbar_3.set(0)
+
+        # UI Elements - Path Specification
         # --------------------------------------------------
-        self.entry = customtkinter.CTkEntry(self,
+        # Absolute Source Path Specification
+        self.path_entry = customtkinter.CTkFrame(self)
+        self.path_entry.grid(row=2, column=1, padx=(20, 0), pady=(20, 20), sticky="nsew")
+        self.path_entry.grid_columnconfigure(1, weight=1)
+        self.path_entry.grid_rowconfigure(2, weight=1)
+
+        # Column Entry Title
+        self.label_column_entry = customtkinter.CTkLabel(master=self.path_entry,
+                                                          text="Path Selection",
+                                                          font=self.font_body
+                                                          )
+        
+        self.label_column_entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, sticky="")
+
+
+        self.entry = customtkinter.CTkEntry(self.path_entry,
                                             placeholder_text="Database Absolute Path",
                                             corner_radius=0,
                                             font=self.font_body_pc,
-                                            placeholder_text_color=self.text_placeholder_color)
+                                            placeholder_text_color=self.text_placeholder_color,
+                                            textvariable=self.var_rdir
+                                            )
 
-        self.entry.grid(row=2, column=1, columnspan=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.entry.grid(row=1, column=1, columnspan=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
 
-        # UI Elements - Absolute Output Path Specification
-        # --------------------------------------------------
-        self.entry = customtkinter.CTkEntry(self,
+        # Absolute Output Path Specification
+        self.entry = customtkinter.CTkEntry(self.path_entry,
                                             placeholder_text="Output Path",
                                             corner_radius=0,
                                             font=self.font_body_pc,
-                                            placeholder_text_color=self.text_placeholder_color)
+                                            placeholder_text_color=self.text_placeholder_color,
+                                            textvariable=self.var_wdir
+                                            )
 
-        self.entry.grid(row=3, column=1, columnspan=2, padx=(20, 0), pady=(20, 20), sticky="nsew")
+        self.entry.grid(row=2, column=1, columnspan=2, padx=(20, 0), pady=(20, 20), sticky="nsew")
 
         # UI Elements - Run Button
         # --------------------------------------------------
-        self.main_button_1 = customtkinter.CTkButton(master=self,
+        self.main_button_1 = customtkinter.CTkButton(master=self.path_entry,
                                                      text='Run Model',
                                                      fg_color="transparent",
                                                      border_width=1,
                                                      font=self.font_body,
                                                      text_color=("gray10", self.text_color),
                                                      corner_radius = 0,
-                                                     command=self.button_event)
+                                                     command=self.runModel)
         
-        self.main_button_1.grid(row=3, column=3, padx=(20, 20), pady=(20, 20), sticky="nsew")
+        self.main_button_1.grid(row=2, column=3, padx=(20, 20), pady=(20, 20), sticky="nsew")
         
     # UI Elements - Events
     # --------------------------------------------------
+
     # Open help toplevel_window
     def open_help_prompt(self):
         if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
@@ -383,36 +623,124 @@ class sentimentAnalysisApp(customtkinter.CTk):
         else:
             self.toplevel_window.focus()  # if window exists focus it
 
-    def open_input_dialog_event(self):
-        dialog = customtkinter.CTkInputDialog(text="Type in a number:", title="CTkInputDialog")
-        print("CTkInputDialog:", dialog.get_input())
-
     def change_appearance_mode_event(self, new_appearance_mode: str):
         customtkinter.set_appearance_mode(new_appearance_mode)
 
-    def change_scaling_event(self, new_scaling: str):
-        new_scaling_float = int(new_scaling.replace("%", "")) / 100
-        customtkinter.set_widget_scaling(new_scaling_float)
 
-    def sidebar_button_event(self):
-        print("sidebar_button click")
 
-    def button_event(self):
-        print('Run Model')
-
+    # Run Model
     def runModel(self):
-        # Define the target dataset
-        target_dataset = resources.getParameters()['dataset']
-        rdir = resources.getParameters()['rdir']
 
-        for target in target_dataset:
-            # Create target path
-            dataset = os.path.join(rdir, target)
-            # Perform Sentiment Analysis
-            df = resources.runSentimentModel(dataset)
+        # Function to print padded strings
+        def padStr(self, measure_title, value_title):
+            measure_title += ' '
+            self.padded_str = measure_title + '.'*(self.dot_sep - len(measure_title))
+            self.padded_str = ('%s %s' % ( self.padded_str, value_title))
+            return self.padded_str
+
+        # Create initial input exception handling
+        if self.var_col1.get() == '':
+            # Unlock textbox
+            self.textlog.configure(state="normal")
+            # Clear textlog from line 0 character 0 to end
+            self.textlog.delete("0.0", "end")
+            # Insert log at end
+            self.textlog.insert("end", "PLEASE SELECT AT LEAST ONE AGGREGATION COLUMN IN COL1")
+            # Lock textbox
+            self.textlog.configure(state="disabled")
+        elif self.var_coltarget.get() == '':
+            self.textlog.configure(state="normal")
+            self.textlog.delete("0.0", "end")
+            self.textlog.insert("end", "PLEASE SELECT A TARGET COLUMN TO ANALYZE")
+            self.textlog.configure(state="disabled")
+        elif self.var_colid.get() == '':
+            self.textlog.configure(state="normal")
+            self.textlog.delete("0.0", "end")
+            self.textlog.insert("end", "PLEASE SELECT AN ID COLUMN")
+            self.textlog.configure(state="disabled")
+        elif self.var_rdir.get() == '':
+            self.textlog.configure(state="normal")
+            self.textlog.delete("0.0", "end")
+            self.textlog.insert("end", "PLEASE SELECT AN INPUT DIRECTORY")
+            self.textlog.configure(state="disabled")
+            print('PLEASE SELECT AN INPUT DIRECTORY')
+        elif self.var_wdir.get() == '':
+            self.textlog.configure(state="normal")
+            self.textlog.delete("0.0", "end")
+            self.textlog.insert("end", "PLEASE SELECT AN OUTPUT DIRECTORY")
+            self.textlog.configure(state="disabled")
+        else:
+            self.textlog.configure(state="normal")
+            self.textlog.delete("0.0", "end")
+
+            textvar_confirm = padStr(self, 'CONFIRMING VARIABLES', '')
+            textvar_model = padStr(self, 'MODEL:', self.var_model.get())
+            textvar_analysis = padStr(self, 'ANALYSIS:', self.var_analysis.get())
+            textvar_operation = padStr(self, 'OPERATION:', self.var_operation.get())
+            textvar_col1 = padStr(self, 'COL1:', self.var_col1.get())
+            textvar_col2 = padStr(self, 'COL2:', self.var_col2.get())
+            textvar_col3 = padStr(self, 'COL3:', self.var_col3.get())
+            textvar_col4 = padStr(self, 'COL4:', self.var_col4.get())
+            textvar_coltarget = padStr(self, 'TARGET:', self.var_coltarget.get())
+            textvar_colid = padStr(self, 'ID:', self.var_colid.get())
+            textvar_colrating = padStr(self, 'RATING:', self.var_colrating.get())
+            textvar_rdir = padStr(self, 'INPUT DIR:', self.var_rdir.get())
+            textvar_wdir = padStr(self, 'OUTPUT DIR:', self.var_wdir.get())
+            textvar_start = padStr(self, 'STARTING ANALYSIS IN', '5s')
+            textvar_stop = padStr(self, 'CONCLUDED ANALYSIS', '')
+
+            self.textlog.insert("end", f"{textvar_confirm}\n\n")
+            self.textlog.insert("end", f"{textvar_model}\n")
+            self.textlog.insert("end", f"{textvar_analysis}\n")
+            self.textlog.insert("end", f"{textvar_operation}\n")
+            self.textlog.insert("end", f"{textvar_col1}\n")
+            self.textlog.insert("end", f"{textvar_col2}\n")
+            self.textlog.insert("end", f"{textvar_col3}\n")
+            self.textlog.insert("end", f"{textvar_col4}\n")
+            self.textlog.insert("end", f"{textvar_coltarget}\n")
+            self.textlog.insert("end", f"{textvar_colid}\n")
+            self.textlog.insert("end", f"{textvar_colrating}\n")
+            self.textlog.insert("end", f"{textvar_rdir}\n")
+            self.textlog.insert("end", f"{textvar_wdir}\n\n")
+            self.textlog.insert("end", f"{textvar_start}\n\n")
+
+            self.textlog.configure(state="disabled")
+            self.update_idletasks()
+            time.sleep(5)
+            self.textlog.configure(state="normal")
+
+            # Start analysis
+            n = 5000
+            iter_step = 1/n
+            progress_step = iter_step
+            self.textlog.insert("0.0", "\n")
+            self.progressbar_1.start()
+            for i in range(n):
+                self.progressbar_1.set(progress_step)
+                textvar_progress = padStr(self, 'ENTRY', round(progress_step, 4))
+                self.textlog.insert("0.0", f"{textvar_progress}\n")
+                progress_step += iter_step
+                self.update_idletasks()
+            self.progressbar_1.stop()
+
+            # Conclude analysis
+            self.textlog.insert("0.0", "\n")
+            self.textlog.insert("end", f"{textvar_stop}\n\n")
+
+            # Disable textlog
+            self.textlog.configure(state="disabled")
+
+        # # Define the target dataset
+        # target_dataset = resources.getParameters()['dataset']
+        # rdir = resources.getParameters()['rdir']
+
+        # for target in target_dataset:
+        #     # Create target path
+        #     dataset = os.path.join(rdir, target)
+        #     # Perform Sentiment Analysis
+        #     df = resources.runSentimentModel(dataset)
 
         return None
-        # return df
 
 # Call main function
 if __name__ == '__main__':

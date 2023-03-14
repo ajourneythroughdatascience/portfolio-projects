@@ -1,14 +1,16 @@
 {
-    "input_method":["Download", "Read"],
+    "input_method":["Download Mode", "Read Mode"],
   	"rdir": "../datasets",
+	"wdir": "../outputs",
 	"inputdir": "../inputs",
 	"sample_file": "sample_us.tsv",
 	"source_url":"source.txt",
 	"complete_file": "all_reviews",
 	"target_id_col":"review_id",
-	"agg_cols":["marketplace", "product_category","product_id"],
+	"agg_cols":["marketplace", "product_category","product_id", ""],
 	"rating_col":"star_rating",
 	"text_col": "review_body",
-	"model": ["VADER", "RoBERTa"],
-	"dataset":["amazon_reviews_us_Watches_v1_00.tsv.gz"]
+	"model": ["VADER", "RoBERTa", "TextBlob", "Happy Transformer"],
+	"dataset":["amazon_reviews_us_Watches_v1_00.tsv.gz"],
+	"analysis":["Complete", "Visual", "Report-Style", "Informative"]
 }

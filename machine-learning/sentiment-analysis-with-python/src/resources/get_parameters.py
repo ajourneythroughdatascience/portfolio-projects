@@ -32,6 +32,7 @@ def getParameters(**kwargs):
     param_dict = dict(
         input_method = source['input_method'],
         rdir = source['rdir'],
+        wdir = source['wdir'],
         inputdir = source['inputdir'],
         source_url = source['source_url'],
         target_id_col = source['target_id_col'],
@@ -39,7 +40,8 @@ def getParameters(**kwargs):
         rating_col = source['rating_col'],
         text_col = source['text_col'],
         model = source['model'],
-        dataset = source['dataset']
+        dataset = source['dataset'],
+        analysis = source['analysis']
         )
     
     f.close()
