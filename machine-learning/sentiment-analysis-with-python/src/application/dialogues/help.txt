@@ -1,0 +1,83 @@
+To run any Sentiment Analysis model, follow the steps below:
+
++ Select Model
+---------------------------------------------------------------------------
+- VADER [Default]
+- TextBlob
+
++ Select Analysis Type
+---------------------------------------------------------------------------
+- Technical [Default].....Technical Excel report and plots.
+- Business................Business-like Excel report and plots.
+- Visual..................All plots included.
+- Complete................All Excel files and plots included.
+
++ Select Chart Background
+---------------------------------------------------------------------------
+- Transparent [Default]
+- Solid
+
++ Select Plot Color Scheme
+---------------------------------------------------------------------------
+The color scheme will be applied to all visuals generated.
+All color schemes include a "reverse" variation (inverted gradient).
+Previews can be consulted here: https://seaborn.pydata.org/tutorial/color_palettes.html
+- rocket [Default]
+- rocket_r
+- mako
+- mako_r
+- flare
+- flare_r
+- crest
+- crest_r
+- magma
+- magma_r
+- viridis
+- viridis_r
+
++ Select NLTK Analysis Top N Words
+---------------------------------------------------------------------------
+If Technical or Complete analysis are selected, a frequency analysis including top n words will be exported.
+- 3
+- 4
+- 5 [Default]
+- 6
+- 7
+
++ Select NLTK Analysis Threshold
+---------------------------------------------------------------------------
+If Technical or Complete analysis are selected, a frequency analysis including top n words will be exported.
+Threshold denotes limits for top and bottom performing scores to export.
+- [0, 1] [Default = 0.7]
+
++ Select Operation Mode
+---------------------------------------------------------------------------
+- Download Mode [Default].....Will download target URLs defined in the FILE.tsv or FILE.tsv.gz
+- Read Mode...................Will load a pre-downloaded set of data sets.
+
++ Select Operation Time
+---------------------------------------------------------------------------
+Time in seconds that application will stall between critical steps (e.g. when providing confirmations inside textlog)
+- 1 [Default]
+- 2
+- 3
+- 4
+- 5
+
++ Select Columns
+---------------------------------------------------------------------------
+- Aggregation 1 [Required].....Column that will be used to aggregate results and export analysis. Can be str, int or float type.
+- Aggregation 2................Column that will be used to aggregate results and export analysis. Can be str, int or float type.
+- Aggregation 3................Column that will be used to aggregate results and export analysis. Can be str, int or float type.
+- Aggregation 4................Column that will be used to aggregate results and export analysis. Can be str, int or float type.
+- Target [Required]............Column that will be used to perform analysis on. Must be str type.
+- Index [Required].............Column that will be used as index. Must not contain duplicate values. Can be str or int.
+- Rating [Required]............Application will compare analysis against existing ratings. Must be int or float type.
+
++ Select Input Path
+---------------------------------------------------------------------------
+- Where executable will look for the target data sets or source file with URLs.
+
++ Select Output Path
+---------------------------------------------------------------------------
+- Where results will be saved.

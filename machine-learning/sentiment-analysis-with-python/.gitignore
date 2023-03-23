@@ -3,3 +3,14 @@
 ## Ignore datasets folder
 datasets/
 
+## Ignore test file
+src/TEST.py
+
+## Ignore Tasks
+TASKS.txt
+
+## Ignore additional resources
+additionals/
+
+## Ignore input test folder
+inputs/
