@@ -1,1 +1,1 @@
-from .app import SetGlobalParams, HelpPrompt, AboutPrompt, MainApplication
+from ._app import SetGlobalParams, HelpPrompt, AboutPrompt, MainApplication

@@ -13,6 +13,4 @@ spyder-kernels
 textblob
 tk
 tomli
-torch
-transformers
 wordcloud

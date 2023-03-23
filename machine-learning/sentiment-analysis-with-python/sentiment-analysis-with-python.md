@@ -248,17 +248,25 @@ When starting a project, the first step is to design a structure which makes sen
 
 There are multiple ways of approaching a project structure design; it really depends on each personal taste. We'll be implementing a frontend, backend, configuration files and utility functions, so a main folder with subfolders as packages makes sense for our case:
 
-We will create a master folder (*project folder*) where our main file, inputs, outputs and packages will reside. This folder will have the following structure:
+We will create a master folder (*project folder*) where the inputs, outputs and source code will reside. This folder will have the following structure:
 - `sentiment-analysis-with-python`: The project folder.
-	- `main.py`: Our main function which the user will execute (*this will be the only point of contact for a typical user*).
 	- `datasets`: Where our datasets will be downloaded and read from.
 	- `outputs`: Where our analyses will be written in.
 	- `se_env`: Our virtual environment.
 	- `src`: Where the source code will be located.
 	- `requirements.txt`: Where all the dependencies will be specified.
-	- `.gitignore`: Where we will specify folders and files to ignore comitting to GitHub.
 
-The application will be divided into multiple **packages** denoted by folders. Each package will contain **modules** denoted by files. Each file will serve a specific purpose and will contain one main **class**. Each class will contain one or more **methods** denoted by functions.
+The application will be divided into multiple **packages** denoted by folders. Each package will contain **modules** belonging to a similar functionality, denoted by files. Each file will serve a specific purpose and will contain one main **class**. Each class will contain one or more **methods** denoted by functions.
+
+The package structure inside `src` will be as follows:
+
+- `src`: Where the source code will be located.
+	- `main.py`: Our main function which the user will execute (*this will be the only point of contact for a typical user*).
+	- `application`: Frontend packages
+	- `config`: Where we will store configuration files and default parameters for our application.
+	- `sentiment_analysis`: Where all the packages related to the analysis will be located.
+		- `models:` Where the model definition for VADER will be located.
+	- utils: Where helper scripts will be located.
 
 We will define classes using two approaches: the mixin approach and the classical single/multiple inheritance approach.
 
@@ -276,25 +284,288 @@ We will start by creating our main folder along with the required subfolders:
 
 ##### **Code**
 ```PowerShell
-mkdir sentiment-analysis-with-python
+mkdir sentiment-analysis-with-python/src
+```
+
+```PowerShell
+cd sentiment-analysis-with-python
+```
+
+```PowerShell
+mkdir datasets, outputs
+```
+
+```PowerShell
+cd src
+```
+
+```PowerShell
+mkdir application, config, sentiment_analysis, utils
 ```
 
 ## Creating a virtual environment
+We will create a virtual environment tailored for this project. We'll be using Python 3.9.0, which we will need to [download](https://www.python.org/downloads/release/python-390/) if we haven't already.
 
-
-## Installing required libraries
-We will employ external libraries which will be usefull for different parts of our application. Once we have our environment created, we will need to create a `requirements.txt` file, where all required dependencies will be defined.
-
-The reason for creating a `requirements.txt` file, is that we can very easily install all libraries inside the file by using the following command:
+We will then create our environment using the installed Python version. This environment will be located inside our project folder, `sentiment-analysis-with-python`:
 
 ##### **Code**
+```PowerShell
+C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe -m venv 'se_env'
+```
+
+## Installing required libraries
+Since we'll be using a fair ammount of libraries, its easier for us and for the final user to define a `requirements.txt` file, the reason being we can quickly install all dependencies with a single `pip` command.
+
+The `requirements.txt` file will be located inside our project folder, `sentiment-analysis-with-python`, and will contain the following packages:
+
+```
+customtkinter
+xlsxwriter
+matplotlib
+nltk
+numpy
+pandas
+polars
+pyarrow
+pyinstaller
+scikit-learn
+seaborn
+spyder-kernels
+textblob
+tk
+tomli
+wordcloud
+```
+
+We can then activate our virtual environment from within the main project folder on the current terminal session, and install all the dependencies. Keep in mind that `Activate.ps1` is meant for `PowerShell`; other shells have their own `activate` script.
+
+##### **Code**
+```PowerShell
+se_env/Scripts/Activate.ps1
+```
+
 ```PowerShell
 pip install -r requirements.txt
 ```
 
+---
+
+# Modules
+Each package will have multiple files inside, each one representing a module. For each module, we will follow the snake case format with single leading underscore practice `_module.py`, where each file representing a module will be signalled as an internal module; a single leading underscore in front of a variable, a function, or a method name means that these objects are used internally. This also means that, when importing modules using a wildcard `*`, these will not be imported.
+
+We will start by creating our modules inside each `src` package and defining boilerplate code inside them. Our definitions will not make much sense now, but will serve as our project's skeleton and will be explained later on:
+
+```
+application
+│   _app.py
+```
+
+Boilerplate code for `_app.py`:
+
+##### **Code**
+```Python
+# Third-party packages
+import customtkinter
+import matplotlib
+import matplotlib.pyplot as plt
+import tkinter
+
+# Built-in packages
+import os
+import shutil
+import time
+import warnings
+warnings.filterwarnings("ignore")
+
+# Internal packages
+import utils
+import sentiment_analysis
+
+# Define classes and functions
+class SetGlobalParams(utils.GetParameters):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+class HelpPrompt(SetGlobalParams,
+                 customtkinter.CTkToplevel):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+class AboutPrompt(SetGlobalParams,
+                  customtkinter.CTkToplevel):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+class MainApplication(SetGlobalParams,
+                      customtkinter.CTk,
+                      sentiment_analysis.SentimentAnalysis):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def open_help_prompt(self):
+	    pass
+
+    def return_threshold_val(self, value):
+	    pass
+
+	def open_about_prompt(self):
+		pass
+
+	def change_appearance_mode_event(self, new_appearance_mode: str):
+		pass
+
+	def runModel(self):
+		pass
+
+if __name__ == '__main__':
+    main()
+```
+
+It's always best practice to import modules using the following rules:
+- Third-party packages first
+- Built-in packages second
+- Internal packages third
+- All imports should ideally be listed alphabetically in ascending order.
+
+```
+sentiment_analysis
+│   _results_analysis.py
+│   _results_writer.py
+│   _sentiment_analysis.py
+│
+├───models
+│   │   vader.py
+```
+
+Boilerplate code for `_results_analysis`:
+
+##### **Code**
+```Python
+
+```
+
+Boilerplate code for `_results_writer.py`:
+
+##### **Code**
+```Python
+
+```
+
+Boilerplate code for `_sentiment_analysis.py`:
+
+##### **Code**
+```Python
+
+```
+
+```
+utils
+│   _get_parameters.py
+│   _preprocess_data.py
+│   _string_formatting.py
+```
 
 
-## Resources (package)
+Boilerplate code for `_get_parameters.py`:
+
+##### **Code**
+```Python
+
+```
+
+Boilerplate code for `_preprocess_data.py`:
+
+##### **Code**
+```Python
+
+```
+
+Boilerplate code for `_string_formatting.py`:
+
+##### **Code**
+```Python
+
+```
+
+Now that we have our modules defined, we can package them.
+
+---
+
+# Packages
+As mentioned before, we will express our packages as folders inside `src`. For a folder to be used as a package, we need to include a special file,  `__init__.py`, inside each package folder. This way, we will be able to import entire packages across files without needing to import each module explicitly; when we import a folder as package from another file, the Python interpreter calls `__init__.py` and looks for module imports. If it finds any, it imports said module as part of the package we're importing.
+
+The basic structure of an `__init__.py` file is very simple. We import the modules we wish to include in the package, along with the classes we wish to use in other files:
+
+```Python
+from ._app import SetGlobalParams
+```
+
+In this case, `_app` would be our module (*file*), and `SetGlobalParams` would be a class inside the module we wish to use across our project files.
+
+We prepend our module import with a dot `.` since, even though we're on the same directory as our modules, the Python interpreter doesn't know that. This is why we explicitly have to specify we would like to import the `_app.py` module which is located inside the current directory (`.`).
+
+We can create an `__init__.py` file per package, and populate with our module imports.
+
+Imports for `aplication/__init__.py`:
+
+##### **Code**
+```Python
+from ._app import SetGlobalParams, HelpPrompt, AboutPrompt, MainApplication
+```
+
+Imports for `sentiment_analysis/__init__.py`:
+
+##### **Code**
+```Python
+from ._results_writer import ResultsWriter
+from ._results_analysis import ResultsAnalysis
+from ._sentiment_analysis import SentimentAnalysis
+```
+
+Imports for `utils/__init__.py`:
+
+##### **Code**
+```Python
+from ._get_parameters import GetParameters
+from ._preprocess_data import PreprocessData
+from ._string_formatting import StringFormatting
+```
+
+Note that we're not importing any external package here; we're simply importing our own modules (*files*) along with the classes we defined earlier.
+
+---
+
+# Configuration Files
+Configuration files are extremely usefull when we're writing code and would like to provide a way to configure our application without messing up with the code itself. This technique provides a way for an external user, or even ourselves, to fine-tune any modifiable parameter which changes the behavior of our application's interface or even backend.
+
+The idea is to leave the configuration for the main user-defined parameters in the GUI, and specific parameters such as the GUI's font family, font size, text color, and other parameters inside a configuration file. This way, we purpose the GUI exclusively for model operation, and the configuration files for the application appearance which the general user would not necessarly want to modify. In short, it keeps distractions away while keeping a backdoor for more fine-grained customization.
+
+Also, a parameters file can be used as a collection of default values for the user-defined variables we will include later on. If the GUI were to malfunction, the user could still access the parameters file and set default values for all variables, effectively bypassing the GUI while making none to minor direct modifications to the code itself.
+
+There are multiple file formats such as `.hcl`, `.json` and `.yaml` tailored for configuration files. In this project, we will stick with the `.toml` file format for both configuration and parameters files because of its multiple advantages:
+- A
+- A
+- A
+- A
+- A
+
+## Application configuration
+The application configuration file will include parameters related to the appearance of the UI.
+
+## User parameters
+The user parameters file will include default values for all user-defined parameters inside the GUI.
+
+
+
+
+
+
+
+
+
+
+
+
 The `resources` folder will contain all libraries required from `sentimentAnalysisApp`. This is convenient because as we will see in a moment, we can simply import the entire folder and all the libraries inside will be included in our `main.py` file.
 
 For this to work, we will need to create a `__init__.py` file, which will be in charge of including all modules from within our `resources` folder.
@@ -303,14 +574,7 @@ The `resources` folder will contain the following elements:
 - `__init__.py`
 - 
 
-## Files (libraries)
-For each library, we will follow the snake case format with single leading underscore practice, where each file representing a library will be signalled as an internal library; a single leading underscore in front of a variable, a function, or a method name means that these objects are used internally. This also means that, when importing modules using a wildcard `*`, these will not be imported.
 
-## Classes (modules)
-Each file will contain classes. Each class will be defined using PascalCase convention (*capitalized*).
-
-## Functions (methods)
-Each class will contain one or more functions or methods. Each method will be defined using camelCase convention.
 
 # Defining TOML files
 The `.toml` file format is ... 
