@@ -13,7 +13,6 @@ Part of Portfolio Project: sentiment-analysis-in-python
 # Third-party packages
 import matplotlib
 import matplotlib.pyplot as plt
-import nltk
 import numpy as np
 import pandas as pd
 import polars as pl
@@ -45,15 +44,6 @@ class ResultsWriter:
                 os.makedirs(os.path.join(self.project_path, self.var_wdir.get(), dataset_name)) # type: ignore
 
         return None
-    
-    # def preprocessResults(self, df_main, dataset):
-    #     '''
-    #     Convert polars dataframe to pandas dataframe
-    #     '''
-    #     self.df = self.df.to_pandas()
-    #     print(self.df.head())
-
-    #     return self.df
 
     def getAttributesParams(self):
         '''

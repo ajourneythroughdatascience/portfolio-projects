@@ -108,7 +108,7 @@ class SetGlobalParams(utils.GetParameters):
         self.text_padding = 18
         self.title_font_size = 17
         self.label_font_size = 14
-        self.subptitle_y = 0.98
+        self.subptitle_y = 0.99
 
 # Help prompt class
 class HelpPrompt(SetGlobalParams,
@@ -662,7 +662,8 @@ class MainApplication(SetGlobalParams,
                                                      font=self.font_body,
                                                      text_color=("gray10", self.text_color),
                                                      corner_radius=self.radius,
-                                                     command=self.runModel)
+                                                     command=self.runModel
+                                                     )
         
         self.main_button_1.grid(row=2, column=3, padx=(20, 20), pady=(20, 20), sticky="nsew")
 
@@ -708,23 +709,23 @@ class MainApplication(SetGlobalParams,
         '''
         if self.var_col1.get() == '':
             self.insertLog("PLEASE SELECT AT LEAST ONE AGGREGATION COLUMN IN COL1",
-                           clear=True)
+                            clear=True)
             
         elif self.var_target_col.get() == '':
             self.insertLog("PLEASE SELECT A TARGET COLUMN TO ANALYZE",
-                           clear=True)
+                            clear=True)
             
         elif self.var_target_id_col.get() == '':
             self.insertLog("PLEASE SELECT AN ID COLUMN",
-                           clear=True)
+                            clear=True)
             
         elif self.var_rdir.get() == '':
             self.insertLog("PLEASE SELECT AN INPUT DIRECTORY",
-                           clear=True)
+                            clear=True)
             
         elif self.var_wdir.get() == '':
             self.insertLog("PLEASE SELECT AN OUTPUT DIRECTORY",
-                           clear=True)
+                            clear=True)
             
         else:
             # Define text variables to print to textlog
@@ -746,19 +747,19 @@ class MainApplication(SetGlobalParams,
 
             # Confirm selected params to user
             self.insertLog(f"{self.textvar_confirm}\n",
-                           f"{self.textvar_model}\n\n",
-                           f"{self.textvar_analysis}\n",
-                           f"{self.textvar_operation}\n",
-                           f"{self.textvar_col1}\n",
-                           f"{self.textvar_col2}\n",
-                           f"{self.textvar_col3}\n",
-                           f"{self.textvar_col4}\n",
-                           f"{self.textvar_coltarget}\n",
-                           f"{self.textvar_colid}\n",
-                           f"{self.textvar_colrating}\n",
-                           f"{self.textvar_rdir}\n",
-                           f"{self.textvar_wdir}\n",
-                           f"{self.textvar_start}\n\n")
+                            f"{self.textvar_model}\n\n",
+                            f"{self.textvar_analysis}\n",
+                            f"{self.textvar_operation}\n",
+                            f"{self.textvar_col1}\n",
+                            f"{self.textvar_col2}\n",
+                            f"{self.textvar_col3}\n",
+                            f"{self.textvar_col4}\n",
+                            f"{self.textvar_coltarget}\n",
+                            f"{self.textvar_colid}\n",
+                            f"{self.textvar_colrating}\n",
+                            f"{self.textvar_rdir}\n",
+                            f"{self.textvar_wdir}\n",
+                            f"{self.textvar_start}\n\n")
 
             # Wait 5 seconds (for user to see params)
             time.sleep(float(self.var_wait_time.get()))

@@ -216,22 +216,27 @@ class ResultsAnalysis:
         on most repeated words per dataset.
         SOURCE: https://samuelndungula.medium.com/sentiment-analysis-using-vader-and-roberta-5279ba312d70
         '''
+        # Define font path
+        font_path = os.path.join(self.project_path, 'src', 'digital_assets', 'Cardo-Regular.ttf') # type: ignore
+
         # Create stopword
         stopwords = set(STOPWORDS)
-        
+
         words_all = ' '.join([str(words) for words in df_processed[self.var_target_col.get()]]) # type: ignore
-        word_cloud = WordCloud(width=3000,
-                               height=2000,
+
+        word_cloud = WordCloud(width=3200,
+                               height=1600,
                                random_state=10,
-                               #max_font_size=110,
                                stopwords=stopwords,
                                background_color='black',
                                colormap=self.var_plot_colorscheme.get(), # type: ignore
-                               collocations=False
+                               collocations=False,
+                               font_path = font_path
                                ).generate(words_all)
         
-        fw, wx = plt.subplots()
+        fw, wx = plt.subplots(figsize=(20,10))
         wx.imshow(word_cloud, interpolation='bilinear')
+        plt.tight_layout(pad=0)
         plt.axis('off')
         plt.close(fw)
 
@@ -460,12 +465,12 @@ class ResultsAnalysis:
         # Plot 1: Compound Score vs Rating Barplot
         fig_list = []
         f1, ax_1 = plt.subplots()
-
         p_1 = sns.barplot(data = df_processed,
-                           x = self.var_rating_col.get(), # type: ignore
-                           y = 'CMP',
-                           ax = ax_1,
-                           palette = self.var_plot_colorscheme.get()) # type: ignore
+                          x = self.var_rating_col.get(), # type: ignore
+                          y = 'CMP',
+                          ax = ax_1,
+                          palette = self.var_plot_colorscheme.get() # type: ignore
+                          )
 
         p_1.set_title('Compound Score by Ratings')
         plt.close(f1)
@@ -487,7 +492,6 @@ class ResultsAnalysis:
 
                 f2_5 = self.plotAggCols(agg_col, df_agg_score)
                 fig_list.append(f2_5)
-
 
                 f6_9 = self.plotHeatMap(agg_col, df_agg_score, 'Score')
                 fig_list.append(f6_9)
@@ -517,6 +521,7 @@ class ResultsAnalysis:
 
         # Set score based on cmp
         df_processed['SCORE'] = df_processed['CMP'].apply(self.setScoresComp)
+        df_processed = df_processed.fillna(0)
 
         # Calculate percentages
         score_percentages = self.getPercentages(df_processed)
@@ -603,7 +608,7 @@ class ResultsAnalysis:
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
 
-            business_plots = self.generateBusinessPlots(score_percentages, agg_col_list)
+            business_plots = self.generateBusinessPlots(df_processed, agg_col_list)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
@@ -643,7 +648,7 @@ class ResultsAnalysis:
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
             
-            business_plots = self.generateBusinessPlots(score_percentages, agg_col_list)
+            business_plots = self.generateBusinessPlots(df_processed, agg_col_list)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
