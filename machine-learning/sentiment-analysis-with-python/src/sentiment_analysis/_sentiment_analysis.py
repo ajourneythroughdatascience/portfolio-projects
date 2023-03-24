@@ -212,4 +212,4 @@ class SentimentAnalysis(PreprocessData,
         return None
 
 if __name__ == '__main__':
-    main() # type: ignore
+    SentimentAnalysis()

@@ -46,15 +46,26 @@ The complete project including all the resources used can be found in the [Port
 		- Application
 		- Sentiment Analysis
 		- Utils
-		- 
 	- Packages
 	- Configuration files
+		- Application configuration
+		- User parameters
+		- Getter functions
 - Frontend
-	- Main application
-		- UI Components
-	- Dialogues
-		- Help
-		- About
+	- SetGlobalParams
+	- Help & About prompts
+	- Main window
+		- Variable setting
+		- Window geometry and structure
+		- Sidebar widgets
+		- Main widgets
+			- Option menus
+			- Horizontal slider
+			- Text log
+			- Text entries
+			- Progress Bars
+			- Text log
+- Main function
 - [Conclusions](#conclusions)
 - [References](#references)
 - [Copyright](#copyright)
@@ -502,7 +513,7 @@ class MainApplication(SetGlobalParams,
         pass
 
 if __name__ == '__main__':
-    main()
+    MainApplication()
 ```
 
 ### 1.2 Sentiment analysis
@@ -563,7 +574,7 @@ class SentimentAnalysis(PreprocessData,
         pass
 
 if __name__ == '__main__':
-    main() # type: ignore
+    SentimentAnalysis()
 ```
 
 Main structure for `_results_analysis.py`:
@@ -757,7 +768,7 @@ class ResultsAnalysis:
 		pass
 
 if __name__ == '__main__':
-    main() # type: ignore
+    ResultsAnalysis()
 ```
 
 Main structure for `_results_writer.py`:
@@ -863,7 +874,27 @@ class ResultsWriter:
         '''
 
 if __name__ == '__main__':
-    main() # type: ignore
+    ResultsWriter()
+```
+
+Main structure for `models/vader.py`:
+
+##### **Code**
+```Python
+# Third-party packages
+import nltk
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+def vaderModel():
+    '''
+    Download the VADER lexicon first.
+    Define Sentiment Analyzer object.
+    Return model object.
+    '''
+    pass
+    
+if __name__ == '__main__':
+    vaderModel()
 ```
 
 ### 1.3 Utils
@@ -903,7 +934,7 @@ class GetParameters:
 		pass
 
 if __name__ == '__main__':
-    main() # type: ignore
+    GetParameters()
 ```
 
 Main structure for `_string_formatting.py`:
@@ -936,7 +967,7 @@ class StringFormatting:
         pass
 
 if __name__ == '__main__':
-    main() # type: ignore
+    StringFormatting()
 ```
 
 Main structure for `_preprocess_data.py`:
@@ -957,7 +988,7 @@ class PreprocessData(StringFormatting):
 		Enter download mode where all URLs specified on source.txt.
 		will be downloaded in datasets folder.
 		'''
-	pass
+		pass
 
         def downloadData():
             '''
@@ -1008,7 +1039,7 @@ class PreprocessData(StringFormatting):
             pass
 
 if __name__ == '__main__':
-    main() # type: ignore
+    PreprocessData()
 ```
 
 We may have noticed a few interesting characteristics from our modules:
@@ -1025,6 +1056,8 @@ Mixin class methods have `self` as parameter. This is because when we call a mix
 
 We include `# type: ignore` at the end of specific lines. This statement tells our Python debugger to ignore errors on the current line we're in. There are multiple reasons why we're using this technique:
 - By design, a mixin class does not explicitly inherit attributes from a "parent class". We may notice that mixin classes are not declared as a conventional child class would be declared (i.e. `MyClass(ParentClass):`)
+
+We included `if name == main` in all modules. This snippet is a key part when working with internal module imports; when we create a module and import it from another script, the Python interpreter will automatically execute it upon import. We don't want that. Instead, we would like our imports to be executed upon explicitly calling them. By implementing `if name == main` on our modules, we are making sure that the modules only run if they are explicitly executed from a shell, for example, or upon function calling inside another script.
 
 Now that we have our modules defined, we can package them.
 
@@ -1244,7 +1277,7 @@ Conversely, we can also use a different class, `customtkinter.CTkToplevel`, inst
 This is as simple as a GUI can get, and from there, we can build *n* number of frames and widgets. Since we'll be building our application using a class approach, we'll do things slightly different.
 
 
-## 1. SetGlobalParams
+## 1. Global parameters
 The first thing we'll do, is define a class which will set global parameters for the 3 GUI classes we'll be writing. We'll head to our [`_app.py`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/application/_app.py) module, and include the following:
 
 ##### **Code**
@@ -1779,8 +1812,7 @@ self.progressbar_2.stop()
 
 This way, when our iteration concludes, our sum has reached the total number of iterations scaled to a range of `[0, 1]`, and the progress bar will reflect completion.
 
-## UI Components
-### Text log
+#### 3.4.5 Text log
 We will define a `textlog` object which will display useful messages to the user. Here, the user will be able to monitor the end-to-end process.
 
 A typical insertion has the following generalized structure:
@@ -1801,71 +1833,82 @@ self.textlog.configure(state="disabled")
 self.update_idletasks()
 ```
 
-We will also use an alternative structure which will include a string pre-formatting function. This will be useful when we're printing a variable name along with its value to screen; it will make the output clearer.
+We will use an alternative structure which will include a string pre-formatting function. This will be useful when we're printing a variable name along with its value to screen; it will make the output clearer.
 
-For these two actions, we will create two separate functions by creating a `string_formatting.py` library inside our `resources` folder:
+For these two actions, we will create two separate functions by creating a `string_formatting.py` library inside our `resources` folder. We will include both functions as part of our previously defined `StringFormatting` mixin class:
 
 ##### **Code**
 ```Python
+def padStr(self, measure_title, value_title):
+    '''
+    Format a string to be inserted into log.
+    '''
+    measure_title += ' '
+    self.padded_str = measure_title + '.'*(self.dot_sep - len(measure_title)) # type: ignore
+    self.padded_str = ('%s %s' % ( self.padded_str, value_title))
 
+    return self.padded_str
 ```
 
 ##### **Code**
 ```Python
+def insertLog(self, *args, clear=False):
+    '''
+    Insert a log into textlog.
+    Perform all required activities associated:
+        - Enable text log.
+        - If clear==True, clear the log before. Else, keep.
+        - Insert all kwargs into text log.
+        - Disable text log.
+        - Update idle tasks.
+    '''
+    if clear==True:
+        self.textlog.configure(state="normal") # type: ignore
+        self.textlog.delete("0.0", "end") # type: ignore
+        for textlog in args:
+            self.textlog.insert(self.print_position, textlog) # type: ignore
+        self.textlog.configure(state="disabled") # type: ignore
+        self.update_idletasks() # type: ignore
 
+    elif clear==False:
+        self.textlog.configure(state="normal") # type: ignore
+        for textlog in args:
+            self.textlog.insert(self.print_position, textlog) # type: ignore
+        self.textlog.configure(state="disabled") # type: ignore
+        self.update_idletasks() # type: ignore
+
+    return None
 ```
 
-# Back-End
+We included an additional parameter, `clear`, where we will be able to define if we want to clear the log previous to text insertion, or we want to keep previous messages. Keeping logs for certain messages is important since the user might want to scroll over the entire log to check the specific output messages for a given step.
 
-## Preprocessing
-We will define a `preprocessData()` function in order to either download or load data sets, depending on the user's choice.
+# Main function
+A main function is used as the user's contact point. It's meant to be run by its own, and is not meant to be called from other packages or modules; we can think of the main function as the executable in case we were to compile our code. It's used as a trigger to execute the entire application.
 
-This function will accept keyword arguments `**kwargs` which we will provide upon the function call later on.
+We want to create a simple script that initializes the application upon execution. Its common practice to call this script `main.py`, and the function inside it, `main`.
 
-It is bad practice to specify required parameters as part of the `**kwargs` since, if left unspecified, our program will not find them and return an error. To ensure this does not happen, we mentioned that we created a `.toml` file containing default arguments for all keyword arguments passed.
+##### **Code**
+```Python
+# Internal packages
+import application
 
-Inside `preprocessData()`, we will define 4 child functions:
-- `downloadData()`
+# Define main function
+def main():
+    app = application.MainApplication()
+    app.mainloop()
 
-### Downloading
-This function will download the user-specified datasets if the mode is set to `Download Mode`. A complete data set can be in the form of a `.csv`, `.gz` or `.tsv` file.
+if __name__ == '__main__':
+    main()
+```
 
-If a dataset already exists, it will not be downloaded. Otherwise, it will be downloaded
-
-### Reading
-A given dataset will be read to a `polars.DataFrame` object. All the preprocessing will be performed on this object, which will provide processing speed advantages over the traditional `pandas.DataFrame` alternative.
-
-# Default arguments
-## Management
-There are some measures we can implement in order to avoid bugs derived from unspecified arguments. These will ensure that our program runs smoothly:
-- Specifying a dictionary of default arguments: In this example, a `.toml` file with default arguments is passed. These parameters are initialized at the beginning of `main.py`, so all required arguments will have a default value without exception. These default parameter files are not meant for the user to modify. Instead, the user can change parameters by using the GUI. 
-- Specifying exception handling carefully: Each input must have an exception handler. If a value. We already have implemented a failsafe for default arguments, but still, the user might input arguments in incorrect forms. To counteract this, exception handles are implemented on each critical step of the downloading, reading and writing process.
-
-## Source file for target URL specification
-A `.txt` file must be created inside the input directory, using the name `source.txt`. This file contains all URLs for downloading target datasets which we wish to process and analyze. If this file is not provided, the program will raise an exception.
-
-# Preprocessing data
-
-
-
-# VADER Model
-https://www.youtube.com/watch?v=QpzMWQvxXWk
-https://www.youtube.com/watch?v=Ew72EAgM7FM
-https://towardsdatascience.com/the-most-favorable-pre-trained-sentiment-classifiers-in-python-9107c06442c6
-https://www.google.com/search?q=beautiful+python+gui&tbm=isch&client=firefox-b-d&hl=en&sa=X&ved=2ahUKEwja2KT4s779AhX-2skDHWv5B2sQrNwCKAB6BQgBEPQB&biw=1920&bih=919#imgrc=IY1ipTmyw464FM&imgdii=Pu6U445c1OHxsM
-
-Library:
-- `from nltk.sentiment import SentimentIntensityAnalyzer`
-
-Assumptions:
-- Stop words are removed.
-- Each word is scored and combined to a total score.\
-- Context is not taken into account.
+This might seem a bit overkill for our specific purpose since our main function is really brief and does nothing else than calling our `MainApplication` class from our `application` package. The reason we did this was to keep our structure more organized: the frontend components inside the `application` folder, and the main function as the execution trigger.
 
 ---
 
 # Conclusions
-We've reviewed multiple yet simple mechanisms we can employ to make our code cleaner, more elegant, modular, usable, scalable and safer. These measures can not only help us become better programmers but better collaborators. It will make reading code a pleasure instead of an agonizing process and instantly boost our credibility.
+In this segment, we discussed what sentiment analysis is and the types of approaches for this technique. We also designed our application's architecture, created our environment and included our project's dependencies, defined our project's directory structure and the interaction between packages & modules, and implemented a fully-fledged GUI using `customtkinter` and `tkinter`.
+
+Now that we have a fully-built frontend for the user to interact with, over the next segment we will design the backend, starting with a dataset preprocessing module, and closing with the sentiment analysis package.
 
 ---
 
@@ -1876,7 +1919,6 @@ We've reviewed multiple yet simple mechanisms we can employ to make our code cle
 - https://www.pythontutorial.net/python-oop/python-mixin/
 - http://python-history.blogspot.com/2010/06/method-resolution-order.html
 - https://huggingface.co/blog/sentiment-analysis-python
-
 
 ---
 

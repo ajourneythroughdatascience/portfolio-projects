@@ -25,3 +25,6 @@ def vaderModel():
     model = SentimentIntensityAnalyzer()
     
     return model
+
+if __name__ == '__main__':
+    vaderModel()

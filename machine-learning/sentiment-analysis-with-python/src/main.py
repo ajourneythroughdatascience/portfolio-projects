@@ -10,10 +10,6 @@ Contact: https://pabloagn.com/contact
 Part of Portfolio Project: sentiment-analysis-in-python
 """
 
-# Built-in packages
-import os
-import sys
-
 # Internal packages
 import application
 

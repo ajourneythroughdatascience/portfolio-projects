@@ -656,3 +656,6 @@ class ResultsAnalysis:
                     technical_plots,
                     business_plots
                     )
+        
+if __name__ == '__main__':
+    ResultsAnalysis()

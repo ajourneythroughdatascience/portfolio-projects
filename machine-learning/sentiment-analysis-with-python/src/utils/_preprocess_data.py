@@ -274,6 +274,5 @@ class PreprocessData(StringFormatting):
 
         return df, termination
 
-# Call main function
 if __name__ == '__main__':
-    main() # type: ignore
+    PreprocessData()
