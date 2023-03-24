@@ -29,13 +29,16 @@ The complete project, including all the resources used, can be found in the [Po
 
 # Table of Contents
 - [Preface](#preface)
-	- [Machine Learning approaches](#machine-learning-approaches)
-	- [Rule-based approaches](#rule-based-approaches)
+	- [Machine Learning approaches](#1-machine-learning-approaches)
+	- [Rule-based approaches](#2-rule-based-approaches)
 - [Concept design](#concept-design)
 	- [GUI](#1-gui)
 	- [Data preprocessing](#2-data-preprocessing)
 	- [Models](#3-models)
 	- [Results & analysis](#4-results--analysis)
+		- [Main results](#41-main-results)
+		- [Analysis](#42-analysis)
+		- [Exporting](#43-exporting)
 - [General project structure](#general-project-structure)
 	- [Structure chart](#1-structure-chart)
 	- [Project components](#2-project-components)
@@ -48,11 +51,11 @@ The complete project, including all the resources used, can be found in the [Po
 		- [Application](#11-application)
 		- [Sentiment Analysis](#12-sentiment-analysis)
 		- [Utils](#13-utils)
-	- [Packages](#packages)
-	- [Configuration files](#configuration-files#configuration-files)
-		- [Application configuration](#1-application-configuration)
-		- [User parameters](#2-user-parameters)
-		- [Getter functions](#3-getter-functions)
+	- [Packages](#2-packages)
+	- [Configuration files](#3-configuration-files)
+		- [Application configuration](#31-application-configuration)
+		- [User parameters](#32-user-parameters)
+		- [Getter functions](#33-getter-functions)
 - [Frontend](#frontend)
 	- [Global parameters](#1-global-parameters)
 	- [Help & About prompts](#2-help--about-prompts)
@@ -278,12 +281,12 @@ The TextBlob sentiment method accepts a `textblob.blob.TextBlob` object containi
 
 The advantage of these two models is that both output a polarity score in the same scale $[-1, 1]$, meaning we can use all analyses for both cases without rescaling or normalizing the results. Also, the range is continuous and can be used to perform correlational studies with other continuous variables selected by the user.
 
-## 3. Results & analysis
+## 4. Results & analysis
 The results & analysis section will consist of two main parts:
 - Apply custom analysis based on user selection.
 - Write analysis results either to Excel worksheets or as plots.
 
-### 3.1 Main results
+### 4.1 Main results
 Both VADER & TextBlob implementations have similar outputs. Still, there are some differences. We need to homogenize the results for both models to apply the same analysis, no matter the case.
 
 Consequently, we will stick with the compound score (*compound for VADER, polarity for TextBlob*) for both cases and ditch the rest of the scores since they are unfamiliar to both models.
@@ -301,7 +304,7 @@ Thus, a typical output with sentiment analysis using the VADER model would look 
 
 ###### *Table 4: Example Amazon Watches Review Analysis*
 
-### 3.2 Analysis
+### 4.2 Analysis
 We want to implement the following analyses:
 - Raw compound score aggregated by columns selected by the user per dataset:
 	- Mean
@@ -333,7 +336,7 @@ We want to implement the following analyses:
 - Bar chart for word frequency analysis per POS for top $n$ scored reviews per dataset.
 - Bar chart for word frequency analysis per POS for lowest $n$ scored reviews per dataset.
 
-### 3.4 Exporting
+### 4.3 Exporting
 We would like to export the previous results in the following format:
 
 | verified_purchase | MEAN     | STD      |
@@ -1226,9 +1229,7 @@ We included `if name == main` in all modules. This snippet is key when working w
 
 Now that we have our modules defined, we can package them.
 
----
-
-# Packages
+## 2. Packages
 As mentioned, we will express our packages as folders inside `src`. For a folder to be used as a package, we must include a special file,  `__init__.py`, inside each folder. This way, we can import entire packages across files without needing to import each module explicitly; when we import a folder as a package from another file, the Python interpreter calls `__init__.py`, which includes all imported modules as part of the package.
 
 The basic structure of an `__init__.py` file is very simple; we import the modules we wish to include in the package, along with the classes we wish to use in other files:
@@ -1270,9 +1271,7 @@ from ._string_formatting import StringFormatting
 
 Note that we're not importing any external package here; we're simply importing our own modules (*files*) along with the classes we defined earlier.
 
----
-
-# Configuration Files
+## 3. Configuration files
 The last piece that needs to be added before we start writing our code is to define **configuration files**. Configuration files are extremely useful when writing code; we would like to provide a way to configure our application without messing up with the code itself. This technique offers a way for an external user, or even ourselves, to fine-tune any modifiable parameter which changes the behavior of our application's interface or even backend. It also provides a way for us to define a set of variables that our application will use; we define our parameter and configuration options outside the code and write a getter function to manage the reading of the parameters from the created files.
 
 The idea is to leave the configuration for the main user-defined parameters in the GUI and specific parameters such as the GUI's font family, font size, text color, and other parameters inside a configuration file. This way, we purpose the GUI exclusively for model operation and leave the application's configuration parameters saved in files, which the general user would not necessarily want to modify. In short, it keeps distractions away while keeping a backdoor for more fine-grained customization.
@@ -1295,7 +1294,7 @@ There are multiple file formats, such as `.hcl`, `.json`, and `.yaml`, tailored 
 - Supports eight native types such as key/value pairs, arrays, integers and floats, tables, and more.
 - Supports sections.
 
-## 1. Application configuration
+### 3.1 Application configuration
 The application configuration file will include parameters related to the appearance of the UI.
 
 We can create our [`config.toml`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/config/config.toml) file inside our previously created `src/config` directory. We will then include the following:
@@ -1331,7 +1330,7 @@ font_code_weight = "normal"
 
 We're dividing our content into two separate sections. This provides better organization when reading our file.
 
-## 2. User parameters
+### 3.2 User parameters
 The user parameters file will include default values for all user-defined parameters inside the GUI. We will use this file to set all options for our GUI menus.
 
 We can create our [`parameters.toml`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/config/parameters.toml) file inside our previously created `src/config` directory. We will then include the following:
@@ -1360,7 +1359,7 @@ rating_col = "star_rating"
 target_col =  "review_body"
 ```
 
-## 3. Getter functions
+### 3.3 Getter functions
 Now that we have our parameter list, we will build two getter functions inside our [`_get_parameters.py`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/utils/_get_parameters.py) file; one for each case (*configuration and parameters*). These functions should go inside our `GetParameters` mixin class:
 
 ##### **Code**
