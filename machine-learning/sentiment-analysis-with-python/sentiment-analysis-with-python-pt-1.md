@@ -69,7 +69,7 @@ The complete project, including all the resources used, can be found in the [Po
 			- [Text log](#343-text-log)
 			- [Text entries](#344-text-entries)
 			- [Progress Bars](#345-progress-bars)
-			- [Execution button](#345-execution-button)
+			- [Execution button](#346-execution-button)
 - [Main function](#main-function)
 - [Results](#results)
 - [Conclusions](#conclusions)
@@ -2023,7 +2023,7 @@ self.progressbar_2.stop()
 
 This way, when our iteration concludes, our sum has reached the total number of iterations scaled to a range of `[0, 1]`, and the progress bar will reflect completion.
 
-#### 3.4.6 execution button
+#### 3.4.6 Execution button
 We wish to provide the user with a way to run the sentiment analysis whenever all options are correctly selected. We can define a button using the following syntax:
 
 ##### **Code**
