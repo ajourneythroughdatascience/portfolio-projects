@@ -28,44 +28,43 @@ The complete project including all the resources used can be found in the [Port
 ---
 
 # Table of Contents
-- Preface
-	- Machine Learning approaches
-	- Rule-based approaches
-- Concept design
-	- GUI
-	- Models
-- General project structure
-	- Structure chart
-	- Project components
-	- Class definition approach
-- Preparing the environment
-	- Creating a virtual environment
-	- Installing required libraries
-- Implementing the main components
-	- Modules
-		- Application
-		- Sentiment Analysis
-		- Utils
-	- Packages
-	- Configuration files
-		- Application configuration
-		- User parameters
-		- Getter functions
-- Frontend
-	- SetGlobalParams
-	- Help & About prompts
-	- Main window
-		- Variable setting
-		- Window geometry and structure
-		- Sidebar widgets
-		- Main widgets
-			- Option menus
-			- Horizontal slider
-			- Text log
-			- Text entries
-			- Progress Bars
-			- Text log
-- Main function
+- [Preface](#preface)
+	- [Machine Learning approaches](#machine-learning-approaches)
+	- [Rule-based approaches](#rule-based-approaches)
+- [Concept design](#concept-design)
+	- [GUI](#1-gui)
+	- [Models](#2-models)
+- [General project structure](#general-project-structure)
+	- [Structure chart](#1-structure-chart)
+	- [Project components](#2-project-components)
+	- [Class definition approach](#3-class-definition-approach)
+- [Preparing the environment](#preparing-the-environment)
+	- [Creating a virtual environment](#1-creating-a-virtual-environment)
+	- [Installing required libraries](#2-installing-required-libraries)
+- [Implementing the main components](#implementing-the-main-components)
+	- [Modules](#1-modules)
+		- [Application](#11-application)
+		- [Sentiment Analysis](#12-sentiment-analysis)
+		- [Utils](#13-utils)
+	- [Packages](#packages)
+	- [Configuration files](#configuration-files#configuration-files)
+		- [Application configuration](#1-application-configuration)
+		- [User parameters](#2-user-parameters)
+		- [Getter functions](#3-getter-functions)
+- [Frontend](#front-end)
+	- [Global parameters](#1-global-parameters)
+	- [Help & About prompts](#2-help--about-prompts)
+	- [Main window](#3-main-window)
+		- [Variable setting](#31-variable-setting)
+		- [Window geometry and structure](#32-window-geometry-and-structure)
+		- [Sidebar widgets](#33-sidebar-widgets)
+		- [Main widgets](#34-main-widgets)
+			- [Option menus](#341-option-menus)
+			- [Horizontal slider](#342-horizontal-slider)
+			- [Text log](#343-text-log)
+			- [Text entries](#344-text-entries)
+			- [Progress Bars](#345-progress-bars)
+- [Main function](#main-function)
 - [Conclusions](#conclusions)
 - [References](#references)
 - [Copyright](#copyright)
@@ -75,7 +74,7 @@ The complete project including all the resources used can be found in the [Port
 # Preface
 Sentiment Analysis methods can provide insight regarding the tone, polarity, subjectivity and most prevalent parts of speech of a given text. We can create our own model from scratch, use a pretrained one out of the box, perform transfer learning on a pretrained model with our own datasets, or use a rule-based approach where no ML model is required.
 
-## Machine Learning approaches
+## 1. Machine Learning approaches
 As mentioned before, sentiment analysis can be achieved using **Machine Learning models**. If we think in simple terms, extracting sentiment out of text can be modeled as a classification problem.
 
 Let us illustrate this with an example, where we have a set of movie reviews we would like to classify as positive, neutral or negative:
@@ -183,7 +182,7 @@ There are a wide variety of models we can use:
 
 Most available pretrained large models already offer great performance in terms of social media and product review analysis out of the box. On top of that, there are thousands of variations for each existing large model; there are multiple forks containing tuned pretrained models specific for a given application, such as Twitter polarity analysis or IMDB movie rating analysis.
 
-## Rule-based approaches
+## 2. Rule-based approaches
 As its name suggests, the rule-based approach follows a set of predefined, hardcoded rules in order to classify the text's sentiment. The result is a set of rules based on which the text is labeled as positive/neutral/negative. These rules are also known as lexicons, hence the Rule-based approach is also called **Lexicon-based approach**.
 
 Upon performing the sentiment analysis on a sentence or paragraph, each of the words are scored, and a final score is calculated based on the frequency of each word.
@@ -1741,6 +1740,55 @@ self.update_idletasks()
 - The `insert` method inserts a line of text at position character `0` line `0`, with message `Text`, which can of course be assigned to a variable.
 - The `update_idletasks` updates pending tasks when called. Without this statement, we would see the insertion reflected only after our execution concludes. 
 
+We will use an alternative structure which will include a string pre-formatting function. This will be useful when we're printing a variable name along with its value to screen; it will make the output clearer.
+
+For these two actions, we will create two separate functions by creating a `string_formatting.py` library inside our `resources` folder. We will include both functions as part of our previously defined `StringFormatting` mixin class:
+
+##### **Code**
+```Python
+def padStr(self, measure_title, value_title):
+    '''
+    Format a string to be inserted into log.
+    '''
+    measure_title += ' '
+    self.padded_str = measure_title + '.'*(self.dot_sep - len(measure_title)) # type: ignore
+    self.padded_str = ('%s %s' % ( self.padded_str, value_title))
+
+    return self.padded_str
+```
+
+##### **Code**
+```Python
+def insertLog(self, *args, clear=False):
+    '''
+    Insert a log into textlog.
+    Perform all required activities associated:
+        - Enable text log.
+        - If clear==True, clear the log before. Else, keep.
+        - Insert all kwargs into text log.
+        - Disable text log.
+        - Update idle tasks.
+    '''
+    if clear==True:
+        self.textlog.configure(state="normal") # type: ignore
+        self.textlog.delete("0.0", "end") # type: ignore
+        for textlog in args:
+            self.textlog.insert(self.print_position, textlog) # type: ignore
+        self.textlog.configure(state="disabled") # type: ignore
+        self.update_idletasks() # type: ignore
+
+    elif clear==False:
+        self.textlog.configure(state="normal") # type: ignore
+        for textlog in args:
+            self.textlog.insert(self.print_position, textlog) # type: ignore
+        self.textlog.configure(state="disabled") # type: ignore
+        self.update_idletasks() # type: ignore
+
+    return None
+```
+
+We included an additional parameter, `clear`, where we will be able to define if we want to clear the log previous to text insertion, or we want to keep previous messages. Keeping logs for certain messages is important since the user might want to scroll over the entire log to check the specific output messages for a given step.
+
 #### 3.4.4 Text entries
 A text entry can be defined using the `CTkEntry` method. Whenever the user inputs a value, it gets registered as a variable of our choice, which we can use at any time during the execution.
 
@@ -1812,75 +1860,7 @@ self.progressbar_2.stop()
 
 This way, when our iteration concludes, our sum has reached the total number of iterations scaled to a range of `[0, 1]`, and the progress bar will reflect completion.
 
-#### 3.4.5 Text log
-We will define a `textlog` object which will display useful messages to the user. Here, the user will be able to monitor the end-to-end process.
-
-A typical insertion has the following generalized structure:
-
-##### **Code**
-```Python
-# Enable textlog entries
-self.textlog.configure(state="normal")
-
-# Insert the required text using the print_position attribute
-self.textlog.insert(self.print_position, f"ENTERING DOWNLOAD MODE\n\n")
-
-# Disable textlog entries
-self.textlog.configure(state="disabled")
-
-# Update idle tasks
-# i.e. Make text appear during run, regardless of current process status
-self.update_idletasks()
-```
-
-We will use an alternative structure which will include a string pre-formatting function. This will be useful when we're printing a variable name along with its value to screen; it will make the output clearer.
-
-For these two actions, we will create two separate functions by creating a `string_formatting.py` library inside our `resources` folder. We will include both functions as part of our previously defined `StringFormatting` mixin class:
-
-##### **Code**
-```Python
-def padStr(self, measure_title, value_title):
-    '''
-    Format a string to be inserted into log.
-    '''
-    measure_title += ' '
-    self.padded_str = measure_title + '.'*(self.dot_sep - len(measure_title)) # type: ignore
-    self.padded_str = ('%s %s' % ( self.padded_str, value_title))
-
-    return self.padded_str
-```
-
-##### **Code**
-```Python
-def insertLog(self, *args, clear=False):
-    '''
-    Insert a log into textlog.
-    Perform all required activities associated:
-        - Enable text log.
-        - If clear==True, clear the log before. Else, keep.
-        - Insert all kwargs into text log.
-        - Disable text log.
-        - Update idle tasks.
-    '''
-    if clear==True:
-        self.textlog.configure(state="normal") # type: ignore
-        self.textlog.delete("0.0", "end") # type: ignore
-        for textlog in args:
-            self.textlog.insert(self.print_position, textlog) # type: ignore
-        self.textlog.configure(state="disabled") # type: ignore
-        self.update_idletasks() # type: ignore
-
-    elif clear==False:
-        self.textlog.configure(state="normal") # type: ignore
-        for textlog in args:
-            self.textlog.insert(self.print_position, textlog) # type: ignore
-        self.textlog.configure(state="disabled") # type: ignore
-        self.update_idletasks() # type: ignore
-
-    return None
-```
-
-We included an additional parameter, `clear`, where we will be able to define if we want to clear the log previous to text insertion, or we want to keep previous messages. Keeping logs for certain messages is important since the user might want to scroll over the entire log to check the specific output messages for a given step.
+---
 
 # Main function
 A main function is used as the user's contact point. It's meant to be run by its own, and is not meant to be called from other packages or modules; we can think of the main function as the executable in case we were to compile our code. It's used as a trigger to execute the entire application.
