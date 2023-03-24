@@ -10,9 +10,9 @@
 
 [![type](https://img.shields.io/static/v1?label=Type&message=portfolio-project&color=e60048&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAi0lEQVRIS+2WMQ7AIAhF/UNXrtP7rz2OYxeqTWxMTBUSxQVXfnzyQQKC8YExL7zAGCNbgIkIsIKVhBw4vbR7unR6Gp0LvwxXd2v+EvkdDpxWXpWlRTyi9/pABRyBJHEHSlxSadxSlV0SsVsqcUml2W/pynWxnsXNisHMRxrCl8qvH3ECnQDuOmy+0zwB4WNxmUKgwwAAAABJRU5ErkJggg==&labelColor=1a1a1a&style=flat)](https://pabloagn.com/portfolio/) [![category](https://img.shields.io/static/v1?label=Category&message=machine-learning&color=e60048&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAB9UlEQVRIS6VWMU7DQBDkDAQEdrAoCISCAomCL1DxC95Azy9oeQS/oOIHVFAgREFoCHGCRSzZzEU+63LZ9W6CO/vudmZ2d9Zn1pTPaDSqut2usduHw+FpFEUv7t1fk8LNAkiPDWj3+ADuTPjNvXMxWwGzLCuqqtqwh5MkiY0xEwfOAfrEKFAWUBO4DZQDXgCEqjuouvbZUanUrocpngMMVUkKtKC+WhFQUudAUd8r1PkepJ/w7Tysn4uzkNJlascF9WOASAki6w0xrn19b3Gpps5y3kRfJADPZgr9gJSP0EgDHDiQ/Mp50PfxAmDtuQhsZmb/z0OVhwSkmGrSGp5bGRDp3EFaJ5JaiahdZ2vYNj/JkWVMgW7sgNw2yOW+99gacp7TeFE72OcUrgo4Ho93+/3+D5T9QmGHm0BNSnHgMI7jj9Ai2tElZGCK9S3S+GA4BcNNydBaIuEstu/iLJWCa+pLDm+Nz+xQAsBenucnRVG8asFq0s/Yf9YoVAI21wyn3N4I7M1A8ijWHwB42XrFqIO9YfMRlVqqyXC5ukED3nIEVJcoBXv1lmWa5gIpeeQioyTWVj1uXf0DpgKUZbmfpunXKnVnU9rWDKiTHRSDNkDu36iqIQK/Q+mxU8sBYniL/1EVoJ9Wqwo/5x6Cf9YKv6Em1XbNH5bGfSwvuRe1AAAAAElFTkSuQmCC&labelColor=1a1a1a&style=flat)](https://pabloagn.com/categories/machine-learning/) [![technologies](https://img.shields.io/static/v1?label=Technologies&message=Python&color=e60048&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nM2RMW7CUBBEnUikIQUIlBJxrrQgJG7ABRBnoUkaWhpoUgWJlgNYbvz/G1dUi1ayoy87rpOtVrszs6OdLPtXlef5UNJXjHHcCwohjMzsKZ3FGN+Bq/e+c0xHGfiWtEznkg6SNnW/dIxjs0YJ2AMnM3tJSFPgHkKY17gBcAQ+zOw5A3aSbsCkdW0NnNOZY2rstpcInJ3cS/SzwGdqtSzLmdusquqtIXWsehVF8QpcJK1qmxt/TMv6wjE/z0leP27i8Ag8inT/axxtAQ+9o/zn9QD3JOiyTjnQEQAAAABJRU5ErkJggg==&labelColor=1a1a1a&style=flat)](https://pabloagn.com/technologies/python) [![website article](https://img.shields.io/static/v1?label=Website&message=Post%20Link&color=e60048&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+ElEQVR4nO2VOYgUURCGR/BAI4MN1EwjI89EMDYQvNBNNNlcE0VBUdlUUSMjj2BF2UDRePDAwGzNF2GNPIYd8Hjv/6YnEHSf/FIDPTJiu4nJFBTd1Kv6/nrVBd1q/S8DJiU9AmaBm5LOSjoATPwDY0LSQUnnzDArmJOjkqclvQceSHohaR6oJC1JeiPprqT9pZSVg5pSyirH4sw5S1EzbwZwP5jTIwWBdj1meEppZ6/XOyXpCdCX9Am4Fv45Yo+Bk1VV7ag3FNz2kKC7yznvHiX4u3U6nXU55xPAW7vfHfvLmNtmW8NaFux67k0Ea03esTfJJQTj23bHgiNtPNK6jZem3Wpg46Wp23hp2q0GNl6axksjaRGYkXRF0mnHq6ra2HSk/X5/k6RDks6YEazFPwnuBS5KuirptqTnkj4CJZ4zwNFSytqBoP/2wDHgXi33A/BM0i2zzDR7SBC4LGlPr9fb5huVUlYMus45b5E0FYJfgQS8C8/Al7jJVEpp86DODLPMNDs0up7xXBQZVKLLb8CCpIfA+ZzzvpTS+lLKGuAI8DT8cClltc+c49yoWQjGL140ao25oW8QXW1IKe3KOR8Hbkh66ZtI+i7plaG+iR244JjP3HDkXnetGWbVp9XYopHtHgvwWtIPu9+BSx7bssBNDdhqX07xT/Jbz1SBBDGHAAAAAElFTkSuQmCC&labelColor=1a1a1a&style=flat)](https://pabloagn.com/portfolio/sentiment-analysis-with-python-pt-1/)
 
-Sentiment analysis is a natural Language Processing (*NLP*) technique which consists of identifying the emotional tone behind a body of text. This analysis can be applied to multiple contexts such as product review, public opinion, social media polarity, and even support ticket satisfaction measurement.
+Sentiment analysis is a Natural Language Processing (*NLP*) technique which consists of identifying the emotional tone behind a body of text. This analysis can be applied to multiple contexts such as product review, public opinion, social media polarity, and even support ticket satisfaction measurement.
 
-Sentiment Analysis can be performed using Machine Learning algorithms, computational linguistics, or a combination of both. There are a number of libraries that can be used to achieve this task, the most popular being [VADER](https://github.com/cjhutto/vaderSentiment), [TextBlob](https://textblob.readthedocs.io/en/dev/), [SpaCy](https://spacy.io/usage/models) and [Flair](https://github.com/flairNLP/flair), and transformer ML models such as [GPT](https://platform.openai.com/docs/models/gpt-3), Google's [BERT](https://cloud.google.com/ai-platform/training/docs/algorithms/bert-start), [RoBERTa](https://huggingface.co/docs/transformers/model_doc/roberta) and [XLNet](https://huggingface.co/docs/transformers/model_doc/xlnet).
+Sentiment Analysis can be performed using Machine Learning algorithms, computational linguistics, or a combination of both. Several libraries can be used to achieve this task, the most popular being [VADER](https://github.com/cjhutto/vaderSentiment), [TextBlob](https://textblob.readthedocs.io/en/dev/), [SpaCy](https://spacy.io/usage/models) and [Flair](https://github.com/flairNLP/flair), and transformer ML models such as [GPT](https://platform.openai.com/docs/models/gpt-3), Google's [BERT](https://cloud.google.com/ai-platform/training/docs/algorithms/bert-start), [RoBERTa](https://huggingface.co/docs/transformers/model_doc/roberta) and [XLNet](https://huggingface.co/docs/transformers/model_doc/xlnet).
 
 In this 5-piece Portfolio Project, we'll build an end-to-end Sentiment Analysis application including a GUI, two NLP models, a wide variety of options for analysis, and multiple user-level customizations.
 
@@ -23,7 +23,7 @@ We'll divide the segments as follows:
 4. Analysis writing.
 5. Results interpretation.
 
-The complete project including all the resources used can be found in the [Portfolio Project Repo](https://github.com/pabloagn/portfolio/tree/master/machine-learning/sentiment-analysis-with-python).
+The complete project, including all the resources used, can be found in the [Portfolio Project Repo](https://github.com/pabloagn/portfolio/tree/master/machine-learning/sentiment-analysis-with-python).
 
 ---
 
@@ -53,7 +53,7 @@ The complete project including all the resources used can be found in the [Port
 		- [Application configuration](#1-application-configuration)
 		- [User parameters](#2-user-parameters)
 		- [Getter functions](#3-getter-functions)
-- [Frontend](#front-end)
+- [Frontend](#frontend)
 	- [Global parameters](#1-global-parameters)
 	- [Help & About prompts](#2-help--about-prompts)
 	- [Main window](#3-main-window)
@@ -76,20 +76,20 @@ The complete project including all the resources used can be found in the [Port
 ---
 
 # Preface
-Sentiment Analysis methods can provide insight regarding the tone, polarity, subjectivity and most prevalent parts of speech of a given text. We can create our own model from scratch, use a pretrained one out of the box, perform transfer learning on a pretrained model with our own datasets, or use a rule-based approach where no ML model is required.
+Sentiment Analysis methods can provide insight regarding the tone, polarity, subjectivity and most prevalent parts of speech of a given text. We can create and train our own model from scratch, use a pre-trained one out of the box, perform transfer learning on a pre-trained model with our datasets, or use a rule-based approach where no ML model is required.
 
 ## 1. Machine Learning approaches
-As mentioned before, sentiment analysis can be achieved using **Machine Learning models**. If we think in simple terms, extracting sentiment out of text can be modeled as a classification problem.
+As mentioned, sentiment analysis can be achieved using **Machine Learning models**. If we think in simple terms, extracting sentiment out of text can be modelled as a classification problem.
 
-Let us illustrate this with an example, where we have a set of movie reviews we would like to classify as positive, neutral or negative:
+Let us illustrate this with an example where we have a set of movie reviews we would like to classify as positive, neutral or negative:
 
 >A riotous film that finds depth, clarity and refreshment in even the shallowest of pools.
 
 >It would be a disservice to consider this generous film a mere homage.
 
-In general terms, we would preprocess our text data, extract relevant features, train our classification model with labeled data and use our trained model to predict the sentiment of future data sets:
+In general terms, we would preprocess our text data, extract relevant features, train our classification model with labelled data and use our trained model to predict the sentiment of future data sets:
 
-**Data preprocessing:** The text data is preprocessed by removing stop words, special characters, and converting it to lowercase to reduce noise in the dataset:
+**Data preprocessing:** The text data is preprocessed by removing stop words and special characters and converting it to lowercase to reduce noise in the dataset:
 
 - Original text: A riotous film that finds depth, clarity and refreshment in even the shallowest of pools.
 - Preprocessed text: riotous film finds depth clarity refreshment even shallowest pools.
@@ -116,9 +116,9 @@ rev_2 = ['would',
 		 'homage']
 ```
 
-**Feature extraction:** The tokenized text is transformed into a numerical representation of features that the model can understand. We can use techniques such as bag-of-words (*BOW*), n-grams, and word embeddings.
+**Feature extraction:** The tokenized text is transformed into a numerical representation of features the model can understand. We can use techniques such as bag-of-words (*BOW*), n-grams, and word embeddings.
 
-The bag-of-words approach considers a vocabulary of all the unique words in the dataset and represent each review as a vector of word counts:
+The bag-of-words approach considers a vocabulary of all the unique words in the dataset and represents each review as a vector of word counts:
 
 | review      | rev_1 | rev_2 |
 | ----------- | ----- | ----- |
@@ -138,9 +138,9 @@ The bag-of-words approach considers a vocabulary of all the unique words in the 
 | mere        | 0     | 1     |
 | homage      | 0     | 1     |
 
-###### Table 1: bag-of-words for 2 Movie Reviews
+###### *Table 1: bag-of-words for 2 Movie Reviews*
 
-**Model training:** We now train our sentiment analysis model with previously labeled data, where each text sample (*in this case, a word*) is associated with a sentiment label (*e.g. positive, neutral or negative*). An example of a simple set of labeled words could consist of the following:
+**Model training:** We now train our sentiment analysis model with previously labelled data, where each text sample (*in this case, a word*) is associated with a sentiment label (*e.g. positive, neutral or negative*). An example of a simple set of labelled words could consist of the following:
 
 | Word        | Label    |
 | ----------- | -------- |
@@ -162,13 +162,13 @@ The bag-of-words approach considers a vocabulary of all the unique words in the 
 
 ###### *Table 2. Sentiment Labels for Words*
 
-Since we want to calculate a score for the entire sentence, labels are usually expressed numerically, instead of textually Positive, Neutral or Negative. We could, for example, define a vector $[-1, 0, 1]$, representing each label.
+Since we want to calculate a score for the entire sentence, labels are usually expressed numerically instead of textually Positive, Neutral or Negative. We could, for example, define a vector $[-1, 0, 1]$, representing each label.
 
-**Model testing and validation:** The trained model is tested and validated on a separate dataset to evaluate its performance. The model's performance is measured using metrics such as accuracy, precision, recall, and F1 score.
+**Model testing and validation:** The trained model is tested and validated on a separate dataset to evaluate its performance. The model's performance is measured using accuracy, precision, recall, and F1 score metrics.
 
-**Prediction:** Once the model is trained and validated, it can be used to make predictions on new text data. The model will analyze the text and classify it as positive, negative, or neutral sentiment based on the learned patterns and features.
+**Prediction:** Once the model is trained and validated, it can be used to make predictions on new text data. Based on the learned patterns and features, the model will analyze the text and classify it as positive, negative, or neutral sentiment.
 
-This was a simplified example, but in reality, ML models such as transformer models make associations between words in order to understand the context of a sentence or paragraph by grouping words using Part of Speech (*POS*) tags or other attributes; this technique is called [**lemmatization**](https://www.techtarget.com/searchenterpriseai/definition/lemmatization) and is extremely relevant in NLP; even though both of the reviews we used were very positive, there were some words tagged as Negative (*e.g. disservice, riotous*), so the final score would not be 100% Positive.
+This was a simplified example, but in reality, ML models such as transformer models make associations between words to understand the context of a sentence or paragraph by grouping words using Part of Speech (*POS*) tags or other attributes; this technique is called [**lemmatization**](https://www.techtarget.com/searchenterpriseai/definition/lemmatization) and is highly relevant in NLP; even though both of the reviews we used were very positive, there were some words tagged as Negative (*e.g. disservice, riotous*), so the final score would not be 100% Positive.
 
 There are a wide variety of models we can use:
 
@@ -184,18 +184,18 @@ There are a wide variety of models we can use:
 	- Deep Belief Networks (*DBN*)
 	- Long-Short Term Memory (*LSTM*)
 
-Most available pretrained large models already offer great performance in terms of social media and product review analysis out of the box. On top of that, there are thousands of variations for each existing large model; there are multiple forks containing tuned pretrained models specific for a given application, such as Twitter polarity analysis or IMDB movie rating analysis.
+Most available pre-trained large models already offer outstanding performance in terms of social media and product review analysis out of the box. On top of that, there are thousands of variations for each existing large model; there are multiple forks containing tuned pre-trained models specific for a given application, such as Twitter polarity analysis or IMDB movie rating analysis.
 
 ## 2. Rule-based approaches
-As its name suggests, the rule-based approach follows a set of predefined, hardcoded rules in order to classify the text's sentiment. The result is a set of rules based on which the text is labeled as positive/neutral/negative. These rules are also known as lexicons, hence the Rule-based approach is also called **Lexicon-based approach**.
+As its name suggests, the rule-based approach follows predefined, hardcoded rules to classify the text's sentiment. The result is a set of rules based on which the text is labelled as positive/neutral/negative. These rules are also known as lexicons; hence the Rule-based approach is also called **Lexicon-based approach**.
 
-Upon performing the sentiment analysis on a sentence or paragraph, each of the words are scored, and a final score is calculated based on the frequency of each word.
+Upon performing the sentiment analysis on a sentence or paragraph, each word is scored, and a final score is calculated based on the frequency of each word.
 
-In general, a rule-based approach follows similar initial steps to a ML approach, the biggest difference being there's no model to train, test and validate: We preprocess the text, tokenize it, enrich it with part of speech (*POS*) tagging, and classify it according to a set of predefined rules; it's essentially a simpler process.
+In general, a rule-based approach follows similar initial steps to an ML approach, the most significant difference being there's no model to train, test and validate: We preprocess the text, tokenize it, enrich it with part of speech (*POS*) tagging, and classify it according to a set of predefined rules; it's essentially a more straightforward process.
 
-The major disadvantage with this approach, is that most libraries are not capable of contextualizing sentences or paragraphs; the final score is given by the cumulative score of each word, without taking context into account.  
+The major disadvantage of this approach is that most libraries cannot contextualize sentences or paragraphs; the final score is given by the cumulative score of each word without considering the context.  
 
-Still, rule-based algorithms have proven extremely useful and fairly accurate, with a low amount of effort required in terms of their implementation.
+Still, rule-based algorithms have proven extremely useful and offer accurate results, with a low amount of effort required in terms of their implementation.
 
 There are two main libraries for performing sentiment analysis using rule-based approaches:
 - VADER (*Valence Aware Dictionary for Sentiment Reasoning*)
@@ -204,26 +204,26 @@ There are two main libraries for performing sentiment analysis using rule-based 
 ---
 
 # Concept Design
-We want to design an easy-to-use Guided User Interface which provides the user a way to perform sentiment analysis on one or more datasets. We also want to include deeper analysis capabilities and results exporting, so that the user can visualize textually and graphically the analysis results.
+We want to design an easy-to-use Guided User Interface that allows users to analyze sentiment on one or more datasets. We also want to include deeper analysis capabilities and results exporting so that the user can visualize the results textually and graphically.
 
 ## 1. GUI
 The Guided User Interface should include the following:
-- Option to bulk-download datasets from a list of URLs provided by the user, or bulk-read existing datasets.
-- Option to perform sentiment analysis for a user-selected column of a given dataset, using two different models.
-- Option to include up to 4 additional columns in order to perform deeper analyses.
-- Option to include a Rating column in order to compare sentiment analysis results with actual rating.
-- Option to export results using 4 different formats:
+- Option to bulk-download datasets from a list of URLs provided by the user or bulk-read existing datasets.
+- Option to perform sentiment analysis for a user-selected column of a given dataset using two different models.
+- Option to include up to 4 additional columns to perform deeper analyses.
+- Option to include a Rating column to compare sentiment analysis results with actual ratings.
+- Option to export results using four different formats:
 	- **Technical:** In-depth analysis including plots and Excel files with results
 	- **Business:** Business-like presentation including plots and Excel files.
 	- **Visual:** All plots from Technical and Business, without the Excel files.
 	- **Complete:** All plots and Excel files.
 - Option to perform in-depth POS analysis correlating POS tags with sentiment scores.
-- Option to customize color scheme and transparency for generated plots.
+- Option to customize the colour scheme and transparency for generated plots.
 
 Apart from the main components, we should also include the following:
 - A Help popup window containing operation instructions.
 - An About popup window containing information related to the project.
-- An Appearance Mode menu for selecting System, Light or Dark.
+- An Appearance Mode menu for selecting System, Light, or Dark.
 - A text prompt informing the user about the current progress.
 - Progress bars for each step of the process.
 
@@ -235,28 +235,6 @@ In the end, we are looking for an interface like the sketch below:
 ###### *Figure 1: GUI concept sketch, Generated by Author*
 
 ## 2. Data preprocessing
-A target 
-
-## 3. Models
-For this project we will implement both VADER and TextBlob as options to the user.
-
-**VADER** is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media. 
-
-VADER accepts a string (*word, sentence, paragraph or document*) as input and returns four scores:
-- Positiveness probability $[0, 1]$
-- Neutrality probability $[0, 1]$
-- Negativity probability $[0, 1]$
-- Compound score $[-1, 1]$
-
-**TextBlob** is a library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.
-
-The TextBlob sentiment method accepts a `textblob.blob.TextBlob` object containing a string (*word, sentence, paragraph or document*) as input, and returns a tuple of two scores:
-- Polarity $[-1, 1]$
-- Subjectivity $[-1, 1]$
-
-The advantage of these 2 models, is that both output a polarity score in the same scale $[-1, 1]$, meaning we can use all analysis for both cases without having to rescale or normalize the results. Also, the range is continuous and can be used to perform correlational analysis with other continuous variables selected by the user.
-
-## 3. Results & analysis
 Let us consider an Amazon reviews dataset for the "Watches" category, where we have the following structure:
 
 | marketplace | customer_id | review_id      | product_id | product_parent | product_title                            | product_category | star_rating | helpful_votes | total_votes | vine | verified_purchase | review_headline                            | review_body                                                           | review_date |
@@ -270,7 +248,7 @@ Let us consider an Amazon reviews dataset for the "Watches" category, where we h
 
 ###### *Table 3: Example Amazon Watches Review Dataset*
 
-In a given example run, we can allocate columns as following:
+In a given execution, we can allocate columns as follows:
 - ID Column: `review_id`
 - Rating Column: `star_rating`
 - Agg Column 1: `verified_purchase`
@@ -279,10 +257,36 @@ In a given example run, we can allocate columns as following:
 - Agg Column 4: `vine`
 - Target Column: `review_body`
 
-### 3.1 Main results
-Both VADER & TextBlob implementations have similar outputs. Still, there are some differences. We need to homogenize the outputs for both models in order to be able to apply the exact same analysis, no matter the case.
+We will need to convert entries to appropriate data types and extract the columns of interest.
 
-As consequence, we will stick with the compound score (*compound for VADER, polarity for TextBlob*) for both cases, and ditch the rest of the scores, since they are not common to both models.
+## 3. Models
+For this project, we will implement both VADER and TextBlob as options for the user.
+
+**VADER** is a lexicon and rule-based sentiment analysis tool attuned explicitly to sentiments expressed in social media. 
+
+VADER accepts a string (*word, sentence, paragraph, or document*) as input and returns four scores:
+- Positiveness probability $[0, 1]$
+- Neutrality probability $[0, 1]$
+- Negativity probability $[0, 1]$
+- Compound score $[-1, 1]$
+
+**TextBlob** is a library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.
+
+The TextBlob sentiment method accepts a `textblob.blob.TextBlob` object containing a string (*word, sentence, paragraph, or document*) as input and returns a tuple of two scores:
+- Polarity $[-1, 1]$
+- Subjectivity $[-1, 1]$
+
+The advantage of these two models is that both output a polarity score in the same scale $[-1, 1]$, meaning we can use all analyses for both cases without rescaling or normalizing the results. Also, the range is continuous and can be used to perform correlational studies with other continuous variables selected by the user.
+
+## 3. Results & analysis
+The results & analysis section will consist of two main parts:
+- Apply custom analysis based on user selection.
+- Write analysis results either to Excel worksheets or as plots.
+
+### 3.1 Main results
+Both VADER & TextBlob implementations have similar outputs. Still, there are some differences. We need to homogenize the results for both models to apply the same analysis, no matter the case.
+
+Consequently, we will stick with the compound score (*compound for VADER, polarity for TextBlob*) for both cases and ditch the rest of the scores since they are unfamiliar to both models.
 
 Thus, a typical output with sentiment analysis using the VADER model would look like such:
 
@@ -299,17 +303,17 @@ Thus, a typical output with sentiment analysis using the VADER model would look 
 
 ### 3.2 Analysis
 We want to implement the following analyses:
-- Raw compound score aggregated by columns selected by user, per dataset:
+- Raw compound score aggregated by columns selected by the user per dataset:
 	- Mean
 	- Standard Deviation
-- Rating (provided by user) aggregated by columns selected by user, per dataset:
+- Rating (provided by the user) aggregated by columns selected by the user per dataset:
 	- Mean
 	- Standard Deviation
-- Polarity percentages based on compound score, per dataset:
+- Polarity percentages based on compound score per dataset:
 	- Positive ($\text{compound} > 0$)
 	- Neutral ($\text{compound} = 0$)
 	- Negative ($\text{compound} < 0$)
-- Full statistical description of compound score, per dataset:
+- Full statistical description of the compound score per dataset:
 	- Median
 	- Mean
 	- Standard Deviation
@@ -322,12 +326,12 @@ We want to implement the following analyses:
 	- Spearman Rank Correlation P-Value (*Rating vs. scaled compound score*)
 	- Pearson Correlation Coefficient (*Rating vs. scaled compound score*)
 	- Pearson Correlation P-Value (*Rating vs. scaled compound score*)
-- Boxplot of compound score by ratings, per dataset
-- 100% stacked bar chart for polarity percentages vs. user-defined aggregation columns, per dataset.
-- Heatmap for polarity percentages vs. user-defined aggregation columns, per dataset.
-- Wordcloud representing most and least mentioned words on each review, per dataset.
-- Bar chart for word frequency analysis per POS for top $n$ scored reviews, per dataset.
-- Bar chart for word frequency analysis per POS for lowest $n$ scored reviews, per dataset.
+- Boxplot of the compound score by ratings per dataset
+- 100% stacked bar chart for polarity percentages vs. user-defined aggregation columns per dataset.
+- Heatmap for polarity percentages vs. user-defined aggregation columns per dataset.
+- Wordcloud representing most and least mentioned words on each review per dataset.
+- Bar chart for word frequency analysis per POS for top $n$ scored reviews per dataset.
+- Bar chart for word frequency analysis per POS for lowest $n$ scored reviews per dataset.
 
 ### 3.4 Exporting
 We would like to export the previous results in the following format:
@@ -403,12 +407,12 @@ We would like to export the previous results in the following format:
 ---
 
 # General project structure
-When starting a project, the first step is to design a structure which makes sense for what we're building. We can look at the structure as how our folders, files, classes and functions will be ordered, and how will they interact with each other. This is extremely important since we'll be writing a lot of modular code, and things can get lost easily, specially when we're escalating our application to bulk operation.
+When starting a project, the first step is to design a structure that makes sense for what we're building. We can look at the structure as to how our folders, files, classes, and functions will be ordered and how they will interact. This is extremely important since we'll be writing a lot of modular code, and things can get lost easily, particularly when we're escalating our application to bulk operation.
 
 ## 1. Structure chart
-There are multiple ways of approaching a project structure design; it really depends on each personal taste, although there are good practices in place to guide us through. The best way to start designing our process flow, is to implement a **structure chart** (*SC*).
+There are multiple ways of approaching a project structure design; it depends on each personal taste, although good practices are in place to guide us through. Implementing a **structure chart** (*SC*) is the best way to start designing our process flow.
 
-A structure chart is a chart which shows the breakdown of a system to its lowest manageable levels. It's used in structured programming to arrange program modules into a tree; each module is represented by a box, which contains the module's name. The tree structure visualizes the relationships between modules.
+A structure chart is a diagram showing a system's breakdown to its lowest manageable levels. It's used in structured programming to arrange program modules into a tree-like system; each module is represented by a box containing the module's name. The tree structure represents the relationships between modules.
 
 <p align="center">
   <img src="https://pabloagn.com/wp-content/uploads/2023/03/P004A020_structure_chart_bg.svg">
@@ -416,7 +420,7 @@ A structure chart is a chart which shows the breakdown of a system to its lowest
 
 ###### *Figure 9: Structure Chart for Sentiment Analysis Application, Generated by Author*
 
-As we can see from the SC above, we'll be implementing a frontend, a backend, configuration files and utility functions, so a main folder with subfolders as packages makes sense for our case.
+As we can see from the SC above, we'll implement a frontend, a backend, configuration files, and utility functions, so a main folder with subfolders as packages makes sense for our case.
 
 ## 2. Project components
 Below is what we'll need for this project:
@@ -424,19 +428,19 @@ Below is what we'll need for this project:
 - An output folder.
 - A virtual environment.
 - A source code folder `src`:
-	- A main function which will execute the application.
+	- A main function that will execute the application.
 	- A frontend module containing all GUI components
 	- Two configuration files:
 		- A configuration file for variable options.
 		- A parameters file for modifying our GUI's appearance.
-	- A configuration & parameter getter module, which will read the parameters from our configuration files.
-	- A string formatting module which will format the text outputs displayed in the GUI's text log.
-	- A preprocessing module which will download/load and clean our data before feeding it into the model.
-	- A sentiment analysis file which will apply the NLP models to our data.
-	- A results analysis file which will perform analysis on our sentiment analysis results.
-	- A results writer which will write the analyses to Excel files or plots, depending on the user's choice. 
+	- A configuration & parameter-getter module that will read the parameters from our configuration files.
+	- A string formatting module that will format the text outputs displayed in the GUI's text log.
+	- A preprocessing module that will download/load and clean our data before feeding it into the model.
+	- A sentiment analysis file that will apply the NLP models to our data.
+	- A results analysis file that will analyze our sentiment results.
+	- A results writer that will write the analyses to Excel files or plots, depending on the user's choice. 
 
-We will create a master folder (*project folder*) where the inputs, outputs and source code will reside. This folder will have the following structure:
+We will create a master folder (*project folder*) where the inputs, outputs, and source code will reside. This folder will have the following structure:
 - `sentiment-analysis-with-python`: The project folder.
 	- `datasets`: Where our datasets will be downloaded and read from.
 	- `outputs`: Where our analyses will be written in.
@@ -444,7 +448,7 @@ We will create a master folder (*project folder*) where the inputs, outputs and 
 	- `src`: Where the source code will be located.
 	- `requirements.txt`: Where all the dependencies will be specified.
 
-The application will be divided into multiple **packages** denoted by folders. Each package will contain **modules** belonging to a similar functionality, denoted by files. Each file will serve a specific purpose and will contain one main **class**. Each class will contain one or more **methods** denoted by functions.
+The application will be divided into multiple **packages** denoted by folders. Each package will contain **modules** belonging to similar functionalities, characterized by files. Each file will serve a specific purpose and include one main **class**. Each class will contain one or more **methods** denoted by functions.
 
 The package structure inside `src` will be as follows:
 
@@ -464,24 +468,24 @@ When working with a modular, multi-class structure, we have some approaches avai
 - Data Transfer Object classes
 - Composite classes
 
-In Python, a **mixin** is a class that provides methods to other classes but is not considered a base class itself. In short, a mixin is a class that extends the functionality of other classes without requiring initialization using an `__init__` function, calls to `super()` to initialize parent classes, and other aspects that a conventional class would require.
+In Python, a **mixin** class provides methods to other classes but is not considered a base class. In short, a mixin is a class that extends the functionality of other classes without requiring initialization using an `__init__` function, calls to `super()` to initialize parent classes, and other aspects that a conventional class would require.
 
 Below are some other advantages of a mixin approach over conventional classes:
 - The main class inherits all mixin class methods directly from `n` mixin classes.
 - Parameters & data are defined on the main function, so there's no need to redefine attributes inside mixin classes.
 - `self` from the main class is automatically accessible inside mixin class methods.
 
-Singe/multiple inheritance is the traditional approach to OOP and works hierarchically (*vertically*), by defining a parent class and a child class, where the latter inherits methods and attributes from the first. We can think of inheritance in terms of a child class or subclass that is **derived** from another class, or as a parent class whose behavior is **extended** by a child class.
+Singe/multiple inheritances are the traditional approach to OOP and work hierarchically (*vertically*) by defining a parent class and a child class, where the latter inherits methods and attributes from the first. We can think of inheritance as a child class or subclass that is **derived** from another class or as a parent class whose behavior is **extended** by a child class.
 
-**Composition** works horizontally, by defining two classes that can interact with each other without the vertical structure (*child-parent association*) from the inheritance approach. We can think of composition in terms of a class that has a **relationship** with another class. A composition approach has a **composite** class which in turn can have a **component** class associated.
+**Composition** works horizontally by defining two classes that can interact with each other without the vertical structure (*child-parent association*) from the inheritance approach. We can think of composition as a class with a **relationship** with another class. A composition approach has a **composite** class, which can have a **component** class associated.
 
 **Data Transfer Objects** (*DOT*) are data structures typically used to pass data between application layers or between services. They don't possess methods of their own; instead, they simply transfer data. This approach is useful when, for example, we have three child classes where:
-- We don't want to create an inheritance structure between them.
-- We would like to set attributes, but we don't have access to a parent class (*it can be part of a third-party framework we're using, and is simply not accessible without involving modifications to the class's source code, which is far from ideal*).
+- We want to avoid creating an inheritance structure between them.
+- We would like to set attributes, but we don't have access to a parent class (*it can be part of a third-party framework we're using and is not accessible without involving modifications to the framework class's source code, which is far from ideal*).
 
 In this project, we'll use the following:
 - Mixin classes to extend the behavior of other classes.
-- Single/Multiple inheritance to interact with our GUI's package, `customtkinter`.
+- Single/Multiple inheritances to interact with our GUI's package, `customtkinter`.
 - Data Transfer Object classes to set common variables for three classes in our `_app.py` module.
 
 ---
@@ -511,7 +515,7 @@ mkdir application, config, sentiment_analysis, utils
 ```
 
 ## 1. Creating a virtual environment
-We will create a virtual environment tailored for this project. We'll be using Python 3.9.0, which we will need to [download](https://www.python.org/downloads/release/python-390/) if we haven't already.
+We will create a virtual environment tailored to this project. We'll be using Python 3.9.0, which we will need to [download](https://www.python.org/downloads/release/python-390/) if we haven't already.
 
 We will then create our environment using the installed Python version. This environment will be located inside our project folder, `sentiment-analysis-with-python`:
 
@@ -521,7 +525,7 @@ C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe -m venv 'se_
 ```
 
 ## 2. Installing required libraries
-Since we'll be using a fair amount of libraries, its easier for us and for the final user to define a `requirements.txt` file, the reason being we can quickly install all dependencies with a single `pip` command.
+Since we'll be using a fair amount of libraries, it's easier for us and for the final user to define a `requirements.txt` file, the reason being we can quickly install all dependencies with a single `pip` command.
 
 The `requirements.txt` file will be located inside our project folder, `sentiment-analysis-with-python`, and will contain the following packages:
 
@@ -544,7 +548,7 @@ tomli
 wordcloud
 ```
 
-We can then activate our virtual environment from within the main project folder on the current terminal session, and install all the dependencies. Keep in mind that `Activate.ps1` is meant for `PowerShell`; other shells have their own `activate` script.
+We can then activate our virtual environment from within the main project folder on the current terminal session and install all the dependencies. We must remember that `Activate.ps1` is meant for `PowerShell`; other shells have their own `activate` script.
 
 ##### **Code**
 ```PowerShell
@@ -557,18 +561,18 @@ pip install -r requirements.txt
 
 ---
 # Implementing the main components
-Once we have a good understanding of the project's general structure and packages, we can implement the main modules, classes and functions; this way, we have clarity of what goes where.
+Once we have a good understanding of the project's general structure and packages, we can implement the main modules, classes, and functions; this way, we have clarity of what goes where.
 
 There are multiple ways of approaching this step:
-- **Implementing classes and functions using placeholders:** Each class and function is followed by a temporary `pass` statement upon initial writing. When we need to write the class or function, we simply remove the temporary statement and write out code. This approach works better when we also add docstrings for each definition; it helps us remember and bring clarity in terms of what the definition is for. 
-- **Implementing boilerplate code:** Boilerplate code are sections of code repeated in multiple places with little to no variation; if we declare a child class which inherits from a parent class, we would declare the class itself, include an `__init__(self)` method, and a call the parent class by including a `super().__init__(self)` method.
-- **Implementing pseudocode:** An artificial and informal language usually made up of simpler code and comments. It helps with clarity on what we intend to do with our classes and functions, but is not necessarily executable to the full extent.
-- **Implementing skeletons:** Similar to pseudocode, skeleton programming consists of a simpler version of our intended code, though it differs in that it can actually be compiled without errors.
+- **Implementing classes and functions using placeholders:** Each class and function is followed by a temporary `pass` statement upon initial writing. When we need to write the class or function, we simply remove the temporary statement and write our code. This approach works better when we add docstrings for each definition; it helps us remember and clarify what the definition is for.
+- **Implementing boilerplate code:** Boilerplate code is code repeated in multiple places with little to no variation; if we declare a child class that inherits from a parent class, we would declare the class itself, including an `__init__(self)` method, and a call the parent class by including a `super().__init__(self)` method.
+- **Implementing pseudocode:** An artificial and informal language usually comprised of simpler code and comments. It helps clarify what we intend to do with our classes and functions but is not necessarily executable to the full extent.
+- **Implementing skeletons:** Similar to pseudocode, skeleton programming consists of a simpler version of our intended code, though it differs in that it can be compiled without errors.
 
-For this example we'll stick with a combination of the first two approaches, and reason the code as we move forward.
+For this example, we'll combine the first two approaches and reason the code as we move forward.
 
 ## 1. Modules
-Each package will have multiple files inside, each one representing a module. For each module, we will follow the snake case format with single leading underscore practice `_module.py`, where each file representing a module will be signaled as an internal module; a single leading underscore in front of a variable, a function, or a method name means that these objects are used internally. This also means that, when importing modules using a wildcard `*`, these will not be imported.
+Each package will have multiple files inside, each one representing a module. For each module, we will follow the snake case format with single leading underscore practice `_module.py`, where each file representing a module will be signaled as an internal module; a single leading underscore in front of a variable, a function, or a method name means that these objects are used internally. This also means that when importing modules using a wildcard `*`, these will not be imported.
 
 We will start by creating our modules inside each `src` package and defining boilerplate code inside them. Our definitions will not make much sense now, but will serve as our project's skeleton and will be explained later on:
 
@@ -712,13 +716,13 @@ class SentimentAnalysis(PreprocessData,
 
     def applyModel(self, df, dataset):
         '''
-        Apply sentiment analysis model depending on user's choice.
+        Apply sentiment analysis model depending on the user's choice.
         '''
         pass
 
     def executeModel(self):
         '''
-        Downloads datasets if user has requested Download operations.
+        Downloads datasets if the user has requested Download operations.
         Loads data sets one by one and perform analysis per dataset.
         '''
         pass
@@ -765,8 +769,8 @@ class ResultsAnalysis:
 
     def getPercentages(self, df_processed):
         '''
-        Calculates percentages for Positive, Neutral and Negative
-        based on score.
+        Calculates percentages for Positive, Neutral, and Negative
+        based on the score.
         '''
         pass
 
@@ -780,7 +784,7 @@ class ResultsAnalysis:
         with this correlation.
             - Spearman Rank Coefficient P-Value
             - Pearson Coefficient P-Value
-        Provides the user two measures
+        Provides the user with two measures
         with which to trust/not trust the model results.
         '''
         pass
@@ -806,7 +810,7 @@ class ResultsAnalysis:
     def getGrammaticalDetail(self, df_processed):
         '''
         Get the grammatical frequency
-        of top and bottom performing subsets
+        of top and bottom-performing subsets
         '''
         pass
 
@@ -949,7 +953,7 @@ class ResultsWriter:
     Mixin class:
         - Decide which analysis to write for a given iteration.
         - Get analysis for each iteration.
-        - Output files depending on selected analysis.
+        - Output files depending on the selected analysis.
     '''
     def createDirs(self, result_dict):
         '''
@@ -978,7 +982,7 @@ class ResultsWriter:
 
     def writeStats(self, result_dict, res_index):
         '''
-        Write stats applicable for Technical, Business and Complete.
+        Write stats applicable for Technical, Business, and Complete.
         '''
         pass
 
@@ -1030,7 +1034,7 @@ class ResultsWriter:
 
     def writeResults(self, result_dict):
         '''
-        Create pack of analyses based on user input.
+        Create a pack of analyses based on user input.
         '''
         pass
 
@@ -1111,7 +1115,7 @@ class StringFormatting:
     
     def padStr(self, measure_title, value_title):
         '''
-        Format a string to be inserted into log.
+        Format a string to be inserted into the log.
         '''
         pass
 
@@ -1121,7 +1125,7 @@ class StringFormatting:
         Perform all required activities associated:
             - Enable text log.
             - If clear==True, clear the log before. Else, keep.
-            - Insert all kwargs into text log.
+            - Insert all kwargs into the text log.
             - Disable text log.
             - Update idle tasks.
         '''
@@ -1137,7 +1141,7 @@ Main structure for `_preprocess_data.py`:
 ```Python
 class PreprocessData(StringFormatting):
     '''
-    - Download (if user specifies) and read datasets into a
+    - Download (if the user specifies) and read datasets into a
     Polars DataFrame object.
     - Cast required data types.
     - Select user-required columns.
@@ -1146,27 +1150,27 @@ class PreprocessData(StringFormatting):
 
     def downloadMode(self):
         '''
-        Enter download mode where all URLs specified on source.txt.
-        will be downloaded in datasets folder.
+        Enter download mode, where all URLs are specified on source.txt.
+        Will be downloaded in the datasets folder.
         '''
         pass
 
         def downloadData():
             '''
-            Download dataset if it does not yet exist.
+            Download the dataset if it does not yet exist.
             '''
             pass
 
     def readMode(self, dataset):
         '''
-        Enter read mode where a dataset will be read
-        if it exists on datasets directory.
+        Enter read mode, where a dataset will be read
+        if it exists in the datasets directory.
         '''
         pass
 
         def selectCols():
             '''
-            Get columns required by user.
+            Get columns required by the user.
             '''
             pass
 
@@ -1181,7 +1185,7 @@ class PreprocessData(StringFormatting):
             This function will read one file per iteration
             and return a dataframe.
             It will perform the following tasks:
-                - Read file if it exists and is of correct file format.
+                - Read a file if it exists and is of the correct file format.
                 - Select user-defined columns if they exist.
                 - Cast user-defined columns to correct data type.
                 - Return a processed Polars DataFrame object.
@@ -1213,19 +1217,19 @@ We imported modules using a structured approach. It's always best practice to im
 
 Mixin classes don't have an `__init__(self)` method. This is because mixin classes are not meant to be initialized with arguments; instead, they are meant to use the arguments from the class inheriting the mixin class.
 
-Mixin class methods have `self` as parameter. This is because when we call a mixin class from another class, the mixin inherits the latter's methods and attributes denoted by `self`. By including the `self` attribute in the mixin class functions, we are specifying that said function should inherit whichever methods and attributes are specified on the calling class.
+Mixin class methods have `self` as a parameter. This is because when we call a mixin class from another class, the mixin inherits the latter's methods and attributes denoted by `self`. By including the `self` attribute in the mixin class functions, we specify that said function should inherit whichever methods and attributes are specified on the calling class.
 
 We include `# type: ignore` at the end of specific lines. This statement tells our Python debugger to ignore errors on the current line we're in. There are multiple reasons why we're using this technique:
 - By design, a mixin class does not explicitly inherit attributes from a "parent class". We may notice that mixin classes are not declared as a conventional child class would be declared (i.e. `MyClass(ParentClass):`)
 
-We included `if name == main` in all modules. This snippet is a key part when working with internal module imports; when we create a module and import it from another script, the Python interpreter will automatically execute it upon import. We don't want that. Instead, we would like our imports to be executed upon explicitly calling them. By implementing `if name == main` on our modules, we are making sure that the modules only run if they are explicitly executed from a shell, for example, or upon function calling inside another script.
+We included `if name == main` in all modules. This snippet is key when working with internal module imports; when we create a module and import it from another script, the Python interpreter will automatically execute it upon import. We don't want that. Instead, we would like our imports executed upon explicitly calling them. By implementing `if name == main` on our modules, we ensure that they only run if explicitly executed from a shell, for example, or upon function calling inside another script.
 
 Now that we have our modules defined, we can package them.
 
 ---
 
 # Packages
-As mentioned before, we will express our packages as folders inside `src`. For a folder to be used as a package, we need to include a special file,  `__init__.py`, inside each package folder. This way, we will be able to import entire packages across files without needing to import each module explicitly; when we import a folder as package from another file, the Python interpreter calls `__init__.py` which includes all imported modules as part of the package.
+As mentioned, we will express our packages as folders inside `src`. For a folder to be used as a package, we must include a special file,  `__init__.py`, inside each folder. This way, we can import entire packages across files without needing to import each module explicitly; when we import a folder as a package from another file, the Python interpreter calls `__init__.py`, which includes all imported modules as part of the package.
 
 The basic structure of an `__init__.py` file is very simple; we import the modules we wish to include in the package, along with the classes we wish to use in other files:
 
@@ -1235,9 +1239,9 @@ from ._app import SetGlobalParams
 
 In this case, `_app` would be our module (*file*), and `SetGlobalParams` would be a class inside the module we wish to use across our project files.
 
-We prepend our module import with a dot `.` since, even though we're on the same directory as our modules, the Python interpreter doesn't know that. This is why we explicitly have to specify we would like to import the `_app.py` module which is located inside the current directory (`.`).
+We prepend our module import with a dot `.` since the Python interpreter doesn't know that even though we're in the same directory as our modules. This is why we explicitly have to specify we would like to import the `_app.py` module, which is located inside the current directory (`.`).
 
-We can create an `__init__.py` file per package, and populate with our module imports.
+We can create an `__init__.py` file per package and populate it with our module imports.
 
 Imports for `aplication/__init__.py`:
 
@@ -1269,12 +1273,11 @@ Note that we're not importing any external package here; we're simply importing 
 ---
 
 # Configuration Files
-The last piece missing before we start writing our code, is to define **configuration files**. Configuration files are extremely useful when we're writing code and would like to provide a way to configure our application without messing up with the code itself. This technique provides a way for an external user, or even ourselves, to fine-tune any modifiable parameter which changes the behavior of our application's interface or even backend. It also provides a way for us to define a set of variables which will be used by our application; we define our parameter and configuration options outside the code, and write a getter function in order to read the parameters from the created files.
+The last piece that needs to be added before we start writing our code is to define **configuration files**. Configuration files are extremely useful when writing code; we would like to provide a way to configure our application without messing up with the code itself. This technique offers a way for an external user, or even ourselves, to fine-tune any modifiable parameter which changes the behavior of our application's interface or even backend. It also provides a way for us to define a set of variables that our application will use; we define our parameter and configuration options outside the code and write a getter function to manage the reading of the parameters from the created files.
 
-The idea is to leave the configuration for the main user-defined parameters in the GUI, and specific parameters such as the GUI's font family, font size, text color, and other parameters inside a configuration file. This way, we purpose the GUI exclusively for model operation, and the configuration files for the application appearance which the general user would not necessarily want to modify. In short, it keeps distractions away while keeping a backdoor for more fine-grained customization.
+The idea is to leave the configuration for the main user-defined parameters in the GUI and specific parameters such as the GUI's font family, font size, text color, and other parameters inside a configuration file. This way, we purpose the GUI exclusively for model operation and leave the application's configuration parameters saved in files, which the general user would not necessarily want to modify. In short, it keeps distractions away while keeping a backdoor for more fine-grained customization.
 
 Also, a parameters file can be used as a collection of default values for the user-defined variables we will include later on. If the GUI were to malfunction, the user could still access the parameters file and set default values for all variables, effectively bypassing the GUI while making none to minor direct modifications to the code itself.
-
 
 <p align="center">
   <img src="https://pabloagn.com/wp-content/uploads/2023/03/P004A020_config_files_tp.svg">
@@ -1282,14 +1285,14 @@ Also, a parameters file can be used as a collection of default values for the us
 
 ###### *Figure 10: Configuration File Management Diagram*
 
-There are multiple file formats such as `.hcl`, `.json` and `.yaml` tailored for configuration files. In this project, we will stick with the `.toml` (*Tom's Obvious Minimal Language*) file format for both configuration and parameters files because of its multiple advantages:
+There are multiple file formats, such as `.hcl`, `.json`, and `.yaml`, tailored for configuration files. In this project, we will stick with the `.toml` (*Tom's Obvious Minimal Language*) file format for both configuration and parameters files because of its multiple advantages:
 - Is human-readable and supports complex configuration and settings.
 - Supports comments.
 - Has an easy-to-read and easy-to-parse structure.
 - Has read and write capabilities.
 - Has implementations in most programming languages.
 - Maps unambiguously to a hash table.
-- Supports 8 main native types such as key/value pairs, arrays, integers and floats, tables, and more.
+- Supports eight native types such as key/value pairs, arrays, integers and floats, tables, and more.
 - Supports sections.
 
 ## 1. Application configuration
@@ -1326,10 +1329,10 @@ font_code_size = 13
 font_code_weight = "normal"
 ```
 
-We're dividing our content in two separate sections. This provides better organization when reading our file.
+We're dividing our content into two separate sections. This provides better organization when reading our file.
 
 ## 2. User parameters
-The user parameters file will include default values for all user-defined parameters inside the GUI. We will use this file in order to set all options for our GUI menus.
+The user parameters file will include default values for all user-defined parameters inside the GUI. We will use this file to set all options for our GUI menus.
 
 We can create our [`parameters.toml`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/config/parameters.toml) file inside our previously created `src/config` directory. We will then include the following:
 
@@ -1390,17 +1393,17 @@ Now, we have everything ready to start writing the frontend of our application.
 
 ---
 
-# Front-End
-There are three main frameworks we can use to easily write GUIs in Python:
+# Frontend
+There are three main frameworks we can use to write GUIs in Python:
 - `PyQT5`: A Python binding of the cross-platform GUI toolkit Qt.
-- `tkinter`: The original built-in `tkinter` library with all legacy widgets, but with an outdated UI.
-- `customtkinter`: A newer UI-library based on `tkinter`, maintained by [TomSchimansky](https://github.com/TomSchimansky).
+- `tkinter`: The original built-in `tkinter` library with all the legacy widgets but with an outdated UI.
+- `customtkinter`: A newer UI library based on `tkinter` maintained by [TomSchimansky](https://github.com/TomSchimansky).
 
 For this example, we'll be using the third option, although there are some methods of `tkinter` we'll also include.
 
-`customtkinter` provides methods to define main and secondary application windows, include grids, and define sections. Inside each section, we can include one or more widget-style instances such as titles, labels, text inputs, option menus, radio buttons, progress bars, text prompts, and more. Widgets that accept a user input will store it as a variable we previously define.
+`customtkinter` provides methods to define primary and secondary application windows, include grids, and define sections. We can include one or more widget-style instances in each section, such as titles, labels, text inputs, option menus, radio buttons, progress bars, text prompts, and more. Widgets that accept user input will store it as a previously-defined variable.
 
-Since we'll be including 3 main windows (*help, about, main application*), we'll need to define 3 classes which will inherit from different `customtkinter` classes.
+Since we'll include three main windows (*help, about, main application*), we'll need to define three classes that will inherit from different `customtkinter` classes.
 
 Every `customtkinter` main application has the following generalized structure:
 
@@ -1412,7 +1415,7 @@ import customtkinter
 customtkinter.set_appearance_mode("dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
-# Application instance for main window
+# Application instance for the main window
 app = customtkinter.CTk()
 
 # Window geometry
@@ -1429,16 +1432,16 @@ frame_1.pack(pady=20, padx=60, fill="both", expand=True)
 label_1 = customtkinter.CTkLabel(master=frame_1, justify=customtkinter.LEFT)
 label_1.pack(pady=10, padx=10)
 
-# Loop calling (keeps window open until closure)
+# Loop calling (keeps the window open until explicit closure)
 app.mainloop()
 ```
 
-Conversely, we can also use a different class, `customtkinter.CTkToplevel`, instead of `customtkinter.CTk` in order to define secondary windows or prompts inside our main GUI.
+Conversely, we can also use a different class, `customtkinter.CTkToplevel`, instead of `customtkinter.CTk` to define secondary windows or prompts inside our main GUI.
 
-This is as simple as a GUI can get, and from there, we can build *n* number of frames and widgets. Since we'll be building our application using a class approach, we'll do things slightly different.
+This is as simple as a GUI can get, and from there, we can build *n* number of frames and widgets. Since we'll build our application using a class approach, we'll do things differently.
 
 ## 1. Global parameters
-The first thing we'll do, is define a class which will set global parameters for the 3 GUI classes we'll be writing. We'll head to our [`_app.py`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/application/_app.py) module, and include the following:
+We'll first define a class that will set global parameters for the 3 GUI classes we'll be writing. We'll head to our [`_app.py`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/application/_app.py) module, and include the following:
 
 ##### **Code**
 ```Python
@@ -1525,10 +1528,10 @@ class SetGlobalParams(utils.GetParameters):
         self.subptitle_y = 0.98
 ```
 
-Here, we have extracted our configuration parameters defined in the `parameters.toml` file as well as some other parameters such as plot formatting, and set them as class attributes. This way, when we inherit `SetGlobalParams` from any other class, we will have access to those.
+Here, we have extracted our configuration parameters defined in the `parameters.toml` file and some other parameters, such as plot formatting, and set them as class attributes. This way, we will have access to those when we inherit `SetGlobalParams` from any other class.
 
 ## 2. Help & About prompts
-We can now define our popup windows, `HelpPrompt` and `AboutPrompt`. These objects will be very simple and just contain a frame and a text box widget. The text box widgets will get their text from the following files:
+We can now define our popup windows, `HelpPrompt` and `AboutPrompt`. These objects will be straightforward and simply contain a frame and a text box widget. The text box widgets will get their text from the following files:
 - `src/application/dialogues/about.txt`
 	- Project Information
 	- Contact Information
@@ -1625,13 +1628,13 @@ We can now define our main window with the following widgets:
 - `CTkButton`: An actionable button.
 - `CTkOptionMenu`: A menu containing multiple items to select from.
 - `CTkTabview`: A tab menu.
-- `CTkSlider`: A slider which can be horizontal or vertical.
+- `CTkSlider`: A slider that can be horizontal or vertical.
 - `CTkEntry`: A text entry.
-- `CTkTextbox`: A text box which can be used for writing or reading only.
-- `CTkProgressBar`: A bar which fills up upon some event.
+- `CTkTextbox`: A text box that can be used for writing or read-only.
+- `CTkProgressBar`: A bar that fills up upon some event.
 
 ### 3.1 Variable setting
-The first thing we'd like to do, is define the variables we will use for each widget. `tkinter` provides variable objects for various types such as `int`, `float`, `str` and `datetime`. These variables also have getter methods included, so if the user sets a variable using the GUI, we can retrieve that value without calling it directly.
+We'd first like to define the variables we will use for each widget. `tkinter` provides variable objects for various types such as `int`, `float`, `str`, and `datetime`. These variables also have getter methods included, so if the user sets a variable using the GUI, we can retrieve that value without calling it directly.
 
 The general syntax for a variable definition is the following:
 
@@ -1648,7 +1651,7 @@ self.params_directories = self.getParams()['directories']
 self.var_rdir = tkinter.StringVar(value=self.params_directories['rdir'])
 ```
 
-The first statement will get the `directories` section, while the second one will extract the required value.
+The first statement will get the `directories` section, while the second will extract the required value.
 
 If we want to get the parameter's value at any point in time, we can simply use the following syntax:
 
@@ -1666,7 +1669,7 @@ self.var_model =  tkinter.StringVar(value=self.config_operation['model'][0])
 ```
 
 ### 3.2 Window geometry and structure
-Once we have all of our variables defined, we'll set our main window geometry, app title, and an optional favicon. For the dimensions, we're inheriting the `geometry_width` and `geometry_height` attributes from our `SetGlobalParams` class:
+Once all our variables are defined, we'll set our main window's geometry, app title, and an optional favicon. For the dimensions, we're inheriting the `geometry_width` and `geometry_height` attributes from our `SetGlobalParams` class:
 
 ##### **Code**
 ```Python
@@ -1677,9 +1680,9 @@ self.title('Author | Sentiment Analysis 1.0')
 
 Note that our icon must be in `.ico` file format. We can convert from `.png` using this [link](https://convertico.com/).
 
-Once we have our main window ready, we will continue by defining our grid layout. If we recall from our GUI concept sketch, we have 2 main columns: The first one for the left side bar, and the second one containing everything else.
+Once our main window is ready, we will continue defining our grid layout. From our GUI concept sketch, we have two primary columns: The first for the left sidebar and the second for everything else.
 
-We can achieve this layout by specifying a grid of 2 columns, and 1 row:
+We can achieve this layout by specifying a grid of 2 columns and 1 row:
 
 ##### **Code**
 ```Python
@@ -1698,9 +1701,9 @@ self.sidebar_frame.grid(row=0, column=0, rowspan=7, sticky="nsew")
 self.sidebar_frame.grid_rowconfigure(7, weight=1)
 ```
 
-- The `.grid` method denotes the global position for our frame. Coordinates 0, 0 would mean a location in the first row and first column of our window.
+- The `.grid` method denotes the global position for our frame. Coordinates `(0, 0)` would mean a location in the first row and first column of our window.
 - The `rowspan` attribute extends our frame to whichever row coordinates we desire. If we specify a span of 7, the frame will extend the full height of our window, which is what we're looking for in our sidebar.
-- Finally, we set 8 rows inside our frame, which will contain each widget.
+- Finally, we set 8 rows inside our frame containing each widget.
 
 ### 3.3 Sidebar widgets
 Now that we have our grid, we can start populating with widgets:
@@ -1714,14 +1717,14 @@ self.logo_label = customtkinter.CTkLabel(self.sidebar_frame,
 self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
 ```
 
-We specify a `CTkLabel` widget by defining an instance of it, and including the following attributes:
+We specify a `CTkLabel` widget by defining an instance of it and including the following attributes:
 - `self.sidebar_frame`: The parent frame.
 - `text`: The text to display.
 - `font`: The font to use.
 
-We then locate our widget instance in a grid by using the same coordinate principles as in the example above.
+We then locate our widget instance in a grid using the same coordinate principles as in the above example.
 
-The Help & About buttons have an action associated to them; we would like for the prompts to display to the user upon button click. Hence, we will associate a command with them:
+The Help & About buttons have an action associated with them; we would like the prompts to display to the user upon button click. Hence, we will associate a command with them:
 
 ##### **Code**
 ```Python
@@ -1734,7 +1737,7 @@ self.help_prompt = customtkinter.CTkButton(self.sidebar_frame,
 self.help_prompt.grid(row=1, column=0, padx=20, pady=10)
 ```
 
-A command or event is simply a function we declare, that will get called upon interaction with our object. The Help button would be associated with the following event:
+A command or event is simply a function we declare that will get called upon interaction with our object. The Help button would be associated with the following event:
 
 ##### **Code**
 ```Python
@@ -1781,7 +1784,7 @@ def changeAppearanceMode(self, new_appearance_mode: str):
 Once we have our sidebar, we will include the following:
 - Tab frame:
 	- Model selection: Switch between models.
-	- Analysis: The type of analysis to export, the chart background and the plot color scheme.
+	- Analysis: The type of analysis to export, the chart background, and the plot color scheme.
 	- Advanced options: The top n words and score threshold to export in the grammatical analysis we will review further on.
 - Operation parameters:
 	- Operation mode: Read or download.
@@ -1801,7 +1804,7 @@ Once we have our sidebar, we will include the following:
 	- Analysis
 
 #### 3.4.1 Option menus
-We can set an option menu where values are extracted from our `parameters.txt` file by using the following syntax:
+We can define an option menu where values are extracted from our `parameters.txt` file by using the following syntax:
 
 ##### **Code**
 ```Python
@@ -1819,7 +1822,7 @@ self.model_name.grid(row=1, column=0, padx=20, pady=(10, 10))
 ```
 
 - The `values` parameter will be set to our getter function for the parameter we're looking for.
-- The `variable` parameter will be set to the previously set variable. This will change whenever the user changes option.
+- The `variable` parameter will be set to the previously set variable. This will change whenever the user changes the option.
 
 #### 3.4.2 Horizontal slider
 We can define a horizontal slider for our threshold values by using the following syntax:
@@ -1836,10 +1839,10 @@ self.nltk_threshold = customtkinter.CTkSlider(master=self.parameters.tab("Advanc
 self.nltk_threshold.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 ```
 
-- Since we want our values to range from 0 to 1, we set the two attributes, `from_` and `to` to reflect our desired range.
+- Since we want our values to range from 0 to 1, we set the two attributes, `from_` and `to`, to reflect our desired range.
 - We also set a `variable` and a `command` to execute.
 
-Since we want our slider variable to change, but also to reflect to the user, we will define the following function:
+Since we want our slider variable to change but also to return the current values to the user, we will define the following function:
 
 ##### **Code**
 ```Python
@@ -1854,11 +1857,11 @@ def returnThresholdVal(self, value):
                    clear=True)
 ```
 
-We can notice two new methods we included:
+We can notice two new methods:
 - `padStr`
 - `insertLog`
 
-The first method generates a justified string output filled with dot `.` characters, so that our information is presented to the user in the following format:
+The first method generates a justified string output filled with dot `.` characters so that our information is presented to the user in the following format:
 
 ```
 PARAMETER........VALUE
@@ -1868,7 +1871,7 @@ PARAMETER_2......VALUE2
 The second method comes from our `_string_formatting.py` module and inserts an entry into the text log we will soon define.
 
 #### 3.4.3 Text log
-A text log is a useful tool which we can use in order to present valuable information to the user. The idea is to print status updates to the user upon key progress part completions. 
+A text log is a helpful tool that we can use to present valuable information to the user. The idea is to print status updates to the user upon key progress part completions. 
 
 A text log can be defined using the following syntax:
 
@@ -1894,16 +1897,16 @@ self.textlog.configure(state="disabled")
 self.update_idletasks()
 ```
 
-- The `state` dictates if the prompt is read-only, or has the capacity to be written into. Since we don't want the user to be able to write in our log window, we need to disable it after each insertion, and enable it again before we insert our text.
-- The `delete` method clears the window and makes sure we have a clean prompt before our insertion. The two parameters included denote:
-	- From character `0`, line `0`
-	- Up to the end
-- The `insert` method inserts a line of text at position character `0` line `0`, with message `Text`, which can of course be assigned to a variable.
+- The `state` dictates if the prompt is read-only or can be written into. Since we don't want the user to be able to write in our log window, we need to disable it after each insertion and enable it again before we insert our text.
+- The `delete` method clears the window, ensuring a clean prompt before insertion. The two parameters included denote the following:
+	- From character `0`, line `0`.
+	- Up to the end.
+- The `insert` method inserts a line of text at position character `0` line `0`, with the message `Text`, which can, of course, be assigned to a variable.
 - The `update_idletasks` updates pending tasks when called. Without this statement, we would see the insertion reflected only after our execution concludes. 
 
-We will use an alternative structure which will include a string pre-formatting function. This will be useful when we're printing a variable name along with its value to screen; it will make the output clearer.
+We will use an alternative structure that will include a string pre-formatting function. This will be useful when printing a variable name and its value to the screen, increasing the output legibility.
 
-For these two actions, we will create two separate functions by creating a `string_formatting.py` library inside our `resources` folder. We will include both functions as part of our previously defined `StringFormatting` mixin class:
+We will create two separate functions for these two actions by defining a `string_formatting.py` library inside our `resources` folder. We will include both functions as part of our previously defined `StringFormatting` mixin class:
 
 ##### **Code**
 ```Python
@@ -1948,7 +1951,7 @@ def insertLog(self, *args, clear=False):
     return None
 ```
 
-We included an additional parameter, `clear`, where we will be able to define if we want to clear the log previous to text insertion, or we want to keep previous messages. Keeping logs for certain messages is important since the user might want to scroll over the entire log to check the specific output messages for a given step.
+We included an additional parameter, `clear`, where we will be able to define if we want to clear the log before text insertion or keep previous messages. Keeping logs for certain messages is important since the user might want to scroll over the entire log to check the specific output messages for a given step.
 
 #### 3.4.4 Text entries
 A text entry can be defined using the `CTkEntry` method. Whenever the user inputs a value, it gets registered as a variable of our choice, which we can use at any time during the execution.
@@ -1969,10 +1972,10 @@ self.col_entry_1.grid(row=1, column=0, padx=(10, 10), pady=(10, 10), sticky="new
 ```
 
 - The `placeholder_text` attribute sets a temporary indicator inside the text entry.
-- The `textvariable` denotes the variable we will be assigning to the text entry input.
+- The `textvariable` denotes the variable we'll assign to the input text entry.
 
 #### 3.4.5 Progress Bars
-A progress bar is a graphical control element used to visualize the progression of an extended computer operation. We want to provide the user a way to visualize the overall progress of the execution, divided into 3 main steps:
+A progress bar is a graphical control element used to visualize the progression of an extended computer operation. We want to provide the user a way to visualize the overall progress of the execution, divided into three main steps:
 - Download/Load
 - Model execution
 - Results analysis
@@ -1996,7 +1999,7 @@ self.progressbar_1.set(0) # Set to 0, since by default, it will be set to 0.5
 
 A progress bar update event can be defined as such:
 
-Imagine we have a DataFrame object of `len=30,000`, and we wish to iterate over all elements. Since we know the length of our object, we can define a step size scaled to a range `[0, 1]` by performing the following operation:
+Imagine we have a DataFrame object of `len=30,000` and wish to iterate over all elements. Since we know the length of our object, we can define a step size scaled to a range `[0, 1]` by performing the following operation:
 
 ##### **Code**
 ```Python
@@ -2004,7 +2007,7 @@ total_items = len(df)
 progress_2_step = 1/total_items
 ```
 
-Upon each iteration, we would be increasing the step by a step size unit. We could keep count of our total progress by adding our step size on each iteration, and then setting our progress bar to this value:
+We would increase the step by a step-size unit upon each iteration. We could keep count of our total progress by adding our step size on each iteration and then setting our progress bar to this value:
 
 ##### **Code**
 ```Python
@@ -2022,7 +2025,7 @@ self.progressbar_2.stop()
 This way, when our iteration concludes, our sum has reached the total number of iterations scaled to a range of `[0, 1]`, and the progress bar will reflect completion.
 
 #### 3.4.6 execution button
-We wish to provide the user a way to run the sentiment analysis whenever all options are correctly selected. We can define a button using the following syntax:
+We wish to provide the user with a way to run the sentiment analysis whenever all options are correctly selected. We can define a button using the following syntax:
 
 ##### **Code**
 ```Python
@@ -2036,7 +2039,7 @@ self.main_button_1 = customtkinter.CTkButton(master=self.path_entry,
                                              command=self.runModel)
 ```
 
-- As with previous examples, the `command` parameter will point to a function that will be in charge of running our model.
+- As with previous examples, the `command` parameter will point to a function in charge of running our model.
 
 The simplest version of a function for running the model would look like such:
 
@@ -2052,12 +2055,12 @@ def runModel(self):
 
 Where `self.executeModel()` would be a module we inherited from the `sentiment_analysis.SentimentAnalysis` package upon our class declaration.
 
-Still, we can extend the functionality of the `runModel` function by including additional useful actions:
-- **Input validation:** If the user does not insert any of the required columns, we can halt the execution and ask the user to input a valid field.
+Still, we can extend the functionality of the `runModel` function by including additional valuable actions:
+- **Input validation:** If the user does not insert any required columns, we can halt the execution and ask the user to input a valid field.
 - **Parameter confirmation:** Before beginning with the execution, we can confirm the parameters to be used by inserting them in the text log we defined earlier.
-- **A timer:** Of seconds defined by the user in the GUI, after the parameters are confirmed, and before the execution starts. This will give the user time to read the text log if required.
+- **A timer:** Of seconds defined by the user in the GUI after the parameters are confirmed and before the execution starts. This will give the user time to read the text log if required.
 
-The complete implementation considering both points above, would look like such:
+The complete implementation considering both points above would look like such:
 
 ##### **Code**
 ```Python
@@ -2132,12 +2135,14 @@ def runModel(self):
     return None
 ```
 
+The complete set of widget definitions can be found at the [`_app.py`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/application/_app.py) module in the project repo.
+
 ---
 
 # Main function
-A main function is used as the user's contact point. It's meant to be run by its own, and is not meant to be called from other packages or modules; we can think of the main function as the executable in case we were to compile our code. It's used as a trigger to execute the entire application.
+A main function is used as the user's contact point and as a trigger to execute the entire application. It's meant to be run on its own and is not meant to be called from other packages or modules; we can think of the main function as the executable if we were to compile our code.
 
-We want to create a simple script that initializes the application upon execution. Its common practice to call this script `main.py`, and the function inside it, `main`.
+We want to create a simple script that initializes the application upon execution. It's common practice to call this script `main.py` and the function `main` inside it.
 
 ##### **Code**
 ```Python
@@ -2153,12 +2158,12 @@ if __name__ == '__main__':
     main()
 ```
 
-This might seem a bit overkill for our specific purpose since our main function is really brief and does nothing else than calling our `MainApplication` class from our `application` package. The reason we did this was to keep our structure more organized: the frontend components inside the `application` folder, and the main function as the execution trigger.
+This might seem a bit overkill for our specific purpose since our main function is brief and does nothing else than call our `MainApplication` class from our `application` package. We did this to keep our structure well organized: the frontend components stay inside the `application` folder, and the main function serves as the execution trigger.
 
 ---
 
 # Results
-We can now try to run our frontend by executing `main.py` from the terminal, with our virtual environment previously activated:
+We can now try to run our frontend by executing `main.py` from the terminal with our virtual environment previously activated:
 
 ##### **Code**
 ```PowerShell
@@ -2180,9 +2185,9 @@ If everything went right, we should end up with a GUI like such:
 ---
 
 # Conclusions
-In this segment, we discussed what sentiment analysis is and the types of approaches for this technique. We also designed our application's architecture, created our environment and included our project's dependencies, defined our project's directory structure and the interaction between packages & modules, and implemented a fully-fledged GUI using `customtkinter` and `tkinter`.
+In this segment, we discussed what sentiment analysis is and the types of approaches for this technique. We also designed our application's architecture, created our environment and included our project's dependencies, defined our project's directory structure and the interaction between packages & modules, included two configuration files using the `.toml` file format, and implemented a fully-fledged GUI using `customtkinter` and `tkinter`.
 
-Now that we have a fully-built frontend for the user to interact with, over the next segment we will design the backend, starting with a dataset preprocessing module, and closing with the sentiment analysis package.
+Now that we have a fully-fledged frontend for the user to interact with, we will design the backend over the next segment, starting with a dataset preprocessing module and wrapping up with the sentiment analysis package.
 
 ---
 
