@@ -1893,12 +1893,9 @@ Now that we have a fully-built frontend for the user to interact with, over the 
 ---
 
 # References
-- https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
-- https://towardsdatascience.com/whats-the-meaning-of-single-and-double-underscores-in-python-3d27d57d6bd1
-- http://www.qtrac.eu/pyclassmulti.html
-- https://www.pythontutorial.net/python-oop/python-mixin/
-- http://python-history.blogspot.com/2010/06/method-resolution-order.html
-- https://huggingface.co/blog/sentiment-analysis-python
+- [QTRAC, Mixin Classes](http://www.qtrac.eu/pyclassmulti.html)
+- [Towards Data Science, Method Resolution Order in Python](https://medium.com/@__hungrywolf/mro-in-python-3-e2bcd2bd6851)
+- [Hugging Face, Sentiment Analysis in Python](https://huggingface.co/blog/sentiment-analysis-python)
 
 ---
 
