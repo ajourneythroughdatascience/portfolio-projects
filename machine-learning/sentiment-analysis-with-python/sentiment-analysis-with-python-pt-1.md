@@ -952,12 +952,12 @@ class PreprocessData(StringFormatting):
     - Return a processed Polars DataFrame object.
     '''
 
-    def downloadMode(self):
-        '''
-        Enter download mode where all URLs specified on source.txt.
-        will be downloaded in datasets folder.
-        '''
-		pass
+	def downloadMode(self):
+		'''
+		Enter download mode where all URLs specified on source.txt.
+		will be downloaded in datasets folder.
+		'''
+	pass
 
         def downloadData():
             '''
