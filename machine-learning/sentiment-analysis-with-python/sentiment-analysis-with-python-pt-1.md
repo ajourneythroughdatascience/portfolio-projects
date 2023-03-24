@@ -66,6 +66,7 @@ The complete project including all the resources used can be found in the [Port
 			- [Text log](#343-text-log)
 			- [Text entries](#344-text-entries)
 			- [Progress Bars](#345-progress-bars)
+			- [Execution button](#345-execution-button)
 - [Main function](#main-function)
 - [Results](#results)
 - [Conclusions](#conclusions)
@@ -955,26 +956,31 @@ class ResultsWriter:
         Create directories for all datasets,
         where we will store all iteration-wise results.
         '''
+        pass
 
     def getAttributesParams(self):
         '''
         Extract attributes (Will be the same for all datasets)
         '''
+        pass
 
     def plotTechnical(self, result_dict, res_index):
         '''
         Write the previously generated technical plots.
         '''
+        pass
 
     def plotBusiness(self, result_dict, res_index):
         '''
         Write the previously generated business plots.
         '''
+        pass
 
     def writeStats(self, result_dict, res_index):
         '''
         Write stats applicable for Technical, Business and Complete.
         '''
+        pass
 
     def writeTechnical(self, result_dict, res_index):
         '''
@@ -1003,6 +1009,7 @@ class ResultsWriter:
                 - Pearson Corr Coef
                 - Pearson Corr P-Value
         '''
+        pass
 
     def writeBusiness(self, result_dict, res_index):
         '''
@@ -1019,11 +1026,13 @@ class ResultsWriter:
                 - SCORE Neutral Perc
                 - SCORE Negative Perc
         '''
+        pass
 
     def writeResults(self, result_dict):
         '''
         Create pack of analyses based on user input.
         '''
+        pass
 
 if __name__ == '__main__':
     ResultsWriter()
@@ -1073,17 +1082,17 @@ class GetParameters:
         - Get configuration
     '''
 
-	def getParams(self):
-		'''
-		Get parameters from .toml file
-		'''
-		pass
+    def getParams(self):
+        '''
+        Get parameters from .toml file
+        '''
+        pass
 		
     def getConfig(self):
         '''
         Get configuration from .toml file
         '''
-		pass
+        pass
 
 if __name__ == '__main__':
     GetParameters()
@@ -1135,12 +1144,12 @@ class PreprocessData(StringFormatting):
     - Return a processed Polars DataFrame object.
     '''
 
-	def downloadMode(self):
-		'''
-		Enter download mode where all URLs specified on source.txt.
-		will be downloaded in datasets folder.
-		'''
-		pass
+    def downloadMode(self):
+        '''
+        Enter download mode where all URLs specified on source.txt.
+        will be downloaded in datasets folder.
+        '''
+        pass
 
         def downloadData():
             '''
@@ -1427,7 +1436,6 @@ app.mainloop()
 Conversely, we can also use a different class, `customtkinter.CTkToplevel`, instead of `customtkinter.CTk` in order to define secondary windows or prompts inside our main GUI.
 
 This is as simple as a GUI can get, and from there, we can build *n* number of frames and widgets. Since we'll be building our application using a class approach, we'll do things slightly different.
-
 
 ## 1. Global parameters
 The first thing we'll do, is define a class which will set global parameters for the 3 GUI classes we'll be writing. We'll head to our [`_app.py`](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/src/application/_app.py) module, and include the following:
@@ -1747,11 +1755,11 @@ We will now define the application appearance option menu:
 ##### **Code**
 ```Python
 self.appearance_mode_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame,
-                                                                values=["System", "Light", "Dark"],
-                                                                corner_radius=self.radius,
-                                                                command=self.changeAppearanceMode,
-                                                                font=self.font_body,
-                                                                dropdown_font=self.font_body)
+                                                               values=["System", "Light", "Dark"],
+                                                               corner_radius=self.radius,
+                                                               command=self.changeAppearanceMode,
+                                                               font=self.font_body,
+                                                               dropdown_font=self.font_body)
 
 self.appearance_mode_optionemenu.grid(row=7, column=0, padx=20, pady=(10, 40))
 ```
@@ -1798,14 +1806,14 @@ We can set an option menu where values are extracted from our `parameters.txt` f
 ##### **Code**
 ```Python
 self.model_name = customtkinter.CTkOptionMenu(self.parameters.tab("Model"),
-                                                dynamic_resizing=False,
-                                                values=self.getParams()['operation']['model'],
-                                                corner_radius=self.radius,
-                                                font=self.font_body,
-                                                dropdown_font=self.font_body,
-                                                width=self.option_box_width,
-                                                variable=self.var_model
-                                                )
+                                              dynamic_resizing=False,
+                                              values=self.getParams()['operation']['model'],
+                                              corner_radius=self.radius,
+                                              font=self.font_body,
+                                              dropdown_font=self.font_body,
+                                              width=self.option_box_width,
+                                              variable=self.var_model
+                                              )
 
 self.model_name.grid(row=1, column=0, padx=20, pady=(10, 10))
 ```
@@ -1819,11 +1827,11 @@ We can define a horizontal slider for our threshold values by using the followin
 ##### **Code**
 ```Python
 self.nltk_threshold = customtkinter.CTkSlider(master=self.parameters.tab("Advanced"),
-                                                from_=0,
-                                                to=1,
-                                                variable = self.var_nltk_threshold,
-                                                command=self.returnThresholdVal
-                                                )
+                                              from_=0,
+                                              to=1,
+                                              variable = self.var_nltk_threshold,
+                                              command=self.returnThresholdVal
+                                              )
 
 self.nltk_threshold.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 ```
@@ -1842,8 +1850,8 @@ def returnThresholdVal(self, value):
     self.threshold_value_bottom_curr = self.padStr('THRESHOLD TOP', f'+{round(value, 4)}')
     self.threshold_value_top_curr = self.padStr('THRESHOLD BOTTOM', round(-value, 4))
     self.insertLog(f"{self.threshold_value_top_curr}\n",
-                    f"{self.threshold_value_bottom_curr}\n",
-                    clear=True)
+                   f"{self.threshold_value_bottom_curr}\n",
+                   clear=True)
 ```
 
 We can notice two new methods we included:
@@ -1950,12 +1958,12 @@ The basic syntax is as follows:
 ##### **Code**
 ```Python
 self.col_entry_1 = customtkinter.CTkEntry(self.column_entry,
-                                            placeholder_text="Column 1",
-                                            corner_radius=self.radius,
-                                            font=self.font_body_pc,
-                                            placeholder_text_color=self.text_placeholder_color,
-                                            textvariable=self.var_col1
-                                            )
+                                          placeholder_text="Column 1",
+                                          corner_radius=self.radius,
+                                          font=self.font_body_pc,
+                                          placeholder_text_color=self.text_placeholder_color,
+                                          textvariable=self.var_col1
+                                          )
                                         
 self.col_entry_1.grid(row=1, column=0, padx=(10, 10), pady=(10, 10), sticky="new")
 ```
@@ -1974,9 +1982,9 @@ A progress bar can be defined using the following syntax:
 ##### **Code**
 ```Python
 self.progressbar_1 = customtkinter.CTkProgressBar(self.progress_frame,
-                                                    mode='determinate',
-                                                    height=self.progress_bar_height,
-                                                    corner_radius=self.radius)
+                                                  mode='determinate',
+                                                  height=self.progress_bar_height,
+                                                  corner_radius=self.radius)
 
 self.progressbar_1.grid(row=1, column=0, padx=(20, 20), pady=(10, 10), sticky="new")
 self.progressbar_1.set(0) # Set to 0, since by default, it will be set to 0.5
@@ -2013,19 +2021,19 @@ self.progressbar_2.stop()
 
 This way, when our iteration concludes, our sum has reached the total number of iterations scaled to a range of `[0, 1]`, and the progress bar will reflect completion.
 
-#### 3.4.5 execution button
+#### 3.4.6 execution button
 We wish to provide the user a way to run the sentiment analysis whenever all options are correctly selected. We can define a button using the following syntax:
 
 ##### **Code**
 ```Python
 self.main_button_1 = customtkinter.CTkButton(master=self.path_entry,
-                                                text='Run Model',
-                                                fg_color="transparent",
-                                                border_width=1,
-                                                font=self.font_body,
-                                                text_color=("gray10", self.text_color),
-                                                corner_radius=self.radius,
-                                                command=self.runModel)
+                                             text='Run Model',
+                                             fg_color="transparent",
+                                             border_width=1,
+                                             font=self.font_body,
+                                             text_color=("gray10", self.text_color),
+                                             corner_radius=self.radius,
+                                             command=self.runModel)
 ```
 
 - As with previous examples, the `command` parameter will point to a function that will be in charge of running our model.
