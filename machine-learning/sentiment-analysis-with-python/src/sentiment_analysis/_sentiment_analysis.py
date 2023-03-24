@@ -11,7 +11,6 @@ Part of Portfolio Project: sentiment-analysis-in-python
 """
 
 # Third-party packages
-# import nltk
 import numpy as np
 import pandas as pd
 import polars as pl
@@ -27,7 +26,6 @@ warnings.filterwarnings('ignore')
 # Internal packages
 from utils import PreprocessData
 from sentiment_analysis.models import vader
-from sentiment_analysis.models import happy_transformer
 from ._results_analysis import ResultsAnalysis
 from ._results_writer import ResultsWriter
 
@@ -35,8 +33,14 @@ from ._results_writer import ResultsWriter
 class SentimentAnalysis(PreprocessData,
                         ResultsAnalysis,
                         ResultsWriter):
+    '''
+    Perform sentiment analysis on a given data set.
+    '''
 
     def applyModel(self, df, dataset):
+        '''
+        Apply sentiment analysis model depending on user's choice.
+        '''
         self.insertLog(f'APPLYING MODEL TO {dataset.name}\n\n')
 
         time.sleep(float(self.var_wait_time.get())) # type: ignore
@@ -143,17 +147,13 @@ class SentimentAnalysis(PreprocessData,
             # Join with original DataFrame
             df_main = df.join(df_res, on = self.col_id.get(), how="inner") # type: ignore
 
-        elif self.var_model.get() == 'Happy Transformer': # type: ignore
-            model = happy_transformer.happyTransformerModel()
-
         return df_main # type: ignore
 
     def executeModel(self):
         '''
-        We will load data sets one by one and perform analysis per dataset
-        This is because files can become too large
+        Downloads datasets if user has requested Download operations. 
+        Loads data sets one by one and perform analysis per dataset.
         '''
-
         # Enter download mode
         if self.var_operation.get() == 'Download Mode': # type: ignore
             self.insertLog("ENTERING DOWNLOAD MODE\n\n")
@@ -207,7 +207,7 @@ class SentimentAnalysis(PreprocessData,
                         result_dict[dataset_name] = self.performAnalysis(df_main, dataset)
 
         # Perform writing
-        self.writeResults(result_dict, df_main) # type: ignore
+        self.writeResults(result_dict) # type: ignore
 
         return None
 

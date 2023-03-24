@@ -62,7 +62,8 @@ class ResultsAnalysis:
 
     def getPercentages(self, df_processed):
         '''
-        Calculates percentages for Positive, Neutral and Negative based on SCORE.
+        Calculates percentages for Positive, Neutral and Negative
+        based on score.
         '''
         total_len = len(df_processed)
 
@@ -74,13 +75,16 @@ class ResultsAnalysis:
 
     def calculateCorrelation(self, df_processed):
         '''
-        Calculates the correlation between the compound score and the actual rating.
+        Calculates the correlation between
+        the compound score and the actual rating.
             - Spearman Rank Coefficient
             - Pearson Coefficient
-        Calculates the p-value associated with this correlation.
+        Calculates the p-value associated
+        with this correlation.
             - Spearman Rank Coefficient P-Value
             - Pearson Coefficient P-Value
-        Provides the user two measures with which to trust/not trust the model results.
+        Provides the user two measures
+        with which to trust/not trust the model results.
         '''
         # First, scale our data for results to be coherent
         df_ratings = df_processed[self.var_rating_col.get()].values # type: ignore
@@ -99,13 +103,22 @@ class ResultsAnalysis:
 
     def findTags(self, tag_prefix, tagged_text):
         '''
-        Get the most frequent words per selected nltk tag using the var_top_words param.
+        Get the most frequent words
+        per selected nltk tag using
+        the var_top_words param.
         '''
         cfd = nltk.ConditionalFreqDist((tag, word.lower()) for (word, tag) in tagged_text if tag == tag_prefix)
 
         return dict((tag, cfd[tag].most_common(int(self.var_top_words.get()))) for tag in cfd.conditions()) # type: ignore
 
-    def performGrammaticalAnalysis(self, df_subset, nltk_tags, banned_chars, grammatical_tags):
+    def performGrammaticalAnalysis(self,
+                                   df_subset,
+                                   nltk_tags,
+                                   banned_chars,
+                                   grammatical_tags):
+        '''
+        Perform word frequency analysis per POS.
+        '''
         # Perform grammatical frequency analysis
         tag_frequency = {}
         tokenized_pos_all = []
@@ -139,7 +152,8 @@ class ResultsAnalysis:
 
     def getGrammaticalDetail(self, df_processed):
         '''
-        Get the grammatical frequency of top and bottom performing subsets
+        Get the grammatical frequency
+        of top and bottom performing subsets
         '''
         # Define a set of banned characters (will not be included in analysis)
         banned_chars = ['\n', '\t', 'br', '<', '>', '/', '#', ']', '[', '-']
@@ -175,7 +189,11 @@ class ResultsAnalysis:
 
         return tag_frequency_top, tag_frequency_bottom
 
-    def plotGrammaticalDetail(self, tag_frequency, grammatical, axis, counter):
+    def plotGrammaticalDetail(self,
+                              tag_frequency,
+                              grammatical,
+                              axis,
+                              counter):
         '''
         Generate a new figure.
         Plot the word frequency.
@@ -194,7 +212,8 @@ class ResultsAnalysis:
 
     def plotWordCloud(self, df_processed):
         '''
-        Generate wordcloud figure on most repeated words per dataset.
+        Generate wordcloud figure
+        on most repeated words per dataset.
         SOURCE: https://samuelndungula.medium.com/sentiment-analysis-using-vader-and-roberta-5279ba312d70
         '''
         # Create stopword
@@ -220,7 +239,9 @@ class ResultsAnalysis:
 
     def plotAggCols(self, agg_col, df_agg):
         '''
-        For each agg column, plot a rating per agg level 100% stacked bar chart.
+        For each agg column,
+        plot a rating per agg level 100%
+        stacked bar chart.
         '''
         f_2_5, ax_2_5 = plt.subplots()
 
@@ -236,7 +257,9 @@ class ResultsAnalysis:
     
     def plotHeatMap(self, agg_col, df_agg, agg_target):
         '''
-        For each agg column, plot a rating per agg level 100% stacked bar chart.
+        For each agg column,
+        plot a rating per agg level 100%
+        heatmap.
         '''
 
         f_6_9, ax_6_9 = plt.subplots()
@@ -253,7 +276,10 @@ class ResultsAnalysis:
 
         return f_6_9
 
-    def generateTechnicalCalc(self, df_processed, dataset, score_percentages):
+    def generateTechnicalCalc(self,
+                              df_processed,
+                              dataset,
+                              score_percentages):
         '''
         For each iteration, calculates the following:
             - Total entries
@@ -268,6 +294,10 @@ class ResultsAnalysis:
             - SCORE Positive Perc
             - SCORE Neutral Perc
             - SCORE Negative Perc
+            - Spearman Rank Corr Coef
+            - Spearman Rank Corr P-Value
+            - Pearson Corr Coef
+            - Pearson Corr P-Value
         '''
         # Calculate additional attributes
         cmp_description = df_processed['CMP'].describe()
@@ -316,14 +346,16 @@ class ResultsAnalysis:
 
         return technical_calc, tag_frequency_top, tag_frequency_bottom
 
-    def generateBusinessCalc(self, df_processed, dataset, score_percentages):
+    def generateBusinessCalc(self,
+                             df_processed,
+                             dataset,
+                             score_percentages):
         '''
         For each iteration, calculates the following:
             - Total entries
             - SCORE Positive Perc
             - SCORE Neutral Perc
             - SCORE Negative Perc
-            - 
         '''
         # First, aggregate
 
@@ -338,7 +370,9 @@ class ResultsAnalysis:
 
     def generateStats(self, df_processed, agg_col_list):
         '''
-        Calculate Mean and Standard Deviation of Compound and Rating for all Aggregation Levels 
+        Calculate Mean and Standard Deviation
+        of Compound and Rating for all
+        aggregation Levels.
         '''
         
         stats_dict = {}
@@ -365,11 +399,11 @@ class ResultsAnalysis:
 
         return stats_dict
 
-    def generateTechnicalPlots(self, df_processed, tag_frequency_top, tag_frequency_bottom):
+    def generateTechnicalPlots(self,
+                               tag_frequency_top,
+                               tag_frequency_bottom):
         '''
-        For each iteration, plots the following:
-            - Figure 1: Word frequency for highest rated composition scores per grammatical object barchart
-            - Figure 2: Word frequency for lowest rated composition scores per grammatical object barchart
+        For each iteration, generate technical plots.
         '''
         # Define counter for subplot index setting
         counter = 0
@@ -413,7 +447,9 @@ class ResultsAnalysis:
 
         return f1, f2
 
-    def generateBusinessPlots(self, df_processed, score_percentages, agg_col_list):
+    def generateBusinessPlots(self,
+                              df_processed,
+                              agg_col_list):
         '''
         For each iteration, plots the following figures:
             - Figure 1: Compound Score vs Rating Barplot (SOURCE: https://www.youtube.com/watch?v=QpzMWQvxXWk&t=1164s).
@@ -509,7 +545,7 @@ class ResultsAnalysis:
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
 
-            technical_plots = self.generateTechnicalPlots(df_processed, tag_frequency_top, tag_frequency_bottom)
+            technical_plots = self.generateTechnicalPlots(tag_frequency_top, tag_frequency_bottom)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
@@ -538,7 +574,7 @@ class ResultsAnalysis:
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
             
-            business_plots = self.generateBusinessPlots(df_processed, score_percentages, agg_col_list)
+            business_plots = self.generateBusinessPlots(df_processed, agg_col_list)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
@@ -562,12 +598,12 @@ class ResultsAnalysis:
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
 
-            technical_plots = self.generateTechnicalPlots(df_processed, tag_frequency_top, tag_frequency_bottom)
+            technical_plots = self.generateTechnicalPlots(tag_frequency_top, tag_frequency_bottom)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
 
-            business_plots = self.generateBusinessPlots(df_processed, score_percentages, agg_col_list)
+            business_plots = self.generateBusinessPlots(score_percentages, agg_col_list)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
@@ -602,12 +638,12 @@ class ResultsAnalysis:
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
             
-            technical_plots = self.generateTechnicalPlots(df_processed, tag_frequency_top, tag_frequency_bottom)
+            technical_plots = self.generateTechnicalPlots(tag_frequency_top, tag_frequency_bottom)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore
             
-            business_plots = self.generateBusinessPlots(df_processed, score_percentages, agg_col_list)
+            business_plots = self.generateBusinessPlots(score_percentages, agg_col_list)
             progress_3_perc += progress_3_step
             self.progressbar_3.set(progress_3_perc) # type: ignore
             self.update_idletasks() # type: ignore

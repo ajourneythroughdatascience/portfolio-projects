@@ -30,8 +30,8 @@ import sentiment_analysis
 # Global parameters class
 class SetGlobalParams(utils.GetParameters):
     '''
-    Mixin class:
-        - Set global parameters for all ctinker objects.
+    DOT (Data Transfer Object) Class:
+    - Set global parameters for all ctinker objects.
     '''
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -93,7 +93,6 @@ class SetGlobalParams(utils.GetParameters):
                                                )
         
         # Set global params for other classes
-        # Define general parameters
         self.threshold_top = 0.70
         self.threshold_bottom = -0.70
 
@@ -104,13 +103,11 @@ class SetGlobalParams(utils.GetParameters):
         except FileNotFoundError:
             pass
 
-        # Define parameters
         plt.style.use('ggplot')
         self.color_main = '#1a1a1a'
         self.text_padding = 18
         self.title_font_size = 17
         self.label_font_size = 14
-        self.color_scheme = 'rocket'
         self.subptitle_y = 0.98
 
 # Help prompt class
@@ -197,11 +194,6 @@ class MainApplication(SetGlobalParams,
         self.progress_bar_height = 20
         self.option_box_width = 200
 
-        # Window settings
-        self.iconbitmap('digital_assets/favicon_code_white.ico')
-        self.geometry(f"{self.geometry_width}x{self.geometry_height}")
-        self.title('Pablo Aguirre | Sentiment Analysis 1.0')
-
         # Printing Formatting Settings
         self.measure_title = ''
         self.value_title = ''
@@ -214,7 +206,6 @@ class MainApplication(SetGlobalParams,
 
         self.var_rdir = tkinter.StringVar(value=self.params_directories['rdir'])
         self.var_wdir =  tkinter.StringVar(value=self.params_directories['wdir'])
-        # self.var_inputdir =  tkinter.StringVar(value=self.params_directories['inputdir'])
         self.var_source_url = tkinter.StringVar(value=self.params_directories['sourceurl'])
 
         self.var_operation = tkinter.StringVar(value=self.config_operation['input_method'][0])
@@ -237,7 +228,12 @@ class MainApplication(SetGlobalParams,
         # Initial Variables - Non-user-modifiable
         self.var_sourceurl = tkinter.StringVar(value=self.params_directories['sourceurl'])
 
-        # UI Elements - Grid Layout (3x4)
+        # Window settings
+        self.iconbitmap('digital_assets/favicon_code_white.ico')
+        self.geometry(f"{self.geometry_width}x{self.geometry_height}")
+        self.title('Pablo Aguirre | Sentiment Analysis 1.0')
+
+        # UI Elements - Grid Layout (1x2)
         self.grid_columnconfigure(1, weight=1)
         self.grid_rowconfigure(0, weight=1)
 
@@ -255,7 +251,7 @@ class MainApplication(SetGlobalParams,
         self.help_prompt = customtkinter.CTkButton(self.sidebar_frame,
                                                    text="Help",
                                                    font=self.font_body,
-                                                   command=self.open_help_prompt,
+                                                   command=self.openHelpPrompt,
                                                    corner_radius=self.radius)
         
         self.help_prompt.grid(row=1, column=0, padx=20, pady=10)
@@ -263,7 +259,7 @@ class MainApplication(SetGlobalParams,
         self.about_prompt = customtkinter.CTkButton(self.sidebar_frame,
                                                    text="About",
                                                    font=self.font_body,
-                                                   command=self.open_about_prompt,
+                                                   command=self.openAboutPrompt,
                                                    corner_radius=self.radius)
         
         self.about_prompt.grid(row=2, column=0, padx=20, pady=10)
@@ -276,12 +272,12 @@ class MainApplication(SetGlobalParams,
         self.appearance_mode_label.grid(row=6, column=0, padx=20, pady=(10, 0))
 
         self.appearance_mode_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame,
-                                                                       values=["System", "Light", "Dark"],
-                                                                       corner_radius=self.radius,
-                                                                       command=self.change_appearance_mode_event,
-                                                                       font=self.font_body,
-                                                                       dropdown_font=self.font_body)
-        
+                                                                        values=["System", "Light", "Dark"],
+                                                                        corner_radius=self.radius,
+                                                                        command=self.changeAppearanceMode,
+                                                                        font=self.font_body,
+                                                                        dropdown_font=self.font_body)
+
         self.appearance_mode_optionemenu.grid(row=7, column=0, padx=20, pady=(10, 40))
 
         # UI Elements - Execution Parameters (Tab View) & Operation Mode (Option Menus)
@@ -309,14 +305,14 @@ class MainApplication(SetGlobalParams,
         self.label_model_name.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
         self.model_name = customtkinter.CTkOptionMenu(self.parameters.tab("Model"),
-                                                      dynamic_resizing=False,
-                                                      values=self.getParams()['operation']['model'],
-                                                      corner_radius=self.radius,
-                                                      font=self.font_body,
-                                                      dropdown_font=self.font_body,
-                                                      width=self.option_box_width,
-                                                      variable=self.var_model
-                                                      )
+                                                        dynamic_resizing=False,
+                                                        values=self.getParams()['operation']['model'],
+                                                        corner_radius=self.radius,
+                                                        font=self.font_body,
+                                                        dropdown_font=self.font_body,
+                                                        width=self.option_box_width,
+                                                        variable=self.var_model
+                                                        )
 
         self.model_name.grid(row=1, column=0, padx=20, pady=(10, 10))
 
@@ -465,13 +461,10 @@ class MainApplication(SetGlobalParams,
                                                       from_=0,
                                                       to=1,
                                                       variable = self.var_nltk_threshold,
-                                                      command=self.return_threshold_val)
-        
+                                                      command = self.returnThresholdVal
+                                                      )
+
         self.nltk_threshold.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-
-
-
-
 
         # UI Elements - Column Selector
         self.column_entry = customtkinter.CTkFrame(self)
@@ -572,7 +565,7 @@ class MainApplication(SetGlobalParams,
                                                 wrap='word',
                                                 font=self.font_code
                                                 )
-        
+
         self.textlog.grid(row=0, column=0, padx=(20, 20), pady=(20, 20), sticky="nsew")
 
         # UI Elements - Progress Bars
@@ -589,10 +582,10 @@ class MainApplication(SetGlobalParams,
         self.progressbar_1_tag.grid(row=0, column=0, padx=10, pady=10, sticky="new")
 
         self.progressbar_1 = customtkinter.CTkProgressBar(self.progress_frame,
-                                                          mode='determinate',
-                                                          height=self.progress_bar_height,
-                                                          corner_radius=self.radius)
-        
+                                                            mode='determinate',
+                                                            height=self.progress_bar_height,
+                                                            corner_radius=self.radius)
+
         self.progressbar_1.grid(row=1, column=0, padx=(20, 20), pady=(10, 10), sticky="new")
         self.progressbar_1.set(0) # Set to 0, since by default, it will be set to 0.5
 
@@ -673,37 +666,45 @@ class MainApplication(SetGlobalParams,
         
         self.main_button_1.grid(row=2, column=3, padx=(20, 20), pady=(20, 20), sticky="nsew")
 
-
-
-    # UI Elements - Events
-    def open_help_prompt(self):
+    def openHelpPrompt(self):
+        '''
+        Event: Open Help prompt.
+        '''
         if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
             self.toplevel_window = HelpPrompt(self)
         else:
             self.toplevel_window.focus()
     
-    # Return Threshold value to user
-    def return_threshold_val(self, value):
-        self.threshold_value_bottom_curr = self.padStr('THRESHOLD TOP', f'+{round(value, 4)}')
-        self.threshold_value_top_curr = self.padStr('THRESHOLD BOTTOM', round(-value, 4))
-        self.insertLog(f"{self.threshold_value_top_curr}\n",
-                       f"{self.threshold_value_bottom_curr}\n",
-                       clear=True)
-
-    # Open about toplevel_window
-    def open_about_prompt(self):
+    def openAboutPrompt(self):
+        '''
+        Event: Open About prompt.
+        '''
         if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
             self.toplevel_window = AboutPrompt(self)
         else:
             self.toplevel_window.focus()  # if window exists focus it
 
-    def change_appearance_mode_event(self, new_appearance_mode: str):
+    # Return Threshold value to user
+    def returnThresholdVal(self, value):
+        '''
+        Event: Get threshold values and print to text log.
+        '''
+        self.threshold_value_bottom_curr = self.padStr('THRESHOLD TOP', f'+{round(value, 4)}')
+        self.threshold_value_top_curr = self.padStr('THRESHOLD BOTTOM', round(-value, 4))
+        self.insertLog(f"{self.threshold_value_top_curr}\n",
+                        f"{self.threshold_value_bottom_curr}\n",
+                        clear=True)
+
+    def changeAppearanceMode(self, new_appearance_mode: str):
+        '''
+        Event: Change application appearance.
+        '''
         customtkinter.set_appearance_mode(new_appearance_mode)
 
     def runModel(self):
         '''
-        Performs initial input exception handling (see if any vital input is missing).
-        Runs model using SentimentAnalysis inherited module.
+        Event: Performs initial input exception handling.
+        Event: Runs model using SentimentAnalysis inherited module.
         '''
         if self.var_col1.get() == '':
             self.insertLog("PLEASE SELECT AT LEAST ONE AGGREGATION COLUMN IN COL1",

@@ -23,7 +23,6 @@ import xlsxwriter
 
 # Built-in packages
 import os
-import shutil
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -37,7 +36,8 @@ class ResultsWriter:
     '''
     def createDirs(self, result_dict):
         '''
-        Create directories for all datasets, where we will store all iteration-wise results.
+        Create directories for all datasets,
+        where we will store all iteration-wise results.
         '''
         for dataset_name, dataset in result_dict.items():
 
@@ -46,19 +46,19 @@ class ResultsWriter:
 
         return None
     
-    def preprocessResults(self, df_main, dataset):
-        '''
-        Convert polars dataframe to pandas dataframe
-        '''
-        self.df = self.df.to_pandas()
-        print(self.df.head())
+    # def preprocessResults(self, df_main, dataset):
+    #     '''
+    #     Convert polars dataframe to pandas dataframe
+    #     '''
+    #     self.df = self.df.to_pandas()
+    #     print(self.df.head())
 
-        return self.df
-
+    #     return self.df
 
     def getAttributesParams(self):
-
-        # Extract attributes (Will be the same for all datasets)
+        '''
+        Extract attributes (Will be the same for all datasets)
+        '''
         attributes_params = {'MODEL':self.var_model.get(), # type: ignore
                              'TARGET_COLUMN_ID':self.var_target_id_col.get(), # type: ignore
                              'COLUMN_1':self.var_col1.get(), # type: ignore
@@ -77,7 +77,6 @@ class ResultsWriter:
         '''
         Write the previously generated technical plots.
         '''
-
         self.insertLog(f'WRITING TECHNICAL PLOTS\n\n') # type: ignore
 
         for dataset_name, dataset in result_dict.items():
@@ -98,7 +97,6 @@ class ResultsWriter:
         '''
         Write the previously generated business plots.
         '''
-        
         self.insertLog(f'WRITING BUSINESS PLOTS\n\n') # type: ignore
 
         for dataset_name, dataset in result_dict.items():
@@ -117,7 +115,7 @@ class ResultsWriter:
 
     def writeStats(self, result_dict, res_index):
         '''
-        Write stats applicable for Technical, Business and Full
+        Write stats applicable for Technical, Business and Complete.
         '''
         self.insertLog(f'WRITING STATISTICS\n\n') # type: ignore
 
@@ -135,12 +133,30 @@ class ResultsWriter:
 
     def writeTechnical(self, result_dict, res_index):
         '''
-        Technical mode will:
-            - Write an excel file.
-            - With tabs:
-                - PARAMETERS: model, target_id_col, agg_cols, rating_col, target_col, number_of_datasets_analyzed.
-                - RESULTS: dataset, total_entries, positive_num, positive percentage, neutral_num, neutral percentage, negative_num, negative percentage.
-                - MODEL: TECHNICAL INFO REGARDING MODEL INTERNAL METHODS
+        - Write an excel file with tabs:
+            - PARAMETERS:
+                - model
+                - target_id_col,
+                - agg_cols,
+                - rating_col,
+                - target_col.
+            - RESULTS:
+                - Total entries
+                - CMP Median
+                - CMP Mean
+                - CMP STD
+                - CMP MIN
+                - CMP Q1
+                - CMP Q2
+                - CMP Q3
+                - CMP MAX
+                - SCORE Positive Perc
+                - SCORE Neutral Perc
+                - SCORE Negative Perc
+                - Spearman Rank Corr Coef
+                - Spearman Rank Corr P-Value
+                - Pearson Corr Coef
+                - Pearson Corr P-Value
         '''
         self.insertLog(f'WRITING TECHNICAL REPORT\n\n') # type: ignore
 
@@ -160,20 +176,25 @@ class ResultsWriter:
         filename = os.path.join(self.project_path, self.var_wdir.get(), 'TECHNICAL.xlsx') # type: ignore
 
         with pd.ExcelWriter(filename, engine='xlsxwriter') as technical_writer:
-            attributes_params.to_excel(technical_writer, sheet_name='PARAMETERS', index=False)
+            attributes_params.to_excel(technical_writer, sheet_name='PARAMETERS')
             df_technical_full.to_excel(technical_writer, sheet_name='RESULTS', index=False)
 
         return None
 
     def writeBusiness(self, result_dict, res_index):
         '''
-        Report mode will:
-            - Write an excel file.
-            - With tabs:
-                - PARAMETERS: model, target_id_col, agg_cols, rating_col, target_col, number_of_datasets_analyzed
-                - RESULTS: dataset, total_entries, positive_num, positive percentage, neutral_num, neutral percentage, negative_num, negative percentage.
-                - RATING: dataset, rating, dev_from_rating
-                - OTHER: TO DEFINE
+        - Write an excel file with tabs:
+            - PARAMETERS:
+                - model
+                - target_id_col,
+                - agg_cols,
+                - rating_col,
+                - target_col.
+            - RESULTS:
+                - Total entries
+                - SCORE Positive Perc
+                - SCORE Neutral Perc
+                - SCORE Negative Perc
         '''
         self.insertLog(f'WRITING BUSINESS REPORT\n\n') # type: ignore
 
@@ -198,7 +219,7 @@ class ResultsWriter:
 
         return None
 
-    def writeResults(self, result_dict, df_main):
+    def writeResults(self, result_dict):
         '''
         Create pack of analyses based on user input.
         '''

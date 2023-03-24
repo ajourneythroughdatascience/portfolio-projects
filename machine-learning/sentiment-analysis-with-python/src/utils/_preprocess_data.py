@@ -30,12 +30,16 @@ pl.toggle_string_cache(True)
 
 class PreprocessData(StringFormatting):
     '''
+    - Download (if user specifies) and read datasets into a
+    Polars DataFrame object.
+    - Cast required data types.
+    - Select user-required columns.
+    - Return a processed Polars DataFrame.
     '''
 
-    # Import Data
     def downloadMode(self):
         '''
-        Enter download mode where all URLs specified on source.txt
+        Enter download mode where all URLs specified on source.txt.
         will be downloaded in datasets folder.
         '''
         def downloadData():
@@ -138,7 +142,7 @@ class PreprocessData(StringFormatting):
 
         def castTypes(df, cols_text, col_rating):
             '''
-            Cast columns to appropriate data types for model deployment.
+            Cast columns to appropriate data types for model execution.
             '''
             # Cast string types
             for text_col in cols_text:
@@ -161,22 +165,24 @@ class PreprocessData(StringFormatting):
 
         def readData(dataset):
             '''
-            This function will read one file per iteration and return a dataframe.
+            This function will read one file per iteration
+            and return a dataframe.
             It will perform the following tasks:
                 - Read file if it exists and is of correct file format.
                 - Select user-defined columns if they exist.
                 - Cast user-defined columns to correct data type.
                 - Return a processed Polars DataFrame object.
             A data set can be in the form of:
-                - A compressed .gz file.
-                - A .tsv file.
                 - A .csv file.
-            If dataset does not comply with file format, exception will be raised.
-            For collumn selection:
-                - A maximum of 4 aggregation columns are allowed.
-                - ID column can be of type str or int.
-                - Target column requires str type.
-                - Rating column can be of type int or float.
+                - A .tsv file.
+                - A compressed .gz file containing:
+                    - A .csv file.
+                    - A .tsv file.
+            For column selection:
+                - Agg columns (max 4, min 1). Can be str, int or float type.
+                - ID column. Can be str or int type.
+                - Target column. Requires str type.
+                - Rating column. Can be int or float type.
             '''
 
             # Define target path for a given iteration

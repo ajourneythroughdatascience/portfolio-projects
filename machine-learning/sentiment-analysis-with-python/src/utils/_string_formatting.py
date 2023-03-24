@@ -22,7 +22,7 @@ class StringFormatting:
         Format a string to be inserted into log.
         '''
         measure_title += ' '
-        self.padded_str = measure_title + '.'*(self.dot_sep - len(measure_title))
+        self.padded_str = measure_title + '.'*(self.dot_sep - len(measure_title)) # type: ignore
         self.padded_str = ('%s %s' % ( self.padded_str, value_title))
 
         return self.padded_str
@@ -38,22 +38,22 @@ class StringFormatting:
             - Update idle tasks.
         '''
         if clear==True:
-            self.textlog.configure(state="normal")
-            self.textlog.delete("0.0", "end")
+            self.textlog.configure(state="normal") # type: ignore
+            self.textlog.delete("0.0", "end") # type: ignore
             for textlog in args:
-                self.textlog.insert(self.print_position, textlog)
-            self.textlog.configure(state="disabled")
-            self.update_idletasks()
+                self.textlog.insert(self.print_position, textlog) # type: ignore
+            self.textlog.configure(state="disabled") # type: ignore
+            self.update_idletasks() # type: ignore
 
         elif clear==False:
-            self.textlog.configure(state="normal")
+            self.textlog.configure(state="normal") # type: ignore
             for textlog in args:
-                self.textlog.insert(self.print_position, textlog)
-            self.textlog.configure(state="disabled")
-            self.update_idletasks()
+                self.textlog.insert(self.print_position, textlog) # type: ignore
+            self.textlog.configure(state="disabled") # type: ignore
+            self.update_idletasks() # type: ignore
 
         return None
 
 # Call main function
 if __name__ == '__main__':
-    main()
+    main() # type: ignore

@@ -21,15 +21,6 @@ class GetParameters:
         - Get parameters
         - Get configuration
     '''
-    def getParams(self):
-        '''
-        Get parameters from .toml file
-        '''
-        with open("config/parameters.toml", mode="rb") as f_params:
-            params = tomli.load(f_params)
-
-        return params
-
     def getConfig(self):
         '''
         Get configuration from .toml file
@@ -39,5 +30,14 @@ class GetParameters:
 
         return config
 
+    def getParams(self):
+        '''
+        Get parameters from .toml file
+        '''
+        with open("config/parameters.toml", mode="rb") as f_params:
+            params = tomli.load(f_params)
+
+        return params
+
 if __name__ == '__main__':
-    main()
+    main() # type: ignore
