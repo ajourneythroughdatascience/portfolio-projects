@@ -1234,6 +1234,7 @@ As mentioned, we will express our packages as folders inside `src`. For a folder
 
 The basic structure of an `__init__.py` file is very simple; we import the modules we wish to include in the package, along with the classes we wish to use in other files:
 
+##### **Code**
 ```Python
 from ._app import SetGlobalParams
 ```
@@ -1973,7 +1974,7 @@ self.col_entry_1.grid(row=1, column=0, padx=(10, 10), pady=(10, 10), sticky="new
 - The `placeholder_text` attribute sets a temporary indicator inside the text entry.
 - The `textvariable` denotes the variable we'll assign to the input text entry.
 
-#### 3.4.5 Progress Bars
+#### 3.4.5 Progress bars
 A progress bar is a graphical control element used to visualize the progression of an extended computer operation. We want to provide the user a way to visualize the overall progress of the execution, divided into three main steps:
 - Download/Load
 - Model execution
@@ -2194,6 +2195,10 @@ Now that we have a fully-fledged frontend for the user to interact with, we will
 - [QTRAC, Mixin Classes](http://www.qtrac.eu/pyclassmulti.html)
 - [Towards Data Science, Method Resolution Order in Python](https://medium.com/@__hungrywolf/mro-in-python-3-e2bcd2bd6851)
 - [Hugging Face, Sentiment Analysis in Python](https://huggingface.co/blog/sentiment-analysis-python)
+- [TomSchimansky,  CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+- [Analytics Vidhya, Sentiment Analysis with NLP & Deep Learning](https://www.analyticsvidhya.com/blog/2022/02/sentiment-analysis-with-nlp-deep-learning/)
+- [NLTK, Documentation](https://www.nltk.org/)
+- [TextBlob, Documentation](https://textblob.readthedocs.io/en/dev/)
 
 ---
 

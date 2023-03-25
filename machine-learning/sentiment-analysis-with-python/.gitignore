@@ -14,3 +14,6 @@ additionals/
 
 ## Ignore input test folder
 inputs/
+
+## Ignore README for now
+README.md
