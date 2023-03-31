@@ -91,7 +91,7 @@ If we zoom in to our `_preprocess_data.py` module, we have the following structu
   <img src="https://pabloagn.com/wp-content/uploads/2023/03/P005A021_preprocessing_module_bg.svg">
 </p>
 
-###### Figure 2: Data Preprocessing Structure Chart
+###### *Figure 2: Data Preprocessing Structure Chart*
 
 There are some key points worth mentioning:
 
@@ -337,116 +337,116 @@ We can now implement a reading method that will read a dataset depending on the 
 
 ##### **Code**
 ```Python
-        def readData(dataset):
-            '''
-            This function will read one file per iteration
-            and return a dataframe.
-            It will perform the following tasks:
-                - Read the file if it exists, and is of correct file format.
-                - Select the user-defined columns if they exist.
-                - Cast the user-defined columns to correct data type.
-                - Return a processed Polars DataFrame object.
-            A data set can be in the form of:
-                - A .csv file.
-                - A .tsv file.
-                - A compressed .gz file containing:
-                    - A .csv file.
-                    - A .tsv file.
-            For column selection:
-                - Agg columns (max 4, min 1). Can be str, int or float type.
-                - ID column. Can be str or int type.
-                - Target column. Requires str type.
-                - Rating column. Can be int or float type.
-            '''
+def readData(dataset):
+    '''
+    This function will read one file per iteration
+    and return a dataframe.
+    It will perform the following tasks:
+        - Read the file if it exists, and is of correct file format.
+        - Select the user-defined columns if they exist.
+        - Cast the user-defined columns to correct data type.
+        - Return a processed Polars DataFrame object.
+    A data set can be in the form of:
+        - A .csv file.
+        - A .tsv file.
+        - A compressed .gz file containing:
+            - A .csv file.
+            - A .tsv file.
+    For column selection:
+        - Agg columns (max 4, min 1). Can be str, int or float type.
+        - ID column. Can be str or int type.
+        - Target column. Requires str type.
+        - Rating column. Can be int or float type.
+    '''
 
-            # Define target path for a given iteration
-            read_target = os.path.join(self.project_path, self.var_rdir.get(), dataset) # type: ignore
+    # Define target path for a given iteration
+    read_target = os.path.join(self.project_path, self.var_rdir.get(), dataset) # type: ignore
 
-            # If a .csv file exists, read the .csv file
-            if read_target.endswith('.csv'):
-                self.insertLog(f"READING:\n{read_target}\n\n")
-                termination = '.csv'
+    # If a .csv file exists, read the .csv file
+    if read_target.endswith('.csv'):
+        self.insertLog(f"READING:\n{read_target}\n\n")
+        termination = '.csv'
 
-                # Wait for user to see params
-                time.sleep(float(self.var_wait_time.get())) # type: ignore
+        # Wait for user to see params
+        time.sleep(float(self.var_wait_time.get())) # type: ignore
 
-                # Read file into df
-                df = pl.read_csv(read_target, sep = ',', ignore_errors=True)
+        # Read file into df
+        df = pl.read_csv(read_target, sep = ',', ignore_errors=True)
 
-                self.insertLog(f"CONCLUDED READING:\n{read_target}\n\n")
-                
-                # Wait for user to see params
-                time.sleep(float(self.var_wait_time.get())) # type: ignore
-
-            # If a .tsv file exists, read the .tsv file
-            elif read_target.endswith('.tsv'):
-                self.insertLog(f"READING:\n{read_target}\n\n")
-                termination = '.tsv'
-
-                # Wait for user to see params
-                time.sleep(float(self.var_wait_time.get())) # type: ignore
-
-                # Read file into df
-                df = pl.read_csv(read_target, sep = '\t', ignore_errors=True)
-
-                self.insertLog(f"CONCLUDED READING:\n{read_target}\n\n")
-            
-                # Wait for user to see params
-                time.sleep(float(self.var_wait_time.get())) # type: ignore
-
-            # If a .gz file exists, read the .gz file without explicitly decompressing
-            elif read_target.endswith('.tsv.gz'):
-                self.insertLog(f"READING:\n{read_target}\n\n")
-                termination = '.tsv.gz'
-
-                # Wait for user to see params
-                time.sleep(float(self.var_wait_time.get())) # type: ignore
-
-                # Read file into df
-                with gzip.open(read_target) as compressed_file:
-                    df = pl.read_csv(compressed_file.read(), sep = '\t', ignore_errors=True)
-
-                self.insertLog(f"CONCLUDED READING:\n{read_target}\n\n")
-
-                # Wait for user to see params
-                time.sleep(float(self.var_wait_time.get())) # type: ignore
-
-            else:
-                self.insertLog(f"ERROR:\n{read_target} IS NOT A VALID FILE\n\n")
-
-                # Return None
-                return None
-
-            textvar_colnum = self.padStr('COLUMN NUMBER:', len(df.columns))
-            self.insertLog(f"{textvar_colnum}\n\n",
-                           f"CHECKING COLUMNS\n\n")
-
-            # Wait for user to see params
-            time.sleep(float(self.var_wait_time.get())) # type: ignore
-
-            # Extract column list
-            cols_all, cols_text, col_rating, col_target = selectCols()
-
-            # Check if user-defined columns exist
-            for col in cols_all:
-                try:
-                    df.select(col)
-                # If it does not exist, return error and notify user
-                except Exception as ex:
-                    self.insertLog(f'ERROR: "{col}" DOES NOT EXIST\n\n')
-                
-                    # We will need to manage this return value in the function calls.
-                    return ex
-
-            df = df.select(cols_all)
-            df = castTypes(df, cols_text, col_rating)
-            df = df.drop_nulls()
-
-            return df, termination
+        self.insertLog(f"CONCLUDED READING:\n{read_target}\n\n")
         
-        df, termination = readData(dataset) # type: ignore
+        # Wait for user to see params
+        time.sleep(float(self.var_wait_time.get())) # type: ignore
 
-        return df, termination
+    # If a .tsv file exists, read the .tsv file
+    elif read_target.endswith('.tsv'):
+        self.insertLog(f"READING:\n{read_target}\n\n")
+        termination = '.tsv'
+
+        # Wait for user to see params
+        time.sleep(float(self.var_wait_time.get())) # type: ignore
+
+        # Read file into df
+        df = pl.read_csv(read_target, sep = '\t', ignore_errors=True)
+
+        self.insertLog(f"CONCLUDED READING:\n{read_target}\n\n")
+    
+        # Wait for user to see params
+        time.sleep(float(self.var_wait_time.get())) # type: ignore
+
+    # If a .gz file exists, read the .gz file without explicitly decompressing
+    elif read_target.endswith('.tsv.gz'):
+        self.insertLog(f"READING:\n{read_target}\n\n")
+        termination = '.tsv.gz'
+
+        # Wait for user to see params
+        time.sleep(float(self.var_wait_time.get())) # type: ignore
+
+        # Read file into df
+        with gzip.open(read_target) as compressed_file:
+            df = pl.read_csv(compressed_file.read(), sep = '\t', ignore_errors=True)
+
+        self.insertLog(f"CONCLUDED READING:\n{read_target}\n\n")
+
+        # Wait for user to see params
+        time.sleep(float(self.var_wait_time.get())) # type: ignore
+
+    else:
+        self.insertLog(f"ERROR:\n{read_target} IS NOT A VALID FILE\n\n")
+
+        # Return None
+        return None
+
+    textvar_colnum = self.padStr('COLUMN NUMBER:', len(df.columns))
+    self.insertLog(f"{textvar_colnum}\n\n",
+                    f"CHECKING COLUMNS\n\n")
+
+    # Wait for user to see params
+    time.sleep(float(self.var_wait_time.get())) # type: ignore
+
+    # Extract column list
+    cols_all, cols_text, col_rating, col_target = selectCols()
+
+    # Check if user-defined columns exist
+    for col in cols_all:
+        try:
+            df.select(col)
+        # If it does not exist, return error and notify user
+        except Exception as ex:
+            self.insertLog(f'ERROR: "{col}" DOES NOT EXIST\n\n')
+        
+            # We will need to manage this return value in the function calls.
+            return ex
+
+    df = df.select(cols_all)
+    df = castTypes(df, cols_text, col_rating)
+    df = df.drop_nulls()
+
+    return df, termination
+
+df, termination = readData(dataset) # type: ignore
+
+return df, termination
 ```
 
 Finally, we will include the following statement at the end of our module:

@@ -12,8 +12,8 @@ Keep in mind that this section refers to my personal portfolio; thus projects in
 	1. [A Task Manager Written in Rust](https://github.com/pabloagn/portfolio-projects/blob/master/computer-science/a-task-manager-written-in-rust/a-task-manager-written-in-rust.md)
 2. [Content Management Systems](https://github.com/pabloagn/portfolio-projects/tree/master/content-management-systems)
 	1. [Website Assets](https://github.com/pabloagn/portfolio-projects/tree/master/content-management-systems/website-assets)
-3. [Machine Learning](https://github.com/pabloagn/portfolio-projects/tree/master/machine-learning)
-	1. [Sentiment Analysis With Python](https://github.com/pabloagn/portfolio-projects/blob/master/machine-learning/sentiment-analysis-with-python/sentiment-analysis-with-python.md)
+3. [Data Science](https://github.com/pabloagn/portfolio-projects/tree/master/data-science)
+	1. [Sentiment Analysis With Python](https://github.com/pabloagn/portfolio-projects/blob/master/data-science/sentiment-analysis-with-python/sentiment-analysis-with-python.md)
 4. [Probability & Statistics](https://github.com/pabloagn/portfolio-projects/tree/master/probability-and-statistics)
 	1. [Markov Chains Toolbox](https://github.com/pabloagn/portfolio-projects/blob/master/probability-and-statistics/markov-chains-toolbox/markov-chains-toolbox.md)
 
