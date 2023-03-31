@@ -459,6 +459,8 @@ if __name__ == '__main__':
 
 This will ensure that our module is not executed on import and is instead executed upon explicitly calling it.
 
+---
+
 # Sentiment analysis package
 Once we have our preprocessing module, we'll implement our models and a sentiment analysis execution module. We'll be working inside our `sentiment_analysis` package.
 
