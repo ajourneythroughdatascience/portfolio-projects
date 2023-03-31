@@ -1,0 +1,16 @@
+customtkinter
+xlsxwriter
+matplotlib
+nltk
+numpy
+pandas
+polars
+pyarrow
+pyinstaller
+scikit-learn
+seaborn
+spyder-kernels
+textblob
+tk
+tomli
+wordcloud
