@@ -1,6 +1,6 @@
 # portfolio-projects
 
-![alt text](https://raw.githubusercontent.com/pabloagn/digital-assets/master/portfolio-projects-cover-image.jpg "Portfolio Projects Cover Image")
+![alt text](https://pabloagn.com/wp-content/uploads/2023/04/portfolio-projects-cover-image.jpg "Portfolio Projects Cover Image")
 
 ## About
 Here you will find a list of all my projects & collaborations. Projects are ordered descending by publish date. The start date & end date refer to the actual project design & execution.
