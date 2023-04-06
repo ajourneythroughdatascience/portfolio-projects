@@ -5,14 +5,198 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1680723423
-Updated: 2023-04-05 13:37:03
+Version: 1.1.1680816993
+Updated: 2023-04-06 15:36:33
 
 */
 
 html, body {
     width: 100% !important;
     overflow-x: hidden !important;
+}
+.dark .elementor-7666 .elementor-element.elementor-element-66634e7:not(.elementor-motion-effects-element-type-background),
+.elementor-7666 .elementor-element.elementor-element-66634e7 > .elementor-motion-effects-container > .elementor-motion-effects-layer
+{
+    background-color: var(--e-global-color-secondary);
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 h1 {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--e-global-color-secondary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h1 {
+    border-bottom: 1px solid var(--e-global-color-primary);
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 li {
+    margin-bottom: 10px;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-element-caption {
+    font-style: italic;
+    text-align: center;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-kevinbatdorf-code-block-pro {
+    margin-bottom: 30px !important;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-kevinbatdorf-code-block-pro a {
+    text-decoration: none !important;
+    color: #5de4c7 !important;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 code {
+    background-color: var(--e-global-color-a7a0f0d);
+    color: var(--e-global-color-secondary);
+    font-size: 14px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    padding: 1px 5px;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 a {
+    text-decoration: underline;
+}
+.elementor-7666 .has-text-align-center {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 .has-drop-cap:not(:focus):first-letter {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    color: var(--e-global-color-secondary);
+    font-size: 90px;
+    line-height: 35px;
+    border: solid var(--e-global-color-secondary);
+    font-family: Lora;
+    padding: 18px 10px;
+}
+.dark .elementor-7666 .elementor-element.elementor-element-2a17b4f .elementor-heading-title,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h1,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h2,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h3,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h4,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h5,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 h6,
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 a {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-quote {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 .has-drop-cap:not(:focus):first-letter {
+    color: var(--e-global-color-primary) !important;
+    border-color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-text,
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-text a,
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-icon i {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-text a:hover,
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-text a:focus,
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-icon i:hover,
+.dark .elementor-7666 .elementor-element.elementor-element-f8fcde3 .elementor-icon-list-item .elementor-icon-list-icon i:focus {
+    color: var(--e-global-color-db8558a);
+    -moz-transition: linear;
+    -webkit-transition: linear;
+    -o-transition: linear;
+    transition: linear;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text:hover,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text:focus,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon:hover,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon:focus,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a:hover,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a:focus,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i:hover,
+.dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i:focus {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-236dce5,
+.dark .elementor-7666 .elementor-element.elementor-element-9242c6b,
+.dark .elementor-7666 .elementor-element.elementor-element-69e2761
+{
+    --divider-border-style: solid;
+    --divider-color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ad2091c {
+    --box-border-color: var( --e-global-color-primary );
+}
+.dark .elementor-toc__header {
+    border-bottom: var(--separator-width,1px) solid var( --e-global-color-primary );
+}
+.dark .elementor-7666 .elementor-element.elementor-element-0733005 .elementor-share-btn {
+    background-color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-0733005 .elementor-share-btn__icon i {
+    color: var(--e-global-color-secondary) !important;
+}
+.dark .elementor-7666 .elementor-element.elementor-element-0733005 .elementor-share-btn:hover {
+    background-color: var(--e-global-color-primary);
+    -moz-transition: linear;
+    -webkit-transition: linear;
+    -o-transition: linear;
+    transition: linear;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.dark .elementor-7666 .elementor-element.elementor-element-0733005 .elementor-share-btn:hover i {
+    color: var(--e-global-color-db8558a);
+    -moz-transition: linear;
+    -webkit-transition: linear;
+    -o-transition: linear;
+    transition: linear;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-938a1f0,
+.dark .elementor-7666 .elementor-element.elementor-element-938a1f0 a {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ad58954 code {
+    font-weight: 400;
+    background-color: var(--e-global-color-5260874);
+    color: var(--e-global-color-primary);
+}
+
+.elementor-7666 .elementor-element.elementor-element-ad58954 h5
+{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.elementor-7666 .elementor-element.elementor-element-ad58954 li
+{
+    margin-bottom: 4px;
 }
 .dark .elementor-2205 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-2205 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer, .dark .elementor-5243 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-5243 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer, .dark .elementor-5661 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-5661 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer, .dark .elementor-5252 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-5252 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: var(--e-global-color-secondary);
@@ -748,10 +932,35 @@ html, body {
     color: var( --e-global-color-secondary );
     border-color: var( --e-global-color-db8558a );
 }
+.dark .elementor-7619 .elementor-element.elementor-element-2223338 a {
+    text-decoration: underline;
+    color: var( --e-global-color-primary );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-19de70b .elementor-button, .dark .elementor-7619 .elementor-element.elementor-element-b6daa11 .elementor-button, .dark .elementor-7619 .elementor-element.elementor-element-4f8daac .elementor-button {
+    background-color: var( --e-global-color-secondary );
+    color: var( --e-global-color-primary );
+    border-color: var( --e-global-color-primary );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-19de70b .elementor-button:hover, .dark .elementor-7619 .elementor-element.elementor-element-b6daa11 .elementor-button:hover, .dark .elementor-7619 .elementor-element.elementor-element-4f8daac .elementor-button:hover {
+    background-color: var( --e-global-color-db8558a );
+    color: var( --e-global-color-secondary );
+    border-color: var( --e-global-color-db8558a );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-19de70b .elementor-button:focus, .dark .elementor-7619 .elementor-element.elementor-element-b6daa11 .elementor-button:focus, .dark .elementor-7619 .elementor-element.elementor-element-4f8daac .elementor-button:focus {
+    background-color: var( --e-global-color-db8558a );
+    color: var( --e-global-color-secondary );
+    border-color: var( --e-global-color-db8558a );
+}
 .dark .elementor-1987 .elementor-element.elementor-element-3b3fd3d {
     color: var( --e-global-color-primary );
 }
-.elementor-7619 .elementor-element.elementor-element-54743e8 a {
+.dark .elementor-7619 .elementor-element.elementor-element-e335174 .elementor-heading-title {
+    color: var( --e-global-color-primary );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-2223338 {
+    color: var( --e-global-color-primary );
+}
+.elementor-7619 .elementor-element.elementor-element-2223338 a {
     text-decoration: underline;
 }
 .dark .elementor-7619 .elementor-element.elementor-element-54743e8 a {
@@ -1588,4 +1797,8 @@ revo-grid[theme="compact"] revogr-header .rgHeaderCell.sortable {
     background-color: var(--e-global-color-5260874);
     color: var(--e-global-color-primary);
     border-color: var(--e-global-color-3b68caa);
+}
+.dark .elementor-7666 .elementor-element.elementor-element-ab0c11b .elementor-heading-title 
+{
+	color: var(--e-global-color-primary);	
 }
