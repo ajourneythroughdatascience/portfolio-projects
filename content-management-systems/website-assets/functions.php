@@ -32,10 +32,35 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // START PABLO CUSTOM FUNCTIONS
 
+
 // ALLOW MULTIPLE CUSTOM POST TYPES IN ELEMENTOR POST WIDGET
 add_action( 'elementor/query/multiple_cpts', function( $query ) {
-	$query->set( 'post_type', [ 'blog', 'deep-dives', 'guided-projects', 'portfolio', 'documentation' ] );
+	$query->set( 'post_type', [ 'blog', 'deep-dives', 'guided-projects', 'portfolio', 'documentation', 'series' ] );
 } );
+
+// DISPLAY RELATED POSTS FROM ACF
+function modify_elementor_posts_widget_query($query, $widget) {
+    // Check if the current post type is 'series'
+    if (get_post_type() === 'series') {
+		
+        // Get the current Series post ID
+        $current_series_id = get_the_ID();
+
+        // Set the query to get Blogs related to the current Series
+        $query->set('post_type', [ 'blog', 'deep-dives', 'guided-projects', 'portfolio', 'documentation' ]);
+        $query->set('meta_query', array(
+            array(
+                'key' => 'series',
+                'value' => '"' . $current_series_id . '"',
+                'compare' => 'LIKE',
+            ),
+        ));
+    }
+    return $query;
+}
+
+// Add query
+add_action('elementor/query/related_cpts', 'modify_elementor_posts_widget_query', 10, 2);
 
 // ADD FEATURED IMAGE COLUMN TO ADMIN VIEW
 // Set thumbnail size

@@ -5,14 +5,17 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1676225063
-Updated: 2023-02-12 12:04:23
+Version: 1.1.1680723423
+Updated: 2023-04-05 13:37:03
 
 */
 
 html, body {
     width: 100% !important;
     overflow-x: hidden !important;
+}
+.dark .elementor-2205 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-2205 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer, .dark .elementor-5243 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-5243 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer, .dark .elementor-5661 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-5661 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer, .dark .elementor-5252 .elementor-element.elementor-element-df58387:not(.elementor-motion-effects-element-type-background), .elementor-5252 .elementor-element.elementor-element-df58387 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: var(--e-global-color-secondary);
 }
 .elementor-2205 .elementor-element.elementor-element-5aa15c6 h1 {
     margin-top: 80px;
@@ -116,23 +119,23 @@ html, body {
 .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text:hover, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text:focus, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon:hover, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon:focus, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a:hover, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a:focus, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i:hover, .dark .elementor-2205 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i:focus {
     color: var(--e-global-color-primary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-32168ba, .dark .elementor-2205 .elementor-element.elementor-element-ce570a2 {
+.dark .elementor-2205 .elementor-element.elementor-element-32168ba, .dark .elementor-2205 .elementor-element.elementor-element-ce570a2, .dark .elementor-2205 .elementor-element.elementor-element-ecbe28b, .dark .elementor-5243 .elementor-element.elementor-element-af8e35c, .dark .elementor-5661 .elementor-element.elementor-element-2150f6b, .dark .elementor-5252 .elementor-element.elementor-element-1347d97 {
     --divider-border-style: solid;
     --divider-color: var(--e-global-color-primary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn,
-.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon
-{
+.dark .elementor-2205 .elementor-element.elementor-element-ad2091c, .dark .elementor-5661 .elementor-element.elementor-element-3835c8b, .dark .elementor-5243 .elementor-element.elementor-element-6269d3a, .dark .elementor-5252 .elementor-element.elementor-element-a83a109 {
+    --box-border-color: var( --e-global-color-primary );
+}
+.dark .elementor-toc__header {
+    border-bottom: var(--separator-width,1px) solid var( --e-global-color-primary );
+}
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn, .dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon {
     background-color: var(--e-global-color-primary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn__icon i,
-.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon i
-{
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn__icon i, .dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon i {
     color: var(--e-global-color-secondary) !important;
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover,
-.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon:hover
-{
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover, .dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon:hover {
     background-color: var(--e-global-color-primary);
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -143,9 +146,7 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i,
-.dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon:hover i
-{
+.dark .elementor-2205 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i, .dark .elementor-2205 .elementor-element.elementor-element-74c5488 .elementor-social-icon:hover i {
     color: var(--e-global-color-db8558a);
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -276,19 +277,13 @@ html, body {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn,
-.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon
-{
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn, .dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon {
     background-color: var( --e-global-color-primary );
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i,
-.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon i
-{
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i, .dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon i {
     color: var( --e-global-color-secondary );
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover,
-.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon:hover
-{
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover, .dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon:hover {
     background-color: var( --e-global-color-primary );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -299,9 +294,7 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i,
-.dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon:hover i
-{
+.dark .elementor-5243 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i, .dark .elementor-5243 .elementor-element.elementor-element-8d6915a .elementor-social-icon:hover i {
     color: var( --e-global-color-db8558a );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -424,22 +417,13 @@ html, body {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
-.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn,
-.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon,
-.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon
-{
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn, .dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon, .dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon {
     background-color: var( --e-global-color-primary );
 }
-.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i,
-.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon i,
-.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon i
-{
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn i, .dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon i, .dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon i {
     color: var( --e-global-color-secondary );
 }
-.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover,
-.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon:hover,
-.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon:hover
-{
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover, .dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon:hover, .dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon:hover {
     background-color: var( --e-global-color-primary );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -450,10 +434,7 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i,
-.dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon:hover i,
-.dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon:hover i
-{
+.dark .elementor-5252 .elementor-element.elementor-element-96a82b2 .elementor-share-btn:hover i, .dark .elementor-5252 .elementor-element.elementor-element-c386fb8 .elementor-social-icon:hover i, .dark .elementor-5661 .elementor-element.elementor-element-3fa20a0 .elementor-social-icon:hover i {
     color: var( --e-global-color-db8558a );
     -moz-transition: linear;
     -webkit-transition: linear;
@@ -770,6 +751,46 @@ html, body {
 .dark .elementor-1987 .elementor-element.elementor-element-3b3fd3d {
     color: var( --e-global-color-primary );
 }
+.elementor-7619 .elementor-element.elementor-element-54743e8 a {
+    text-decoration: underline;
+}
+.dark .elementor-7619 .elementor-element.elementor-element-54743e8 a {
+    text-decoration: underline;
+    color: var( --e-global-color-primary );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-54743e8 a:hover {
+    color: var( --e-global-color-db8558a );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-54743e8 a:focus {
+    color: var( --e-global-color-db8558a );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-e21192c .elementor-button, .dark .elementor-7619 .elementor-element.elementor-element-01092bd .elementor-button, .dark .elementor-7619 .elementor-element.elementor-element-3c6e1df .elementor-button {
+    background-color: var( --e-global-color-secondary );
+    color: var( --e-global-color-primary );
+    border-color: var( --e-global-color-primary );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-e21192c .elementor-button:hover, .dark .elementor-7619 .elementor-element.elementor-element-01092bd .elementor-button:hover, .dark .elementor-7619 .elementor-element.elementor-element-3c6e1df .elementor-button:hover {
+    background-color: var( --e-global-color-db8558a );
+    color: var( --e-global-color-secondary );
+    border-color: var( --e-global-color-db8558a );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-e21192c .elementor-button:focus, .dark .elementor-7619 .elementor-element.elementor-element-01092bd .elementor-button:focus, .dark .elementor-7619 .elementor-element.elementor-element-3c6e1df .elementor-button:focus {
+    background-color: var( --e-global-color-db8558a );
+    color: var( --e-global-color-secondary );
+    border-color: var( --e-global-color-db8558a );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d {
+    color: var( --e-global-color-primary );
+}
+.dark .elementor-7619 .elementor-element.elementor-element-f6bb114 .elementor-heading-title {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers:not(:last-child), .dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers:not(:first-child), .dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers:not(.dots) {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers.current, .dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers:not(:last-child):hover, .dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers:not(:first-child):hover, .dark .elementor-7619 .elementor-element.elementor-element-3b3fd3d .elementor-pagination .page-numbers:not(.dots):hover {
+    color: var(--e-global-color-db8558a);
+}
 .dark .elementor-1913 .elementor-element.elementor-element-63e2998 .elementor-heading-title {
     color: var( --e-global-color-primary );
 }
@@ -921,16 +942,16 @@ body.dark {
 .dark .elementor-7 .elementor-element.elementor-element-64ae28a .elementor-heading-title {
     color: var(--e-global-color-primary);
 }
-.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon {
+.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-social-icon {
     background-color: var(--e-global-color-primary);
 }
-.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon i {
+.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-social-icon i {
     color: var(--e-global-color-secondary);
 }
-.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon:hover {
+.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon:hover, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-social-icon:hover {
     background-color: var(--e-global-color-primary);
 }
-.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon:hover i {
+.dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon:hover i, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-social-icon:hover i {
     color: var(--e-global-color-db8558a);
 }
 .dark .elementor-1957 .elementor-element.elementor-element-48489c7 .elementor-heading-title {
@@ -999,6 +1020,9 @@ body.dark {
     color: var(--e-global-color-primary);
 }
 .dark .elementor-1866 .elementor-element.elementor-element-eb905e0 .elementor-widget-container {
+    color: var(--e-global-color-primary);
+}
+.dark .elementor-1866 .elementor-element.elementor-element-efea140 .elementor-widget-container {
     color: var(--e-global-color-primary);
 }
 .dark .elementor-1866 .elementor-element.elementor-element-b985486 .elementor-icon-list-icon i {
@@ -1092,20 +1116,20 @@ body.dark {
 .dark .elementor-3460 .elementor-element.elementor-element-0bde927 .elementor-pagination .page-numbers.current, .dark .elementor-3460 .elementor-element.elementor-element-0bde927 .elementor-pagination .page-numbers:not(:last-child):hover, .dark .elementor-3460 .elementor-element.elementor-element-0bde927 .elementor-pagination .page-numbers:not(:first-child):hover, .dark .elementor-3460 .elementor-element.elementor-element-0bde927 .elementor-pagination .page-numbers:not(.dots):hover {
     color: var(--e-global-color-db8558a);
 }
-.searchandfilter[data-sf-form-id="5305"] > ul, .searchandfilter[data-sf-form-id="5344"] > ul, .searchandfilter[data-sf-form-id="5343"] > ul, .searchandfilter[data-sf-form-id="5675"] > ul {
+.searchandfilter[data-sf-form-id="5305"] > ul, .searchandfilter[data-sf-form-id="5344"] > ul, .searchandfilter[data-sf-form-id="5343"] > ul, .searchandfilter[data-sf-form-id="5675"] > ul, .searchandfilter[data-sf-form-id="7626"] > ul {
     padding: 0;
     margin: 0;
 }
-.searchandfilter[data-sf-form-id="5305"] > ul > li, .searchandfilter[data-sf-form-id="5344"] > ul > li, .searchandfilter[data-sf-form-id="5343"] > ul > li, .searchandfilter[data-sf-form-id="5675"] > ul > li {
+.searchandfilter[data-sf-form-id="5305"] > ul > li, .searchandfilter[data-sf-form-id="5344"] > ul > li, .searchandfilter[data-sf-form-id="5343"] > ul > li, .searchandfilter[data-sf-form-id="5675"] > ul > li, .searchandfilter[data-sf-form-id="7626"] > ul > li {
     padding-right: 10px;
     display: inline;
     overflow-x: scroll;
     white-space: nowrap;
 }
-.searchandfilter[data-sf-form-id="5305"] ul, .searchandfilter[data-sf-form-id="5344"] ul, .searchandfilter[data-sf-form-id="5343"] ul, .searchandfilter[data-sf-form-id="5675"] ul {
+.searchandfilter[data-sf-form-id="5305"] ul, .searchandfilter[data-sf-form-id="5344"] ul, .searchandfilter[data-sf-form-id="5343"] ul, .searchandfilter[data-sf-form-id="5675"] ul, .searchandfilter[data-sf-form-id="7626"] ul {
     margin-left: 0;
 }
-.searchandfilter[data-sf-form-id="5305"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="5344"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="5343"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="5675"] li.sf-field-search input.sf-input-text {
+.searchandfilter[data-sf-form-id="5305"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="5344"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="5343"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="5675"] li.sf-field-search input.sf-input-text, .searchandfilter[data-sf-form-id="7626"] li.sf-field-search input.sf-input-text {
     width: 200px;
     background-color: var e global color primary;
     background-color: var(--e-global-color-primary);
@@ -1128,7 +1152,7 @@ body.dark {
     border-style: solid;
     padding: 10px, 0, 0, 0;
 }
-.searchandfilter[data-sf-form-id="5305"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5305"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="5344"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5344"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="5343"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5343"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="5675"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5675"] li.sf-field-category select.sf-input-select {
+.searchandfilter[data-sf-form-id="5305"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5305"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="5344"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5344"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="5343"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5343"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="5675"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5675"] li.sf-field-category select.sf-input-select, .searchandfilter[data-sf-form-id="7626"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="7626"] li.sf-field-category select.sf-input-select {
     width: 233px;
     background-color: var e global color primary;
     background-color: var(--e-global-color-primary);
@@ -1151,7 +1175,7 @@ body.dark {
     border-style: solid;
     padding: 0, 0, 0, 0;
 }
-.searchandfilter[data-sf-form-id="5305"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="5344"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="5343"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="5675"] li.sf-field-sort_order select.sf-input-select {
+.searchandfilter[data-sf-form-id="5305"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="5344"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="5343"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="5675"] li.sf-field-sort_order select.sf-input-select, .searchandfilter[data-sf-form-id="7626"] li.sf-field-sort_order select.sf-input-select {
     width: 100%;
     background-color: var(--e-global-color-secondary);
     color: var(--e-global-color-primary);
@@ -1168,7 +1192,7 @@ body.dark {
     letter-spacing: 1px;
     padding: 0 20px;
 }
-.searchandfilter[data-sf-form-id="5305"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="5344"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="5343"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="5675"] li.sf-field-reset input.search-filter-reset {
+.searchandfilter[data-sf-form-id="5305"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="5344"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="5343"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="5675"] li.sf-field-reset input.search-filter-reset, .searchandfilter[data-sf-form-id="7626"] li.sf-field-reset input.search-filter-reset {
     width: 110px;
     background-color: var(--e-global-color-primary);
     color: var(--e-global-color-secondary);
@@ -1185,7 +1209,7 @@ body.dark {
     letter-spacing: 1px;
     padding: 0;
 }
-.searchandfilter[data-sf-form-id="5305"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="5344"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="5343"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="5675"] li.sf-field-reset input.search-filter-reset:hover {
+.searchandfilter[data-sf-form-id="5305"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="5344"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="5343"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="5675"] li.sf-field-reset input.search-filter-reset:hover, .searchandfilter[data-sf-form-id="7626"] li.sf-field-reset input.search-filter-reset:hover {
     background-color: var(--e-global-color-db8558a);
     color: var(--e-global-color-secondary);
     border-color: var(--e-global-color-db8558a);
@@ -1231,7 +1255,7 @@ body.dark {
     padding: 10px, 0, 0, 0;
 }
 .searchandfilter[data-sf-form-id="5337"] li.sf-field-tag select.sf-input-select, .searchandfilter[data-sf-form-id="5337"] li.sf-field-category select.sf-input-select {
-    width: 200px;
+    width: 180px !important;
     background-color: var(--e-global-color-primary);
     color: var(--e-global-color-secondary);
     height: 50px;
