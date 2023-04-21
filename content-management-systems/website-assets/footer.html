@@ -1,0 +1,20 @@
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById('hide-header-posts').style.top = '0';
+  } else {
+    document.getElementById('hide-header-posts').style.top = '-110px';
+  }
+  prevScrollpos = currentScrollPos;
+};
+</script>
+
+<style>
+/* Show Hide Sticky Header Speed Control */
+#hide-header-posts
+{
+	transition: all .4s ease!important;
+}
+</style>
