@@ -31,11 +31,22 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 // END ENQUEUE PARENT ACTION
 
 // START PABLO CUSTOM FUNCTIONS
+// ADD TOPICS WORD CLOUD FUNCTION
+require_once get_stylesheet_directory() . '/topics-cloud-shortcode.php';
+function enqueue_topics_cloud_styles() {
+    wp_enqueue_style('topics-cloud', get_template_directory_uri() . '/topics-cloud.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_topics_cloud_styles');
 
 
 // ALLOW MULTIPLE CUSTOM POST TYPES IN ELEMENTOR POST WIDGET
 add_action( 'elementor/query/multiple_cpts', function( $query ) {
 	$query->set( 'post_type', [ 'blog', 'deep-dives', 'guided-projects', 'portfolio', 'documentation', 'series' ] );
+} );
+
+// ALLOW MULTIPLE CUSTOM POST TYPES IN ELEMENTOR POST WIDGET, EXCEPT SERIES
+add_action( 'elementor/query/multiple_cpts_except', function( $query ) {
+	$query->set( 'post_type', [ 'blog', 'deep-dives', 'guided-projects', 'portfolio', 'documentation' ] );
 } );
 
 // DISPLAY RELATED POSTS FROM ACF

@@ -1,0 +1,18 @@
+.topics-cloud {
+    margin: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.topic {
+  margin: 10px;
+  text-decoration: none;
+  color: var( --e-global-color-primary );
+}
+
+.topic:hover {
+  color: var( --e-global-color-db8558a );
+  animation: float 1.2s ease-in-out infinite;
+}

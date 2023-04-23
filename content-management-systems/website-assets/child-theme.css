@@ -5,8 +5,8 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1681958424
-Updated: 2023-04-19 20:40:24
+Version: 1.1.1682283753
+Updated: 2023-04-23 15:02:33
 
 */
 
@@ -111,11 +111,7 @@ html, body {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
-.elementor-7805 .elementor-element.elementor-element-e62b129 .elementor-icon-list-item .elementor-icon-list-icon i,
-.elementor-7805 .elementor-element.elementor-element-5847a76 .elementor-icon-list-item .elementor-icon-list-icon i,
-.elementor-7805 .elementor-element.elementor-element-7774a49 .elementor-icon-list-item .elementor-icon-list-icon i,
-.elementor-7805 .elementor-element.elementor-element-6b3b4fe .elementor-icon-list-item .elementor-icon-list-icon i
-{
+.elementor-7805 .elementor-element.elementor-element-e62b129 .elementor-icon-list-item .elementor-icon-list-icon i, .elementor-7805 .elementor-element.elementor-element-5847a76 .elementor-icon-list-item .elementor-icon-list-icon i, .elementor-7805 .elementor-element.elementor-element-7774a49 .elementor-icon-list-item .elementor-icon-list-icon i, .elementor-7805 .elementor-element.elementor-element-6b3b4fe .elementor-icon-list-item .elementor-icon-list-icon i {
     padding-top: 5px;
 }
 .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text:hover, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text:focus, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon:hover, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon:focus, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a:hover, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-text a:focus, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i:hover, .dark .elementor-7666 .elementor-element.elementor-element-a2542b8 .elementor-icon-list-item .elementor-icon-list-icon i:focus {
@@ -1783,4 +1779,16 @@ revo-grid[theme="compact"] revogr-header .rgHeaderCell.sortable {
 }
 .dark .elementor-7880 .elementor-element.elementor-element-edfb846 {
     color: var(--e-global-color-primary);
+}
+.elementor-8054 .elementor-element.elementor-element-dacae3c a {
+    color: var( --e-global-color-primary );
+}
+.elementor-8054 .elementor-element.elementor-element-dacae3c a:hover {
+    color: var( --e-global-color-db8558a );
+}
+.elementor-7880 .elementor-element.elementor-element-1570e3c .elementor-icon-list-item {
+    align-items: start;
+}
+.elementor-7880 .elementor-element.elementor-element-1570e3c .elementor-icon-list-icon {
+    padding-top: 5px;
 }
