@@ -5,8 +5,8 @@ Template: astra
 Author: Pablo Aguirre
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
 Description: Astra Child theme for css code
-Version: 1.1.1684683747
-Updated: 2023-05-21 09:42:27
+Version: 1.1.1685577987
+Updated: 2023-05-31 18:06:27
 
 */
 
@@ -49,21 +49,21 @@ html, body {
     font-style: italic;
     text-align: center;
 }
-.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-kevinbatdorf-code-block-pro,
-.elementor-8215 .elementor-element.elementor-element-1251d35 .wp-block-kevinbatdorf-code-block-pro,
-.elementor-8237 .elementor-element.elementor-element-12004c5 .wp-block-kevinbatdorf-code-block-pro
-{
+.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-kevinbatdorf-code-block-pro, .elementor-8215 .elementor-element.elementor-element-1251d35 .wp-block-kevinbatdorf-code-block-pro, .elementor-8237 .elementor-element.elementor-element-12004c5 .wp-block-kevinbatdorf-code-block-pro {
     margin-bottom: 30px !important;
-    border-style: solid;
-    border-color: var(--e-global-color-19c43af);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: #f2f2f2;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    border-color: var(--e-global-color-19c43af);
+    -moz-box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    -o-box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-style: solid;
 }
-.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-kevinbatdorf-code-block-pro a,
-.elementor-8215 .elementor-element.elementor-element-1251d35 .wp-block-kevinbatdorf-code-block-pro a,
-.elementor-8237 .elementor-element.elementor-element-12004c5 .wp-block-kevinbatdorf-code-block-pro a
-{
+.elementor-7666 .elementor-element.elementor-element-ad58954 .wp-block-kevinbatdorf-code-block-pro a, .elementor-8215 .elementor-element.elementor-element-1251d35 .wp-block-kevinbatdorf-code-block-pro a, .elementor-8237 .elementor-element.elementor-element-12004c5 .wp-block-kevinbatdorf-code-block-pro a {
     text-decoration: none !important;
     color: #5de4c7 !important;
 }
@@ -214,14 +214,10 @@ html, body {
     font-style: italic;
     text-align: center;
 }
-.elementor-5243 .elementor-element.elementor-element-aa30dcc .wp-block-kevinbatdorf-code-block-pro,
-.elementor-7880 .elementor-element.elementor-element-a4d780b .wp-block-kevinbatdorf-code-block-pro
-{
+.elementor-5243 .elementor-element.elementor-element-aa30dcc .wp-block-kevinbatdorf-code-block-pro, .elementor-7880 .elementor-element.elementor-element-a4d780b .wp-block-kevinbatdorf-code-block-pro {
     margin-bottom: 30px !important;
 }
-.elementor-5243 .elementor-element.elementor-element-aa30dcc .wp-block-kevinbatdorf-code-block-pro a,
-.elementor-7880 .elementor-element.elementor-element-a4d780b .wp-block-kevinbatdorf-code-block-pro a
-{
+.elementor-5243 .elementor-element.elementor-element-aa30dcc .wp-block-kevinbatdorf-code-block-pro a, .elementor-7880 .elementor-element.elementor-element-a4d780b .wp-block-kevinbatdorf-code-block-pro a {
     text-decoration: none !important;
     color: #5de4c7 !important;
 }
@@ -400,9 +396,7 @@ html, body {
     text-decoration: none !important;
     color: #5de4c7 !important;
 }
-.elementor-2205 .elementor-element.elementor-element-5aa15c6 code,
-.elementor-8215 .elementor-element.elementor-element-1251d35 code
-{
+.elementor-2205 .elementor-element.elementor-element-5aa15c6 code, .elementor-8215 .elementor-element.elementor-element-1251d35 code {
     background-color: var(--e-global-color-a7a0f0d);
     color: var(--e-global-color-secondary);
     font-size: 14px;
@@ -507,9 +501,7 @@ html, body {
 .dark .elementor-2205 .elementor-element.elementor-element-66c364c, .dark .elementor-2205 .elementor-element.elementor-element-66c364c a {
     color: var(--e-global-color-primary);
 }
-.dark .elementor-2205 .elementor-element.elementor-element-5aa15c6 code,
-.dark .elementor-8215 .elementor-element.elementor-element-1251d35 code
-{
+.dark .elementor-2205 .elementor-element.elementor-element-5aa15c6 code, .dark .elementor-8215 .elementor-element.elementor-element-1251d35 code {
     font-weight: 400;
     background-color: var(--e-global-color-5260874);
     color: var(--e-global-color-primary);
@@ -1165,10 +1157,7 @@ body.dark {
 .dark .elementor-7 .elementor-element.elementor-element-ed246f1 .elementor-heading-title {
     color: var(--e-global-color-primary);
 }
-.dark .elementor-7 .elementor-element.elementor-element-64ae28a .elementor-heading-title,
-.dark .elementor-7 .elementor-element.elementor-element-7505def .elementor-heading-title,
-.dark .elementor-7 .elementor-element.elementor-element-9b20a43 .elementor-heading-title
-{
+.dark .elementor-7 .elementor-element.elementor-element-64ae28a .elementor-heading-title, .dark .elementor-7 .elementor-element.elementor-element-7505def .elementor-heading-title, .dark .elementor-7 .elementor-element.elementor-element-9b20a43 .elementor-heading-title {
     color: var(--e-global-color-primary) !important;
 }
 .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-bfe6865.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-cd17c41.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-e196746.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-07bb978.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-232d336.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-repeater-item-075dc06.elementor-social-icon, .dark .elementor-1957 .elementor-element.elementor-element-6d7300e .elementor-social-icon {
@@ -1203,65 +1192,17 @@ body.dark {
     color: var(--e-global-color-db8558a);
     fill: var(--e-global-color-db8558a);
 }
-.dark .elementor-7 .elementor-element.elementor-element-2dc093b .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-0a587e6 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-1c394dc .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-143af88 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-d21702a .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-2b60b2a .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-11a532a .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-fb46064 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-27d5964 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-e92bcc9 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-c6d30c3 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-4d527e7 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-cdd86b9 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-64c2ec2 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-2788a68 .elementor-button,
-.dark .elementor-7 .elementor-element.elementor-element-71437f8 .elementor-button
-{
+.dark .elementor-7 .elementor-element.elementor-element-2dc093b .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-0a587e6 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-1c394dc .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-143af88 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-d21702a .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-2b60b2a .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-11a532a .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-fb46064 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-27d5964 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-e92bcc9 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-c6d30c3 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-4d527e7 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-cdd86b9 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-64c2ec2 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-2788a68 .elementor-button, .dark .elementor-7 .elementor-element.elementor-element-71437f8 .elementor-button {
     background-color: var(--e-global-color-secondary) !important;
     color: var(--e-global-color-primary) !important;
     border-color: var(--e-global-color-primary) !important;
 }
-.dark .elementor-7 .elementor-element.elementor-element-2dc093b .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-0a587e6 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-1c394dc .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-143af88 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-d21702a .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-2b60b2a .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-11a532a .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-fb46064 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-27d5964 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-e92bcc9 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-c6d30c3 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-4d527e7 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-cdd86b9 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-64c2ec2 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-2788a68 .elementor-button:hover,
-.dark .elementor-7 .elementor-element.elementor-element-71437f8 .elementor-button:hover
-{
+.dark .elementor-7 .elementor-element.elementor-element-2dc093b .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-0a587e6 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-1c394dc .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-143af88 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-d21702a .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-2b60b2a .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-11a532a .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-fb46064 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-27d5964 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-e92bcc9 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-c6d30c3 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-4d527e7 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-cdd86b9 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-64c2ec2 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-2788a68 .elementor-button:hover, .dark .elementor-7 .elementor-element.elementor-element-71437f8 .elementor-button:hover {
     background-color: var(--e-global-color-db8558a) !important;
     color: var(--e-global-color-secondary) !important;
     border-color: var(--e-global-color-db8558a) !important;
 }
-.dark .elementor-7 .elementor-element.elementor-element-2dc093b .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-0a587e6 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-1c394dc .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-143af88 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-d21702a .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-2b60b2a .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-11a532a .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-fb46064 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-27d5964 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-e92bcc9 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-c6d30c3 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-4d527e7 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-cdd86b9 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-64c2ec2 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-2788a68 .elementor-button:focus,
-.dark .elementor-7 .elementor-element.elementor-element-71437f8 .elementor-button:focus
-{
+.dark .elementor-7 .elementor-element.elementor-element-2dc093b .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-0a587e6 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-1c394dc .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-143af88 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-d21702a .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-2b60b2a .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-11a532a .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-fb46064 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-27d5964 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-e92bcc9 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-c6d30c3 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-4d527e7 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-cdd86b9 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-64c2ec2 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-2788a68 .elementor-button:focus, .dark .elementor-7 .elementor-element.elementor-element-71437f8 .elementor-button:focus {
     background-color: var(--e-global-color-db8558a) !important;
     color: var(--e-global-color-secondary) !important;
     border-color: var(--e-global-color-db8558a) !important;
@@ -1865,69 +1806,57 @@ revo-grid[theme="compact"] revogr-header .rgHeaderCell.sortable {
 .elementor-7880 .elementor-element.elementor-element-1570e3c .elementor-icon-list-icon {
     padding-top: 5px;
 }
-.rune_icons .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a
-{
+.rune_icons .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a {
     color: var(--e-global-color-primary) !important;
 }
-
-.rune_icons .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a:hover
-{
+.rune_icons .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a:hover {
     color: var(--e-global-color-db8558a) !important;
 }
-
-.rune_icons .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-icon,
-.rune_icons_white .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-icon
-{
-  margin-top: 5px !important;
+.rune_icons .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-icon, .rune_icons_white .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-icon {
+    margin-top: 5px !important;
 }
-
-.dark .elementor-8247 .elementor-element.elementor-element-7ec37f0 .elementor-heading-title,
-.dark .elementor-8247 .elementor-element.elementor-element-2852bfe,
-.dark .elementor-8247 .elementor-element.elementor-element-2852bfe a,
-.dark .elementor-8215 .elementor-element.elementor-element-9010296 > .elementor-widget-container a,
-.dark .elementor-8215 .elementor-element.elementor-element-51929bc .elementor-heading-title,
-.dark .rune_icons_white .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a,
-.dark .rune_icons_white .elementor-icon-list-item .elementor-icon-list-text,
-.dark .rune_icons_white .elementor-icon-list-item .elementor-icon-list-icon i
-{
+.dark .elementor-8247 .elementor-element.elementor-element-7ec37f0 .elementor-heading-title, .dark .elementor-8247 .elementor-element.elementor-element-2852bfe, .dark .elementor-8247 .elementor-element.elementor-element-2852bfe a, .dark .elementor-8215 .elementor-element.elementor-element-9010296 > .elementor-widget-container a, .dark .elementor-8215 .elementor-element.elementor-element-51929bc .elementor-heading-title, .dark .rune_icons_white .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a, .dark .rune_icons_white .elementor-icon-list-item .elementor-icon-list-text, .dark .rune_icons_white .elementor-icon-list-item .elementor-icon-list-icon i {
     color: var(--e-global-color-primary) !important;
 }
-
-.dark .elementor-8247 .elementor-element.elementor-element-a159abd .elementor-button,
-.dark .elementor-8247 .elementor-element.elementor-element-332aa0e .elementor-button,
-.dark .elementor-8247 .elementor-element.elementor-element-9292973 .elementor-button
-{
+.dark .elementor-8247 .elementor-element.elementor-element-a159abd .elementor-button, .dark .elementor-8247 .elementor-element.elementor-element-332aa0e .elementor-button, .dark .elementor-8247 .elementor-element.elementor-element-9292973 .elementor-button {
     background-color: var( --e-global-color-secondary ) !important;
     color: var( --e-global-color-primary ) !important;
     border-color: var( --e-global-color-primary ) !important;
 }
-
-.dark .elementor-8247 .elementor-element.elementor-element-a159abd .elementor-button:hover,
-.dark .elementor-8247 .elementor-element.elementor-element-332aa0e .elementor-button:hover,
-.dark .elementor-8247 .elementor-element.elementor-element-9292973 .elementor-button:hover
-{
+.dark .elementor-8247 .elementor-element.elementor-element-a159abd .elementor-button:hover, .dark .elementor-8247 .elementor-element.elementor-element-332aa0e .elementor-button:hover, .dark .elementor-8247 .elementor-element.elementor-element-9292973 .elementor-button:hover {
     background-color: var( --e-global-color-db8558a ) !important;
     color: var( --e-global-color-secondary ) !important;
     border-color: var( --e-global-color-db8558a ) !important;
 }
-
-.dark .elementor-8247 .elementor-element.elementor-element-a159abd .elementor-button:focus,
-.dark .elementor-8247 .elementor-element.elementor-element-332aa0e .elementor-button:focus,
-.dark .elementor-8247 .elementor-element.elementor-element-9292973 .elementor-button:focus
-{
+.dark .elementor-8247 .elementor-element.elementor-element-a159abd .elementor-button:focus, .dark .elementor-8247 .elementor-element.elementor-element-332aa0e .elementor-button:focus, .dark .elementor-8247 .elementor-element.elementor-element-9292973 .elementor-button:focus {
     background-color: var( --e-global-color-db8558a ) !important;
     color: var( --e-global-color-secondary ) !important;
     border-color: var( --e-global-color-db8558a ) !important;
 }
-
-.dark .elementor-8215 .elementor-element.elementor-element-1251d35
-{
+.dark .elementor-8215 .elementor-element.elementor-element-1251d35 {
     background-color: var(--e-global-color-secondary) !important;
 }
-
-.dark .elementor-8247 .elementor-element.elementor-element-ed6fd19,
-.dark .elementor-8247 .elementor-element.elementor-element-3a9643a,
-.dark .elementor-8247 .elementor-element.elementor-element-36b556e
-{
+.dark .elementor-8247 .elementor-element.elementor-element-ed6fd19, .dark .elementor-8247 .elementor-element.elementor-element-3a9643a, .dark .elementor-8247 .elementor-element.elementor-element-36b556e {
     background-color: var( --e-global-color-secondary ) !important;
+}
+.elementor-8215 .elementor-element.elementor-element-d77a03c
+{
+    transition-duration: 0.2s !important;
+    background-color: #a6a6a6 !important;
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    text-shadow: rgba(245,245,245,0.3) 0px 2px 2px !important;
+}
+ 
+ .dark .elementor-8215 .elementor-element.elementor-element-d77a03c
+{
+    transition-duration: 0.2s !important;
+    background-color: #1a1a1a !important;
+	text-shadow: 0px 2px 2px #363636 !important;
+	color: #121212 !important;
+}
+.dark .elementor-8237 .elementor-element.elementor-element-0ed30f9 .elementor-heading-title {
+    color: var(--e-global-color-primary);
 }
